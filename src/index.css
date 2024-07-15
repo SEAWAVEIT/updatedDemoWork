@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	background: white;
+	color: black;
+	font-family: "Montserrat", sans-serif;
+	/* font-family: sans-serif; */
+
+}
+
+
+.App {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	/* Prevent horizontal scrolling */
+}
+
+
+/* scroll animation */
+/* @layer utilities {
+	.paused {
+		animation-play-state: paused;
+	}
+} */
+@layer utilities {
+	.paused {
+		animation-play-state: paused;
+	}
+}
+
+/* Add this to make the images scroll continuously */
+.Hero02>div {
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+}
+
+.Hero02 img {
+	width: 20%;
+	/* adjust the width to your liking */
+	height: 100px;
+	/* adjust the height to your liking */
+	object-fit: cover;
+	margin: 10px;
+	scroll-snap-align: start;
+}
+
+.Hero01,
+.Hero02,
+.Hero03,
+.Hero08{
+	height: 100%;
+	width: 100%;
+}
+
+/* Faq */
+.faq-details {
+	transition: all 0.45s ease;
+}
+
+.faq-details[open] {
+	padding-bottom: 1rem;
+	/* Adjust as needed */
+	color: white;
+	background-color: black;
+	transition: all 0.45s ease;
+}
+
+
+
+/* Hero03.css */
+
+/* Keyframes for sliding out and in */
+/* @keyframes slideOutLeft {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+}
+
+@keyframes slideInRight {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	
+}
+
+/* Applying animations to the image on hover */
+.roll-out-in {
+	position: relative;
+	transition:
+		transform 0.3s,
+		opacity 0.3s;
+	/* Smooth transition */
+}
+
+.roll-out-in:hover {
+	animation: slideOutLeft 1s forwards;
+	/* Animation for sliding out on hover */
+}
+
+.roll-out-in:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	background-image: inherit;
+	background-size: cover;
+	background-position: center;
+	animation: slideInBottom 1s forwards;
+	/* Animation for sliding in new image */
+}
+
+
+
+*/
+
+/* section active  */
+.active {
+	opacity: 1;
+	animation: slidein 0.5s ease forwards;
+}
+
+@keyframes slidein {
+	from {
+		transform: translateY(20px);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+
+/* ================================= */
+/* .btn {
+	padding: 12px 24px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+	background-color: #0056b3;
+  }
+   */
