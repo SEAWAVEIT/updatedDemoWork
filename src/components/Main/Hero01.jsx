@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 
 function Hero01() {
     const MainHeadingEffect = useRef();
-
+  
     useGSAP(() => {
         gsap.from(MainHeadingEffect.current.children, {
             opacity: 0,

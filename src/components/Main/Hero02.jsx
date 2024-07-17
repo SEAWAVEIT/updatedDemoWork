@@ -1,4 +1,5 @@
 import React from "react";
+// import "../../stylesheet"
 
 function Hero02() {
 	return (

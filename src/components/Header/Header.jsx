@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import {Link} from "react-router-dom"
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to manage dropdown toggle
+  // const [isOpen, setIsOpen] = useState(false); 
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen); // Toggle isOpen state
-  };
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen); // Toggle isOpen state not working
+  // };
 
   return (
     <div className="px-4">
@@ -17,7 +17,7 @@ const Header = () => {
               tabIndex={0}
               role="button"
               className="btn btn-ghost lg:hidden"
-              onClick={toggleMenu} // Toggle menu on click
+              // onClick={toggleMenu}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,8 @@ const Header = () => {
               </svg>
             </div>
             {/* Conditional rendering of dropdown based on isOpen state */}
-            {isOpen && (
+            {/* {isOpen && ( */}
+            {(  
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
@@ -55,12 +56,12 @@ const Header = () => {
                   </ul>
                 </li>
                 <li>
-                  <Link>Contact</Link>
+                  <Link to={"contact"}>Contact</Link>
                 </li>
               </ul>
             )}
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to={"/"} className="btn btn-ghost text-xl">Home</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -81,7 +82,7 @@ const Header = () => {
               </details>
             </li>
             <li>
-              <Link>Contact</Link>
+              <Link to={"contact"}>Contact</Link>
             </li>
           </ul>
         </div>

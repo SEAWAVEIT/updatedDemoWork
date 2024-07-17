@@ -11,6 +11,7 @@ import Main6 from "./components/Main/Hero06";
 import Main7 from "./components/Main/Hero07";
 import Main8 from "./components/Main/Hero08";
 import About from "./components/Pages/About";
+import Contact from "./components/Pages/Contact";
 import "./App.css";
 
 function Home() {
@@ -36,6 +37,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
