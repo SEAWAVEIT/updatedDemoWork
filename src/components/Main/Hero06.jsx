@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 function Hero06() {
 
-	const InnerDivStyle = {
-		paddingBottom: '10px',
+	// const InnerDivStyle = {
+	// 	paddingBottom: '10px',
 
-	};
+	// };
 
 	return (
 		<div className="Hero06 md:h-screen flex md:flex-row flex-col flex-start items-center bg-white  ">
 			<div className="md:w-[40%] ">
-				<div className="md:p-8 mt-20 md:text-start text-center">
+				<div className="md:p-8 md:mt-20 md:text-start text-center">
 					<h1 className="text-4xl md:text-6xl">Why choose us</h1>
 					<h1 className="text-4xl md:text-6xl">for your service</h1>
-					<div className="my-4 md:text-lg text-sm">
+					<div className="md:my-4 md:text-lg text-sm">
 						<p>Cursus congue tortor turpis faucibus </p>
 						<p>massa accumsan egestas habitant in diam</p>
 						<p>ollicitud ut placerat nascet</p>

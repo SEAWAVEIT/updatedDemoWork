@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero05() {
 	return (
-		<div className="Hero05 h-screen w-full flex justify-center items-center bg-white pt-[212px] md:pt- md:py-none  ">
+		<div className="Hero05 h-auto w-full flex justify-center items-center bg-white md:pt-[212px] pt-[142px] md:py-none  ">
 			<div className="flex items-center justify-center h-screen bg-white">
 				<div className="w-full max-w-6xl text-black p-6 rounded-lg shadow-xl">
 					<div className="carousel w-full">
