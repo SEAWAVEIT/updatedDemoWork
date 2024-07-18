@@ -49,14 +49,14 @@ function Contact() {
 	return (
 		<div
 			ref={EntirePageEffect}
-			className=" h-screen w-full  p-12"
+			className=" md:h-screen w-full  p-12"
 		>
 			<div>
-				<div class="grid grid-cols-3 gap-4 h-80">
-					<div class="col-span-1 row-span-2 flex-col flex pl-6 justify-center">
-						<div className="text-4xl font-bold ">
+				<div class="grid md:grid-cols-3 grid-flow-row gap-4 md:h-80">
+					<div class="col-span-1 row-span-2 flex-col flex md:pl-6 justify-center">
+						<div className="md:text-4xl md:font-bold text-center font-semibold text-3xl ">
 							<h1>Emergency</h1>
-							<h1 className="ml-4">Solutions</h1>
+							<h1 className="md:ml-4">Solutions</h1>
 							<h1>for Delivery</h1>
 						</div>
 						<div className="pl-6 pt-8">
@@ -67,7 +67,7 @@ function Contact() {
 							<p> Ullamcorper Molestie</p>
 						</div>
 					</div>
-					<div class=" col-span-1 row-span-2 flex items-center justify-center">
+					<div class=" md:px-1 md:py-1 py-8 col-span-1 row-span-2 flex items-center justify-center">
 						<div>
 							<img
 								ref={droneRef}
@@ -75,16 +75,16 @@ function Contact() {
 							/>
 						</div>
 					</div>
-					<div class="col-span-1 flex flex-col gap-4">
-						<div className="flex-1 flex items-center justify-center">
+					<div class="col-span-1 flex md:flex-col flex-row items-center md:pt-18 gap-4">
+						<div className=" flex-1 md:flex items-center order-2 justify-center">
 							<div
 								ref={circleRef}
-								className="h-[120px] w-[120px] -rotate-45 rounded-full bg-black text-white p-4 flex justify-center items-center"
+								className="md:h-[120px] md:w-[120px] h-[60px] w-[60px]  -rotate-45 rounded-full bg-black text-white md:p-4 p-12 flex justify-center items-center"
 							>
 								<p>Quote</p>
 							</div>
 						</div>
-						<div class="flex-1 flex flex-col gap-4 pt-20 align-bottom ">
+						<div class="flex-1 flex flex-col gap-4 pt-20 align-bottom order-3">
 							<div className="  text-start">
 								<li>Fastest Trait Times</li>
 								<li>Security and Protection</li>

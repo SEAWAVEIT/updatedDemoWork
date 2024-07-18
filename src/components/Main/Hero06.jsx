@@ -2,6 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Hero06() {
+
+	const InnerDivStyle = {
+		paddingBottom: '10px',
+
+
+	  };
+
 	return (
 		<div className="Hero06 h-screen flex flex-start items-center bg-white  ">
 			<div className="w-[40%] ">
@@ -43,40 +50,44 @@ function Hero06() {
 					</div>
 				</div>
 			</div>
-			<div className="w-[60%] ">
-				<div className="topSec flex flex-row  ">
-					<div className="flex">
-						<div className="w-1/3">
+			<div className="w-[60%] grid grid-cols-3 p-4 px-12">
+				<div className="topSec pt-24   ">
+					<div className="flex gap-4 mb-8" style={InnerDivStyle}>
+						<div className="w-16 ">
 							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009b0314aa349233739d_why%20choose.svg" alt="" /></div>
-						<div className="w-2/3">
-							<h1 className="text-2xl font-semibold pb-2">Online Support</h1>
+						
+						<div className="w-80 p-4 pt-8">
+							<h1 className="text-xl font-semibold">Online Support</h1>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
 						</div>
+						
 					</div>
-					<div className="flex ">
-						<div className="w-1/3">
+					<div className="CustomBorder-Sub"></div>
+					<div className="flex gap-1  my-4">
+						<div className="w-1/3 ">
 							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009b7d75415a8cb4c30a_why%20choose-3.svg" alt="" /></div>
-						<div className="w-2/3">
-							<h1 className="text-2xl font-semibold pb-2">Online Support</h1>
+						<div className="w-2/3 pt-8">
+							<h1 className="text-xl font-semibold ">Online Support</h1>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
 						</div>
 					</div>
 				</div>
-				<div className="CustomBorder-main text-center mx-6 my-12"></div>
-				<div className="bottomSec  flex flex-row ">
-					<div className="flex ">
-						<div className="w-1/3">
+				<div className="CustomBorder-main text-center  mx-auto my-auto "></div>
+				<div className="bottomSec pb-24 ">
+					<div className="flex gap-1  mb-8">
+						<div className="w-1/3 ">
 							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009b7d7541f38bb4c309_why%20choose-2.svg" alt="" /></div>
-						<div className="w-2/3">
-							<h1 className="text-2xl font-semibold pb-2">Online Support</h1>
+						<div className="w-2/3 pt-8">
+							<h1 className="text-xl font-semibold pb-2">Online Support</h1>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
 						</div>
 					</div>
-					<div className="flex ">
-						<div className="w-1/3">
+					<div className="CustomBorder-Sub"></div>
+					<div className="flex gap-1 my-4">
+						<div className="w-1/3 ">
 							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009bdff26411a67191d3_why%20choose-1.svg" alt="" /></div>
-						<div className="w-2/3">
-							<h1 className="text-2xl font-semibold pb-2">Online Support</h1>
+						<div className="w-2/3 pt-8">
+							<h1 className="text-xl font-semibold ">Online Support</h1>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
 						</div>
 					</div>

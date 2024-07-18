@@ -152,6 +152,7 @@ body {
 .active {
 	opacity: 1;
 	animation: slidein 0.5s ease forwards;
+	
 }
 
 @keyframes slidein {
@@ -167,11 +168,20 @@ body {
 
 /* Hero 06 */
 .CustomBorder-main{
-	height: 1px ;
-	width: 622px;
-	background-color: black;
+	height: 24rem ;
+	width: 0.1rem;
+	background-color: rgba(0, 0, 0, 0.438);
 }
 
+.CustomBorder-Sub{
+	height: 1px ;
+	width: 222px;
+	background-color: rgba(0, 0, 0, 0.438);
+}
+
+.serviceText{
+	margin-left: 34px;
+}
 
 /* ================================= */
 /* .btn {

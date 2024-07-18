@@ -18,7 +18,7 @@ function Hero01() {
     });
 
     return (
-        <div ref={MainHeadingEffect} className=" Hero01 w-full px-4 md:px-8 lg:px-16">
+        <div ref={MainHeadingEffect} className=" Hero01 z-0 w-full px-4 md:px-8 lg:px-16">
             <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-8 mb-4">
                 <h1>Full Sustainable</h1>
                 <h1>Cargo Solution</h1>

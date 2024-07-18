@@ -1,23 +1,50 @@
-import React, { useState } from "react";
-import {Link} from "react-router-dom"
+import React, { useRef,useState,useEffect } from "react";
+import { Link } from "react-router-dom";
+import { gsap } from "gsap";
 
 const Header = () => {
-  // const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
 
-  // const toggleMenu = () => {
-  //   setIsOpen(!isOpen); // Toggle isOpen state not working
-  // };
+  const toggleMenu = () => {
+    setIsOpen((prevOpen) => !prevOpen);
+  };
+
+  const animateMenu = (open)=>{
+    const menu = menuRef.current
+    const tl = gsap.timeline({defaults:{ease:"power3.inOut"}})
+  
+    if(open){
+      tl.to(menu,{
+        duration:0.3,
+        height:198,
+        opacity:1,
+      })
+
+    }
+    else{
+      tl.to(menu,{
+        duration:0.3,
+        height:0,
+        opacity:0,
+      })
+    }
+  }
+
+  useEffect(()=>{
+    animateMenu(isOpen)
+  },[isOpen])
+
 
   return (
-    <div className="px-4">
+    <div className="px-4 z-2">
       <div className="navbar justify-between">
         <div className="navbar-start">
           <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
+            <button
               className="btn btn-ghost lg:hidden"
-              // onClick={toggleMenu}
+              onClick={toggleMenu}
+              aria-label="Toggle Menu"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,19 +60,17 @@ const Header = () => {
                   d="M4 6h16M4 12h8m-8 6h16"
                 />
               </svg>
-            </div>
-            {/* Conditional rendering of dropdown based on isOpen state */}
-            {/* {isOpen && ( */}
-            {(  
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            </button>
+            {isOpen && (
+              <ul className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                ref={menuRef}
+                style={{height:0,opacity:0,overflow:"hidden"}}
               >
                 <li>
-                  <Link to={"about"} >About</Link>
+                  <Link to={"about"}>About</Link>
                 </li>
                 <li>
-                  <Link>Services</Link>
+                  <span>Services</span>
                   <ul className="p-2">
                     <li>
                       <Link>Submenu 1</Link>
@@ -61,7 +86,9 @@ const Header = () => {
               </ul>
             )}
           </div>
-          <Link to={"/"} className="btn btn-ghost text-xl">Home</Link>
+          <Link to={"/"} className="btn btn-ghost text-xl">
+            Home
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
