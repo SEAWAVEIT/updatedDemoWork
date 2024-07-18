@@ -79,9 +79,9 @@ function Contact() {
 						<div className=" flex-1 md:flex items-center order-2 justify-center">
 							<div
 								ref={circleRef}
-								className="md:h-[120px] md:w-[120px] h-[60px] w-[60px]  -rotate-45 rounded-full bg-black text-white md:p-4 p-12 flex justify-center items-center"
+								className="md:h-[120px] md:w-[120px] h-[60px] w-[60px]  -rotate-45 rounded-full bg-black text-white md:p-4   flex justify-center items-center"
 							>
-								<p>Quote</p>
+								<p className="md:text-2xl text-[12px]">Quote</p>
 							</div>
 						</div>
 						<div class="flex-1 flex flex-col gap-4 pt-20 align-bottom order-3">
