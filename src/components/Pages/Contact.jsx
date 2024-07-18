@@ -49,7 +49,7 @@ function Contact() {
 	return (
 		<div
 			ref={EntirePageEffect}
-			className=" md:h-screen w-full  p-12"
+			className="bg-white md:h-screen w-full  p-12"
 		>
 			<div>
 				<div class="grid md:grid-cols-3 grid-flow-row gap-4 md:h-80">
@@ -79,7 +79,7 @@ function Contact() {
 						<div className=" flex-1 md:flex items-center order-2 justify-center">
 							<div
 								ref={circleRef}
-								className="md:h-[120px] md:w-[120px] h-[60px] w-[60px]  -rotate-45 rounded-full bg-black text-white md:p-4   flex justify-center items-center"
+								className="md:h-[120px] md:w-[120px] h-[60px] w-[60px]  -rotate-45 rounded-full bg-black text-white md:p-4  flex justify-center items-center"
 							>
 								<p className="md:text-2xl text-[12px]">Quote</p>
 							</div>
