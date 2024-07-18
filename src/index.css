@@ -168,15 +168,19 @@ body {
 
 /* Hero 06 */
 .CustomBorder-main{
-	height: 24rem ;
+	height: 20rem ;
 	width: 0.1rem;
-	background-color: rgba(0, 0, 0, 0.438);
+	background-color: rgba(104, 104, 104, 0.233);
+
+	/* margin: auto; */
 }
+
+
 
 .CustomBorder-Sub{
 	height: 1px ;
 	width: 222px;
-	background-color: rgba(0, 0, 0, 0.438);
+	background-color: rgba(104, 104, 104, 0.233);
 }
 
 .serviceText{

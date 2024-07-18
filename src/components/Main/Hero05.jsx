@@ -4,7 +4,7 @@ function Hero05() {
 	return (
 		<div className="Hero05 h-screen w-full flex justify-center items-center bg-white pt-[212px] md:pt- md:py-none  ">
 			<div className="flex items-center justify-center h-screen bg-white">
-				<div className="w-full max-w-6xl bg-blue-400 p-6 rounded-lg shadow-xl">
+				<div className="w-full max-w-6xl text-black p-6 rounded-lg shadow-xl">
 					<div className="carousel w-full">
 						<div
 							id="item1"
@@ -14,7 +14,7 @@ function Hero05() {
 								src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
 								className="md:w-1/3 md:h-auto h-[198px] w-full rounded-md "
 							/>
-							<div className="md:w-2/3 w-full mt-4 md:p-8 text-white md:text-4xl text-lg">
+							<div className="md:w-2/3 w-full mt-4 md:p-8 text-black md:text-4xl text-lg">
 								In the Indian customs system, the Special
 								Valuation Branch (SVB) investigates the
 								valuation of goods when they are imported
