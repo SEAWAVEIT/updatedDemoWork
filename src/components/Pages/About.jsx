@@ -54,9 +54,9 @@ function About() {
   });
 
   return (
-    <div className='md:h-screen md:p-2 p-8 w-full bg-white text-black '>
+    <div className='md:h-screen md:p-2 p-8 w-full bg-white text-black  '>
       <div className='md:flex md:flex-col'>
-        <div className='flex flex-col md:flex-row items-center justify-between m-auto py-6'>
+        <div className='section1 flex flex-col md:flex-row items-center justify-between m-auto md:py-6 py-2'>
           <div ref={HeadingEffect} className='md:text-6xl text-2xl font-semibold'>
             <h1 className='text-center my-2'>Safe reliable</h1>
             <h1 className='text-center '>Logistic Solutions</h1>
@@ -65,9 +65,9 @@ function About() {
             <img ref={truck1Ref} src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f1f1dde1e45ab1ef4ad094_mini%20track.png" alt="" />
           </div>
         </div>
-        <div className='md:flex md:flex-row m-auto py-6'>
-          <div className='md:flex md:flex-row'>
-            <div  className='md:order-1 order-2 flex flex-row w-1/2'>
+        <div className='section2 flex flex-col md:flex-row items-center justify-between m-auto py-6'>
+          <div className='flex md:flex-row flex-col'>
+            <div  className=' flex flex-row md:order-1 order-2'>
               <div ref={personRef} className='pr-8 pt-6'>
                 <img 
                  src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2f5ea222b9b7f59eacfc7_logi%20man.png" alt="" />
@@ -78,14 +78,13 @@ function About() {
                   src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f1f1de63ea2217e333ebca_track.png"
                   alt=""
                 />
-
               </div>
             </div>
-            <div ref={ParaEffect} className='md:order-2 order-12 w-1/2 '> {/* //order changing issue  */}
+            <div ref={ParaEffect} className='md:order-2 order-1 mb-8 text-center  md:mb-0'>
               <p>Road transportation has a crucial role. </p>
               <p>coordinated transportation in the </p>
               <p>countries of origin destination makes all the difference.</p>
-              <button className="relative inline-block px-6 py-3 font-medium group">
+              <button className="relative inline-block text-center my-2 md:my-0 px-6 py-3 font-medium group">
                 <Link
                   to="#"
                   className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"
