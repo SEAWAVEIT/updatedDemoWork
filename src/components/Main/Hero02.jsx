@@ -1,9 +1,9 @@
 import React from "react";
-// import "../../stylesheet"
+import "../../index.css"
 
 function Hero02() {
 	return (
-		<div className="Hero02">
+		<div className="Hero02 h-screen bg-pink ">
 			<h2 className="text-4xl text-center md:mb-12 mb-8">Over 17,000 Clients All Over The World</h2>
 			<div className="w-full flex overflow-hidden space-x-16 group pb-[18px] pt-none">
 				<div className=" flex space-x-16  animate-loop-scroll group-hover:paused">

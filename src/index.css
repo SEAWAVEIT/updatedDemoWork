@@ -21,7 +21,6 @@ body {
 	color: black;
 	font-family: "Montserrat", sans-serif;
 	/* font-family: sans-serif; */
-
 }
 
 
@@ -34,11 +33,11 @@ body {
 
 
 /* scroll animation */
-/* @layer utilities {
+@layer utilities {
 	.paused {
 		animation-play-state: paused;
 	}
-} */
+}
 @layer utilities {
 	.paused {
 		animation-play-state: paused;
