@@ -17,7 +17,7 @@ const Header = () => {
     if(open){
       tl.to(menu,{
         duration:0.3,
-        height:198,
+        height:178,
         opacity:1,
       })
 
@@ -62,7 +62,7 @@ const Header = () => {
               </svg>
             </button>
             {isOpen && (
-              <ul className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              <ul className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow bg-black text-white"
                 ref={menuRef}
                 style={{height:0,opacity:0,overflow:"hidden"}}
               >
