@@ -12,6 +12,7 @@
 	box-sizing: border-box;
 }
 
+/* =========================================================================================================== */
 
 html,
 body {
@@ -28,41 +29,8 @@ body {
 	height: 100%;
 	width: 100%;
 	overflow-x: hidden;
-	/* Prevent horizontal scrolling */
 }
 
-
-/* scroll animation */
-@layer utilities {
-	.paused {
-		animation-play-state: paused;
-	}
-}
-@layer utilities {
-	.paused {
-		animation-play-state: paused;
-	}
-}
-
-/* Add this to make the images scroll continuously */
-.Hero02{
-	display: none;
-}
-.Hero02>div {
-	flex-wrap: nowrap;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-}
-
-.Hero02 img {
-	width: 100%;
-	/* adjust the width to your liking */
-	height: 100px;
-	/* adjust the height to your liking */
-	object-fit: cover;
-	margin: 10px;
-	scroll-snap-align: start;
-}
 
 /* .Hero01,
 .Hero02,
@@ -72,19 +40,85 @@ body {
 	width: 100%;
 } */
 
-/* Faq */
-.faq-details {
-	transition: all 0.45s ease;
+/* scroll animation */
+@layer utilities {
+	.paused {
+		animation-play-state: paused;
+	}
 }
 
-.faq-details[open] {
-	padding-bottom: 1rem;
-	/* Adjust as needed */
-	color: white;
-	background-color: black;
-	transition: all 0.45s ease;
+@layer utilities {
+	.paused {
+		animation-play-state: paused;
+	}
 }
 
+/* =========================================================================================================== */
+/* previous code */
+/* Add this to make the images scroll continuously */
+/* .Hero02{
+	display: none;
+}
+.Hero02>div {
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+} */
+
+/* .Hero02 img { */
+/* width: 100%; */
+/* adjust the width to your liking */
+/* height: 100px; */
+/* adjust the height to your liking */
+/* object-fit: cover; */
+/* margin: 10px;
+	scroll-snap-align: start;
+} */
+
+
+
+
+
+/* =========================================================================================================== */
+/* new hero02 code */
+.scrollContainer {
+	height: 30%;
+
+	width: 100%;
+  
+	position: relative;
+}
+
+#container {
+	height: 350px;
+	position: relative;
+	overflow: hidden;
+}
+
+.photobanner {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: bannermove 10s linear infinite;
+}
+
+.photobanner img {
+	margin: 0 0.5em
+}
+
+@keyframes bannermove {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-50%, 0);
+	}
+}
+
+/* =========================================================================================================== */
 
 
 /* Hero03.css */
@@ -95,7 +129,7 @@ body {
 		transform: translateX(0);
 		opacity: 1;
 	}
-
+	
 	100% {
 		transform: translateX(-100%);
 		opacity: 0;
@@ -107,7 +141,7 @@ body {
 		transform: translateX(100%);
 		opacity: 0;
 	}
-
+	
 	100% {
 		transform: translateX(0);
 		opacity: 1;
@@ -151,7 +185,7 @@ body {
 .active {
 	opacity: 1;
 	animation: slidein 0.5s ease forwards;
-	
+
 }
 
 @keyframes slidein {
@@ -164,10 +198,11 @@ body {
 	}
 }
 
+/* =========================================================================================================== */
 
 /* Hero 06 */
-.CustomBorder-main{
-	height: 20rem ;
+.CustomBorder-main {
+	height: 20rem;
 	width: 0.1rem;
 	background-color: rgba(104, 104, 104, 0.233);
 
@@ -176,13 +211,13 @@ body {
 
 
 
-.CustomBorder-Sub{
-	height: 1px ;
+.CustomBorder-Sub {
+	height: 1px;
 	width: 222px;
 	background-color: rgba(104, 104, 104, 0.233);
 }
 
-.serviceText{
+.serviceText {
 	margin-left: 34px;
 }
 
@@ -198,18 +233,35 @@ body {
 	outline: none;
 	border-radius: 4px;
 	transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
 	background-color: #0056b3;
-  }
-   */
+}
+*/
 
 
 
 
 /* rolling button on contact page */
 /* customm Button */
+
+/* =========================================================================================================== */
+
+/* Faq */
+.faq-details {
+	transition: all 0.45s ease;
+}
+
+.faq-details[open] {
+	padding-bottom: 1rem;
+	/* Adjust as needed */
+	color: white;
+	background-color: black;
+	transition: all 0.45s ease;
+}
+
+/* =========================================================================================================== */
 
 /* 12 */
 .btn-12 {

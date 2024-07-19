@@ -34,7 +34,7 @@ function Hero04() {
   return (
     <div
       // ref={sectionRef}
-      className="Hero04  opacity-1 h-screen md:pt-[128px] pt-[839px] bg-white p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 flex flex-col justify-center items-center transition-opacity duration-500"
+      className="Hero04  opacity-1 h-auto md:pt-[128px] pt-[839px] bg-white p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 flex flex-col justify-center items-center transition-opacity duration-500"
     >
       <div className="text-start flex flex-row md:flex-col md:justify-center">
         <div>
