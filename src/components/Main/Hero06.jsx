@@ -22,7 +22,7 @@ function Hero06() {
 					<div>
 						<Link
 							to="#"
-							className="relative inline-block md:px-4 md:py-2  px-2 py-1 font-medium group"
+							className="relative inline-block md:px-4 md:py-2 m-8 px-2 py-1 font-medium group"
 						>
 							<span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform -translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
 							<span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-white"></span>
