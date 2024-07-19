@@ -74,7 +74,7 @@ function About() {
               </div>
               <div ref={truck2Ref}>
                 <img
-                  className='md:h-96 h-[250px]'
+                  className='md:h-96 h-54'
                   src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f1f1de63ea2217e333ebca_track.png"
                   alt=""
                 />
