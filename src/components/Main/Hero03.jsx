@@ -87,7 +87,7 @@ function Hero03() {
         <h1 className="text-3xl sm:text-5xl">And Reliable Cargo Solutions</h1>
       </div>
       <div className="cards flex flex-wrap justify-center gap-8 sm:gap-12">
-        <div className="card border-2 border-slate-800 md:w-1/3 w-80 shadow-xl m-8">
+        <div className="card border-2 border-slate-800 md:w-1/4 w-80 px-8 shadow-xl m-8">
           <figure
             // onMouseOver={animateTruck}
             onMouseEnter={animateTruck}
@@ -123,7 +123,7 @@ function Hero03() {
             </div>
           </div>
         </div>
-        <div className="card border-2 border-slate-800 md:w-1/3 w-80 shadow-xl m-8">
+        <div className="card border-2 border-slate-800 md:w-1/4 w-80 px-8 shadow-xl m-8">
           <figure
             onMouseEnter={animateShip}
             // onMouseLeave={animateShip}
@@ -159,7 +159,7 @@ function Hero03() {
             </div>
           </div>
         </div>
-        <div className="card border-2 border-slate-800 md:w-1/3 w-80 shadow-xl m-8">
+        <div className="card border-2 border-slate-800 md:w-1/4 w-80 px-8 shadow-xl m-8">
           <figure
             // onMouseLeave={animatePlane}
             onMouseEnter={animatePlane}
