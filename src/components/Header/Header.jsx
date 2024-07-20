@@ -73,10 +73,10 @@ const Header = () => {
                   <span>Services</span>
                   <ul className="p-2">
                     <li>
-                      <Link>Submenu 1</Link>
+                    <Link to={"getafreequote"}>Get A Free Quote</Link>
                     </li>
                     <li>
-                      <Link>Submenu 2</Link>
+                    <Link>Get Brochure</Link>
                     </li>
                   </ul>
                 </li>
@@ -100,10 +100,10 @@ const Header = () => {
                 <summary>Services</summary>
                 <ul className="p-2">
                   <li>
-                    <Link>Submenu 1</Link>
+                  <Link to={"getafreequote"}>Get A Free Quote</Link>
                   </li>
                   <li>
-                    <Link>Submenu 2</Link>
+                    <Link>Get Brochure</Link>
                   </li>
                 </ul>
               </details>

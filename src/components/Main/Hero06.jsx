@@ -9,12 +9,12 @@ function Hero06() {
 	// };
 
 	return (
-		<div className="Hero06 md:h-screen flex md:flex-row flex-col flex-start items-center bg-white  ">
+		<div className="Hero06 md:h-screen h-auto my-2 md:py-none flex md:flex-row flex-col flex-start items-center bg-white  ">
 			<div className="md:w-[40%] ">
-				<div className="md:p-8 md:mt-20 md:text-start text-center">
+				<div className="md:p-8 md:my-20 md:text-start text-center ">
 					<h1 className="text-4xl md:text-6xl">Why choose us</h1>
 					<h1 className="text-4xl md:text-6xl">for your service</h1>
-					<div className="md:my-4 md:text-lg text-sm">
+					<div className="my-4 md:text-lg text-sm">
 						<p>Cursus congue tortor turpis faucibus </p>
 						<p>massa accumsan egestas habitant in diam</p>
 						<p>ollicitud ut placerat nascet</p>
@@ -49,7 +49,7 @@ function Hero06() {
 					</div>
 				</div>
 			</div>
-			<div className="md:w-[60%] flex md:flex-row flex-col p-4 px-8">
+			<div className="md:w-[60%] flex md:flex-row flex-col md:p-4 p-2 px-8">
 				<div className="topSec md:pt-24 mt-12   ">
 					<div className="flex gap-1  my-4">
 						<div className="w-1/3 ">

@@ -10,6 +10,7 @@ import Main5 from "./components/Main/Hero05";
 import Main6 from "./components/Main/Hero06";
 import Main7 from "./components/Main/Hero07";
 import Main8 from "./components/Main/Hero08";
+import Modal from "./components/Modal/Modal";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import "./App.css";
@@ -38,6 +39,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/getafreequote" element={<Modal />} />
         </Routes>
         <Footer />
       </div>

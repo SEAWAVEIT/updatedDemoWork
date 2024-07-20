@@ -47,12 +47,6 @@ body {
 	}
 }
 
-@layer utilities {
-	.paused {
-		animation-play-state: paused;
-	}
-}
-
 /* =========================================================================================================== */
 /* previous code */
 /* Add this to make the images scroll continuously */

@@ -81,7 +81,7 @@ function Hero03() {
   };
 
   return (
-    <div className="Hero03 bg-white pt-[429px] sm:p-12  flex flex-col justify-center items-center">
+    <div className="Hero03 bg-white h-auto py-1 flex flex-col justify-center items-center">
       <div className="text-center mb-8">
         <h1 className="text-3xl sm:text-5xl">We Provide Safe </h1>
         <h1 className="text-3xl sm:text-5xl">And Reliable Cargo Solutions</h1>
