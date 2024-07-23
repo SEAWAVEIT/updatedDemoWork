@@ -54,7 +54,7 @@ function About() {
   });
 
   return (
-    <div className='md:h-screen md:p-2 p-8 w-full bg-white text-black  '>
+    <div className='md:h-auto md:p-2 p-8 w-full bg-white text-black  '>
       <div className='md:flex md:flex-col'>
         <div className='section1 flex flex-col md:flex-row items-center justify-between m-auto md:py-6 py-2'>
           <div ref={HeadingEffect} className='md:text-6xl text-2xl font-semibold'>
@@ -67,10 +67,10 @@ function About() {
         </div>
         <div className='section2 flex flex-col md:flex-row items-center justify-between m-auto py-6'>
           <div className='flex md:flex-row flex-col'>
-            <div  className=' flex flex-row md:order-1 order-2'>
+            <div className=' flex flex-row md:order-1 order-2'>
               <div ref={personRef} className='pr-8 pt-6'>
-                <img 
-                 src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2f5ea222b9b7f59eacfc7_logi%20man.png" alt="" />
+                <img
+                  src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2f5ea222b9b7f59eacfc7_logi%20man.png" alt="" />
               </div>
               <div ref={truck2Ref}>
                 <img

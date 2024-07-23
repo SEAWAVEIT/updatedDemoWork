@@ -13,6 +13,7 @@ import Main8 from "./components/Main/Hero08";
 import Main9 from "./components/Main/Hero09";
 import FreeQuote from "./components/Pages/FreeQuote";
 import CustomClearance from "./components/Pages/CustomClearance";
+import FreightForwarding from "./components/Pages/FreightForwarding";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import "./App.css";
@@ -43,6 +44,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/getafreequote" element={<FreeQuote />} />
         <Route path="/customclearance" element={<CustomClearance />} />
+        <Route path="/freightForwarding" element={<FreightForwarding />} />
       </Routes>
       <Footer />
     </div>

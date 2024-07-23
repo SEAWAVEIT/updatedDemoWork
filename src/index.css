@@ -43,21 +43,22 @@ body {
 /* scroll animation */
 @keyframes scroll {
 	0% {
-	  transform: translateX(0);
+		transform: translateX(0);
 	}
+
 	100% {
-	  transform: translateX(-100%);
+		transform: translateX(-100%);
 	}
-  }
-  
-  .animate-loop-scroll {
+}
+
+.animate-loop-scroll {
 	animation: scroll 20s linear infinite;
-  }
-  
-  .group:hover .animate-loop-scroll {
+}
+
+.group:hover .animate-loop-scroll {
 	animation-play-state: paused;
-  }
-  
+}
+
 /* =========================================================================================================== */
 /* previous code */
 /* Add this to make the images scroll continuously */
@@ -90,7 +91,7 @@ body {
 	height: 30%;
 
 	width: 100%;
-  
+
 	position: relative;
 }
 
@@ -258,13 +259,11 @@ body {
 /* Hero07 */
 
 .GradientText {
-	background: linear-gradient(
-		to right,
-		#7953cd 20%,
-		#00affa 30%,
-		#0190cd 70%,
-		#764ada 80%
-	);
+	background: linear-gradient(to right,
+			#7953cd 20%,
+			#00affa 30%,
+			#0190cd 70%,
+			#764ada 80%);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -273,10 +272,17 @@ body {
 	animation: textShine 5s ease-in-out infinite alternate;
 }
 
+.GradientText2 {
+	font-size: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
 @keyframes textShine {
 	0% {
 		background-position: 0% 50%;
 	}
+
 	100% {
 		background-position: 100% 50%;
 	}
@@ -291,6 +297,17 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.lino {
+	height: 4px;
+	width: 90px;
+	background: linear-gradient(to right, #f32170,
+			#ff6b08, #cf23cf, #eedd44);
+	-webkit-text-fill-color: transparent;
+	/* -webkit-background-clip: text; */
+	background-size: 500% auto;
+	animation: textShine 5s ease-in-out infinite alternate;
 }
 
 .CustomLine::before {
@@ -313,6 +330,12 @@ body {
 		left: 0;
 	}
 }
+
+/* customcheck
+ .check:hover {
+	color: green;
+} */
+
 /* =========================================================================================================== */
 
 /* Faq */
@@ -326,7 +349,8 @@ body {
 	color: white;
 	background-color: black;
 	transition: all 0.45s ease;
-	.question{
+
+	.question {
 		color: rgba(179, 179, 179, 0.37);
 	}
 }
