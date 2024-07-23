@@ -1,36 +1,47 @@
-import React from 'react'
+import React from 'react';
+import logo1 from '../../assets/logos/1.webp';
+import logo2 from '../../assets/logos/2.webp';
+import logo3 from '../../assets/logos/3.webp';
+import logo4 from '../../assets/logos/4.webp';
+import logo5 from '../../assets/logos/5.webp';
+import logo6 from '../../assets/logos/6.webp';
+import logo7 from '../../assets/logos/7.webp';
+import logo8 from '../../assets/logos/8.webp';
+import logo9 from '../../assets/logos/9.webp';
+import './../../index.css'; // Import your custom CSS for animations
+
+const logos = [
+  { id: 1, src: logo1, alt: 'Image 1' },
+  { id: 2, src: logo2, alt: 'Image 2' },
+  { id: 3, src: logo3, alt: 'Image 3' },
+  { id: 4, src: logo4, alt: 'Image 4' },
+  { id: 5, src: logo5, alt: 'Image 5' },
+  { id: 6, src: logo6, alt: 'Image 6' },
+  { id: 7, src: logo7, alt: 'Image 7' },
+  { id: 8, src: logo8, alt: 'Image 8' },
+  { id: 9, src: logo9, alt: 'Image 9' },
+];
 
 function Hero02() {
-	return (
-		<div className='bg-white h-auto ms:py-8 py-20 px-8'>
-			<div className="flex overflow-hidden space-x-16 group">
-				<div className="flex space-x-16 animate-loop-scroll group-hover:paused">
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8ee9f161-df19-4fa7-a2a6-edf9acf0e0d6?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 1" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/80480f8a-69ad-4c30-88ba-f4e7ee08fc51?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 2" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/140d376c-13f2-4823-b397-b3de733bf560?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 3" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ae217f1-b695-4661-bd3d-6440eebc2c5c?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 4" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/67017079-51e1-4245-9bf1-b5957eb66c74?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 5" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/515313ac-7ec9-4c6e-95db-80dac2f8b960?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 6" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c513fc32-3ab9-4cca-911e-0b2642ac7206?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 7" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5731a5a7-689f-49ae-abf1-6e6dc00c2043?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 8" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cb51d286-530f-42be-9e91-9c850522f127?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 9" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/44ba8437-f6fd-4a51-bfd3-262d7528f7a4?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 10" />
-				</div>
-				<div className="flex space-x-16 animate-loop-scroll group-hover:paused" aria-hidden="true">
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8ee9f161-df19-4fa7-a2a6-edf9acf0e0d6?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 1" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/80480f8a-69ad-4c30-88ba-f4e7ee08fc51?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 2" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/140d376c-13f2-4823-b397-b3de733bf560?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 3" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ae217f1-b695-4661-bd3d-6440eebc2c5c?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 4" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/67017079-51e1-4245-9bf1-b5957eb66c74?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 5" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/515313ac-7ec9-4c6e-95db-80dac2f8b960?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 6" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c513fc32-3ab9-4cca-911e-0b2642ac7206?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 7" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5731a5a7-689f-49ae-abf1-6e6dc00c2043?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 8" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cb51d286-530f-42be-9e91-9c850522f127?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 9" />
-					<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/44ba8437-f6fd-4a51-bfd3-262d7528f7a4?apiKey=7e8b177c7c374d8abaf3aebf27f1c17d&" className="max-w-none" alt="Image 10" />
-				</div>
-			</div>
-		</div>
-	)
+  return (
+    <div className='bg-white h-auto py-20'>
+      <div className="flex overflow-hidden space-x-16 group">
+        {/* First set of logos */}
+        <div className="flex space-x-16 animate-loop-scroll group-hover:paused">
+          {logos.map((logo) => (
+            <img key={logo.id} loading="lazy" src={logo.src} className="h-28" alt={logo.alt} />
+          ))}
+        </div>
+        
+        {/* Second set of logos for infinite loop */}
+        {/* <div className="flex space-x-16 animate-loop-scroll group-hover:paused">
+          {logos.map((logo) => (
+            <img key={logo.id} loading="lazy" src={logo.src} className="h-28" alt={logo.alt} />
+          ))}
+        </div> */}
+      </div>
+    </div>
+  );
 }
 
-export default Hero02
+export default Hero02;

@@ -29,20 +29,6 @@ function Hero06() {
 							<span className="relative text-black group-hover:text-black">
 								<div className="flex items-center gap-2 p-2">
 									<p>Learn More</p>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										strokeWidth="1.5"
-										stroke="currentColor"
-										className="w-6 h-6"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											d="M5 15l7-7 7 7"
-										/>
-									</svg>
 								</div>
 							</span>
 						</Link>
@@ -71,7 +57,7 @@ function Hero06() {
 						</div>
 					</div>
 				</div>
-			
+
 				<div className="CustomBorder-main hidden md:block text-center mx-8   my-auto"></div>
 				<div className="CustomBorder-Sub  md:hidden mx-auto my-8"></div>
 

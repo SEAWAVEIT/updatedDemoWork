@@ -10,7 +10,9 @@ import Main5 from "./components/Main/Hero05";
 import Main6 from "./components/Main/Hero06";
 import Main7 from "./components/Main/Hero07";
 import Main8 from "./components/Main/Hero08";
-import Modal from "./components/Modal/Modal";
+import Main9 from "./components/Main/Hero09";
+import FreeQuote from "./components/Pages/FreeQuote";
+import CustomClearance from "./components/Pages/CustomClearance";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import "./App.css";
@@ -26,24 +28,24 @@ function Home() {
       <Main6 />
       <Main7 />
       <Main8 />
+      <Main9 />
     </div>
   );
 }
 
 function App() {
   return (
-   
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/getafreequote" element={<Modal />} />
-        </Routes>
-        <Footer />
-      </div>
-
+    <div className="App">
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/getafreequote" element={<FreeQuote />} />
+        <Route path="/customclearance" element={<CustomClearance />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

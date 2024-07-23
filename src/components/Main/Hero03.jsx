@@ -1,15 +1,22 @@
 import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
-import shipImage from "./../../assets/ship.png"
-import planeImage from "./../../assets/plan1.png"
-import truckImage from "./../../assets/truck.png"
+import shipImage from "./../../assets/editedship.png";
+import planeImage from "./../../assets/editedplane.png";
+import truckImage from "./../../assets/editedtruck.png";
 
 function Hero03() {
   const truckRef = useRef(null);
   const planeRef = useRef(null);
   const shipRef = useRef(null);
+  const buttonRef = useRef(null);
 
   const [hover, setHover] = useState(false);
+
+  const animateButton = () => {
+    gsap.to(buttonRef,{
+      rotation: 180 
+    })
+  }
 
   const animateTruck = () => {
     gsap.to(truckRef.current, {
@@ -104,8 +111,9 @@ function Hero03() {
           <div className="card-body text-center p-4">
             <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-2">Truck!</h2>
             <div className="card-actions justify-center">
-              <button className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full">
+              <button ref={buttonRef} className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full">
                 <svg
+                  onMouseEnter={animateButton}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
