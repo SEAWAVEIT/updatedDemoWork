@@ -12,7 +12,7 @@ function FreeQuote() {
 					alt=""
 				/>
 				<div className="relative flex justify-center items-center h-96">
-					<h1 className="Heading text-white text-6xl z-10">
+					<h1 className="Heading text-white md:text-6xl 4xl z-10">
 						Get A Free Quote
 					</h1>
 				</div>

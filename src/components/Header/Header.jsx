@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen((prevOpen) => !prevOpen);
@@ -17,23 +18,36 @@ const Header = () => {
     if (open) {
       tl.to(menu, {
         duration: 0.3,
-        height: 178,
+        height: "auto",
+        width: "auto",
         opacity: 1,
-        display: "block",
       });
     } else {
       tl.to(menu, {
         duration: 0.3,
         height: 0,
         opacity: 0,
-        display: "none",
       });
     }
   };
 
+
   useEffect(() => {
     animateMenu(isOpen);
   }, [isOpen]);
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="px-4 z-10 relative">
@@ -62,16 +76,16 @@ const Header = () => {
             </button>
             {isOpen && (
               <ul
-                className="menu menu-sm dropdown-content rounded-box absolute z-20 mt-3 w-52 p-2 shadow bg-black text-white"
+                className={`menu menu-sm dropdown-content rounded-box absolute z-20 mt-3 w-full md:w-80 p-2 shadow bg-black text-white ${isMobile ? "block" : "hidden"
+                  }`}
                 ref={menuRef}
-                style={{ height: 0, opacity: 0, overflow: "hidden" }}
               >
                 <li>
                   <Link to={"about"}>About</Link>
                 </li>
                 <li>
                   <span>Services</span>
-                  <ul className="p-2 bg-white text-black border-[1px] focus:shadow-[2px]">
+                  <ul className="p-2 bg-black text-white z-14 rounded-lg focus:shadow-[2px]">
                     <li>
                       <Link to={"customclearance"}>Custom Clearance</Link>
                     </li>
@@ -79,13 +93,13 @@ const Header = () => {
                       <Link to={"freightforwarding"}>Freight Forwarding</Link>
                     </li>
                     <li>
-                      <Link>Land Freight</Link>
+                      <Link to={"landfreight"}>Land Freight</Link>
                     </li>
                     <li>
-                      <Link>Warehousing</Link>
+                      <Link to={"warehousing"}>Warehousing</Link>
                     </li>
                     <li>
-                      <Link>Logistics Design</Link>
+                      <Link to={"logisticsdesign"}>Logistics Design</Link>
                     </li>
                   </ul>
                 </li>
