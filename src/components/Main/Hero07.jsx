@@ -10,7 +10,7 @@ function Hero07() {
     <div className="Hero07 w-full bg-white text-black p-4 md:p-8">
       <div className="flex flex-col items-center gap-4">
         <h1 className="GradientText text-4xl text-center">Services</h1>
-        <p className="text-center">
+        <p className="text-center my-4">
           OUR COMMITMENT IS TO FIND THE BEST SOLUTION FOR OUR CLIENTS
         </p>
       </div>
@@ -24,7 +24,7 @@ function Hero07() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="MediumVioletRed"
-              className="h-24 w-40"
+              className="md:h-28 h-20 w-40"
             >
               <path
                 strokeLinecap="round"
@@ -34,7 +34,7 @@ function Hero07() {
             </svg>
           </div>
           <div className="flex flex-col flex-grow float-end">
-            <h2 className="text-xl my-2 text-center">Custom Clearance</h2>
+            <h2 className="text-xl text-center">Custom Clearance</h2>
             <p className="text-sm text-slate-700 text-center">
               As a customs clearance specialist, this division can handle
               general cargo as well as project cargo.
@@ -59,10 +59,10 @@ function Hero07() {
 
         <div className="card flex gap-4 overflow-hidden rounded-box place-items-center border-[1px] border-slate-200 p-4 md:p-8">
           <div className="flex-shrink-0">
-            <img src={calender} className="h-20 md:h-28" alt="" />
+            <img src={calender} className="h-16 md:h-24" alt="" />
           </div>
           <div className="flex flex-col flex-grow">
-            <h2 className="text-xl text-center">Logistics Design</h2>
+            <h2 className="text-xl md:mt-4 text-center">Logistics Design</h2>
             <p className="text-sm text-slate-700 text-center">
               Logistics cost directly relates to time, mode of transportation,
               route of transport, and selection of carriers for export and
