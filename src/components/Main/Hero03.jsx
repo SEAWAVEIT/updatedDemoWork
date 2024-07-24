@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
 import shipImage from "./../../assets/editedship.png";
 import planeImage from "./../../assets/editedplane.png";
@@ -8,15 +8,45 @@ function Hero03() {
   const truckRef = useRef(null);
   const planeRef = useRef(null);
   const shipRef = useRef(null);
-  const buttonRef = useRef(null);
+  const buttonRefTruck = useRef(null);
+  const buttonRefShip = useRef(null);
+  const buttonRefPlane = useRef(null);
 
-  const [hover, setHover] = useState(false);
+  const animateButtonOverTruck = () => {
+    gsap.to(buttonRefTruck.current, {
+      rotation: 90,
+    });
+  };
 
-  const animateButton = () => {
-    gsap.to(buttonRef,{
-      rotation: 180 
-    })
-  }
+  const animateButtonOutTruck = () => {
+    gsap.to(buttonRefTruck.current, {
+      rotation: 0,
+    });
+  };
+
+  const animateButtonOverShip = () => {
+    gsap.to(buttonRefShip.current, {
+      rotation: 90,
+    });
+  };
+
+  const animateButtonOutShip = () => {
+    gsap.to(buttonRefShip.current, {
+      rotation: 0,
+    });
+  };
+
+  const animateButtonOverPlane = () => {
+    gsap.to(buttonRefPlane.current, {
+      rotation: 90,
+    });
+  };
+
+  const animateButtonOutPlane = () => {
+    gsap.to(buttonRefPlane.current, {
+      rotation: 0,
+    });
+  };
 
   const animateTruck = () => {
     gsap.to(truckRef.current, {
@@ -96,7 +126,6 @@ function Hero03() {
       <div className="cards flex flex-wrap justify-center gap-8 sm:gap-12">
         <div className="card border-2 border-slate-800 md:w-1/4 w-80 px-8 shadow-xl m-8">
           <figure
-            // onMouseOver={animateTruck}
             onMouseEnter={animateTruck}
             className="relative overflow-hidden"
           >
@@ -111,9 +140,13 @@ function Hero03() {
           <div className="card-body text-center p-4">
             <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-2">Truck!</h2>
             <div className="card-actions justify-center">
-              <button ref={buttonRef} className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full">
+              <button
+                ref={buttonRefTruck}
+                onMouseEnter={animateButtonOverTruck}
+                onMouseLeave={animateButtonOutTruck}
+                className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full"
+              >
                 <svg
-                  onMouseEnter={animateButton}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -134,7 +167,6 @@ function Hero03() {
         <div className="card border-2 border-slate-800 md:w-1/4 w-80 px-8 shadow-xl m-8">
           <figure
             onMouseEnter={animateShip}
-            // onMouseLeave={animateShip}
             className="relative overflow-hidden"
           >
             <img
@@ -148,7 +180,12 @@ function Hero03() {
           <div className="card-body text-center p-4">
             <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-2">Ship!</h2>
             <div className="card-actions justify-center">
-              <button className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full">
+              <button
+                ref={buttonRefShip}
+                onMouseEnter={animateButtonOverShip}
+                onMouseLeave={animateButtonOutShip}
+                className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -169,9 +206,8 @@ function Hero03() {
         </div>
         <div className="card border-2 border-slate-800 md:w-1/4 w-80 px-8 shadow-xl m-8">
           <figure
-            // onMouseLeave={animatePlane}
             onMouseEnter={animatePlane}
-            className="relative overflow-hidden"
+            className="relative  overflow-hidden"
           >
             <img
               ref={planeRef}
@@ -183,8 +219,13 @@ function Hero03() {
           </figure>
           <div className="card-body text-center p-4">
             <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-2">Plane!</h2>
-            <div className="card-actions justify-center">
-              <button className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full">
+            <div className="card-actions justify-center mb-none">
+              <button
+                ref={buttonRefPlane}
+                onMouseEnter={animateButtonOverPlane}
+                onMouseLeave={animateButtonOutPlane}
+                className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

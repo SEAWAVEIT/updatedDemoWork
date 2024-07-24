@@ -15,7 +15,7 @@ function Hero07() {
         </p>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
-        {/* Custom Clearance Card */}
+
         <div className="card flex gap-4 overflow-hidden rounded-box place-items-center border-[1px] border-slate-200 p-4 md:p-8">
           <div className="flex-shrink-0">
             <svg
@@ -24,7 +24,7 @@ function Hero07() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="MediumVioletRed"
-              className="h-14 w-14"
+              className="h-24 w-40"
             >
               <path
                 strokeLinecap="round"
@@ -33,37 +33,37 @@ function Hero07() {
               />
             </svg>
           </div>
-          <div className="flex flex-col flex-grow">
-            <h2 className="text-xl my-2">Custom Clearance</h2>
-            <p className="text-sm text-slate-700">
+          <div className="flex flex-col flex-grow float-end">
+            <h2 className="text-xl my-2 text-center">Custom Clearance</h2>
+            <p className="text-sm text-slate-700 text-center">
               As a customs clearance specialist, this division can handle
               general cargo as well as project cargo.
             </p>
           </div>
         </div>
 
-        {/* Freight Forwarding Card */}
+
         <div className="card flex gap-4 overflow-hidden rounded-box place-items-center border-[1px] border-slate-200 p-4 md:p-8">
           <div className="flex-shrink-0">
             <img src={boat} className="h-20 md:h-28" alt="" />
           </div>
-          <div className="flex flex-col flex-grow">
-            <h2 className="text-xl">Freight Forwarding</h2>
-            <p className="text-sm text-slate-700">
+          <div className="flex flex-col flex-grow float-end">
+            <h2 className="text-xl text-center">Freight Forwarding</h2>
+            <p className="text-sm text-slate-700 text-center">
               It consists of strategic logistics planning and execution for the
               international movement of goods, on behalf of shippers.
             </p>
           </div>
         </div>
 
-        {/* Logistics Design Card */}
+
         <div className="card flex gap-4 overflow-hidden rounded-box place-items-center border-[1px] border-slate-200 p-4 md:p-8">
           <div className="flex-shrink-0">
-            <img src={calender} className="h-20 md:h-36" alt="" />
+            <img src={calender} className="h-20 md:h-28" alt="" />
           </div>
           <div className="flex flex-col flex-grow">
-            <h2 className="text-xl">Logistics Design</h2>
-            <p className="text-sm text-slate-700">
+            <h2 className="text-xl text-center">Logistics Design</h2>
+            <p className="text-sm text-slate-700 text-center">
               Logistics cost directly relates to time, mode of transportation,
               route of transport, and selection of carriers for export and
               import.
@@ -71,40 +71,40 @@ function Hero07() {
           </div>
         </div>
 
-        {/* Land Freight Card */}
+
         <div className="card flex gap-4 overflow-hidden rounded-box place-items-center border-[1px] border-slate-200 p-4 md:p-8">
           <div className="flex-shrink-0">
             <img src={truck} className="h-20 md:h-28" alt="" />
           </div>
           <div className="flex flex-col flex-grow">
-            <h2 className="text-xl">Land Freight</h2>
-            <p className="text-sm text-slate-700">
+            <h2 className="text-xl text-center">Land Freight</h2>
+            <p className="text-sm text-slate-700 text-center">
               Land Transport, Delivery, Distribution Carrier & Own Vehicles
             </p>
           </div>
         </div>
 
-        {/* Warehousing Card */}
+
         <div className="card flex gap-4 overflow-hidden rounded-box place-items-center border-[1px] border-slate-200 p-4 md:p-8">
           <div className="flex-shrink-0">
-            <img src={warehouse} className="h-20 md:h-24" alt="" />
+            <img src={warehouse} className="h-20 md:h-28" alt="" />
           </div>
-          <div className="flex flex-col flex-grow">
-            <h2 className="text-xl">Warehousing</h2>
-            <p className="text-sm text-slate-700">
+          <div className="flex flex-col flex-grow float-end">
+            <h2 className="text-xl text-center">Warehousing</h2>
+            <p className="text-sm text-slate-700 text-center">
               Own Godown & Storage Area
             </p>
           </div>
         </div>
 
-        {/* Exim Consultancy Card */}
+
         <div className="card flex gap-4 overflow-hidden rounded-box place-items-center border-[1px] border-slate-200 p-4 md:p-8">
           <div className="flex-shrink-0">
-            <img src={pad} className="h-20 md:h-32" alt="" />
+            <img src={pad} className="h-20 md:h-28" alt="" />
           </div>
-          <div className="flex flex-col flex-grow">
-            <h2 className="text-xl">Exim Consultancy</h2>
-            <p className="text-sm text-slate-700">
+          <div className="flex flex-col flex-grow float-end">
+            <h2 className="text-xl text-center">Exim Consultancy</h2>
+            <p className="text-sm text-slate-700 text-center">
               Consultancy related to Law, Act, Provisions, Circulars,
               Notifications, etc
             </p>

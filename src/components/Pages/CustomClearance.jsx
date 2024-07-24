@@ -40,9 +40,9 @@ function CustomClearance() {
 				</p>
 			</div>
 
-			<div>
+			<div className="px-4 md:px-20 mb-6 md:mb-">
 				<h2 className="text-xl md:text-2xl my-2 font-medium">Services</h2>
-				<div className="flex flex-col">
+				<div className="flex flex-col ">
 					<ServiceItem text="Custom Documentation" />
 					<ServiceItem text="Import & Export Documentation" />
 					<ServiceItem text="Examination of Import & Export Consignments" />
@@ -55,7 +55,7 @@ function CustomClearance() {
 }
 
 const ServiceItem = ({ text }) => (
-	<div className="flex items-center p-2">
+	<div className="flex items-center p-1">
 		<img src={check} alt="" className="h-5 md:h-6 mr-4" />
 		<p className="text-sm md:text-base">{text}</p>
 	</div>

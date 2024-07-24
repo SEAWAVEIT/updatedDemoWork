@@ -355,6 +355,27 @@ body {
 	}
 }
 
+@media only screen and (max-width:600px) {
+
+	.faq h2 {
+		font-size: 20px;
+	}
+
+	.accordian .content {
+		font-size: 14px;
+	}
+
+	.accordian li label {
+		padding: 10px;
+		font-size: 14px;
+	}
+
+	label::after {
+		font-size: 22px;
+	}
+
+}
+
 
 /* =========================================================================================================== */
 
