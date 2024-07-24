@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import WAVESVG from "../WaveSVG"
 import BackgroundSlide from "../Button";
 import plane from "../../assets/editedplane-2.png"
 
@@ -84,18 +85,38 @@ function Contact() {
 								<p className="md:text-2xl text-[12px]">Quote</p>
 							</div>
 						</div>
-						<div class="flex-1 flex flex-col gap-4 pt-20 align-bottom order-3">
-							<div className="  text-start">
-								<div>
-									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+						<div class="md:text-xl text-sm flex-1 flex flex-col gap-4 pt-20 align-bottom order-3">
+							<div className=" text-start list-none">
+								<div className="flex items-center gap-x-2 mb-2">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4 hover:border-sky-200 hover:shadow-[green]">
 										<path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
 									</svg>
+									<li>Fastest Trait Times</li>
 								</div>
 
-								<li>Fastest Trait Times</li>
-								<li>Security and Protection</li>
-								<li>Safe Packaging</li>
-								<li>Guaranteed Delivery</li>
+								<div className="flex items-center gap-2  mb-2">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4 hover:border-sky-200 hover:shadow-[green]">
+										<path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+									</svg>
+									<li className="text-nowrap">Security and Protection</li>
+								</div>
+
+								<div className="flex items-center gap-2  mb-2">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4 hover:border-sky-200 hover:shadow-[green]">
+										<path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+									</svg>
+									<li>Safe Packaging</li>
+								</div>
+
+								<div className="flex items-center gap-2  mb-2">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4 hover:border-sky-200 hover:shadow-[green]">
+										<path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+									</svg>
+									{/* <WAVESVG /> */}
+									<li>Guaranteed Delivery</li>
+								</div>
+
+
 							</div>
 							<div className="">
 								<button class="custom-btn btn-12">

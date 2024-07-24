@@ -54,10 +54,10 @@ function About() {
   });
 
   return (
-    <div className='md:h-auto md:p-2 p-8 w-full bg-white text-black  '>
+    <div className='md:h-auto md:p-none p-8 w-full bg-white text-black  '>
       <div className='md:flex md:flex-col'>
-        <div className='section1 flex flex-col md:flex-row items-center justify-between m-auto md:py-6 py-2'>
-          <div ref={HeadingEffect} className='md:text-6xl text-2xl font-semibold'>
+        <div className='section1 flex flex-col md:flex-row items-center justify-between m-auto md:py-2 py-2'>
+          <div ref={HeadingEffect} className='md:text-6xl text-2xl font-medium GradientText'>
             <h1 className='text-center my-2'>Safe reliable</h1>
             <h1 className='text-center '>Logistic Solutions</h1>
           </div>
@@ -81,10 +81,10 @@ function About() {
               </div>
             </div>
             <div ref={ParaEffect} className='md:order-2 order-1 mb-8 text-center  md:mb-0'>
-              <p>Road transportation has a crucial role. </p>
-              <p>coordinated transportation in the </p>
-              <p>countries of origin destination makes all the difference.</p>
-              <button className="relative inline-block text-center my-2 md:my-0 px-6 py-3 font-medium group">
+              <p className='md:w-96 w-80 text-center md:text-lg md:font-medium font-light'>Road transportation has a crucial role.
+                coordinated transportation in the
+                countries of origin destination makes all the difference.</p>
+              <button className="relative inline-block text-center my-2 md:my-2 px-6 py-3 font-medium group">
                 <Link
                   to="#"
                   className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"
