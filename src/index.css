@@ -341,6 +341,7 @@ body {
 /* Faq */
 .faq-details {
 	transition: all 0.45s ease;
+
 }
 
 .faq-details[open] {
@@ -372,6 +373,14 @@ body {
 
 	label::after {
 		font-size: 22px;
+	}
+
+
+	.faq-details[open] {
+
+		color: white;
+		background-color: black;
+		transition: all 0.45s ease;
 	}
 
 }
