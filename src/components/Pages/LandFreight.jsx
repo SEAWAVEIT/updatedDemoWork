@@ -14,7 +14,7 @@ function LandFreight() {
 				/>
 				<div className=" relative flex justify-center items-center h-60 md:h-96">
 					<div class="logo-container GradientText">
-						<h1 id="page-logo" className="text-white  md:font-medium font-semibold text-2xl md:text-6xl z-0 text-center">Land Freight</h1>
+						<h1 id="page-logo" className="text-white  md:font-medium font-semibold text-3xl md:text-6xl z-0 text-center">Land Freight</h1>
 					</div>
 				</div>
 
