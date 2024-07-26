@@ -14,7 +14,7 @@ function FreeQuote() {
 				<div className="relative flex justify-center items-center  h-60 md:h-96 ">
 					<h1 className="text-white text-2xl md:text-6xl z-0  text-center">
 						Get A {""}
-						<div className="waviy inline">
+						<div className="waviy inline text-3xl md:text-6xl ">
 							<span style={{ '--i': 1 }}	>F</span>
 							<span style={{ '--i': 2 }}	>r</span>
 							<span style={{ '--i': 3 }}	>e</span>

@@ -19,7 +19,7 @@ const Header = () => {
       tl.to(menu, {
         duration: 0.3,
         height: "auto",
-        width: "auto",
+        width: 8,
         opacity: 1,
       });
     } else {

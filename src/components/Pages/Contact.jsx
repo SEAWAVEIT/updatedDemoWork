@@ -55,10 +55,11 @@ function Contact() {
 			<div>
 				<div class="grid md:grid-cols-3 grid-flow-row gap-4 md:h-80">
 					<div class="col-span-1 row-span-2 flex-col flex md:pl-6 justify-center">
-						<div className="md:text-4xl md:font-bold text-center font-semibold text-3xl ">
-							<h1>Emergency</h1>
-							<h1 className="md:ml-4">Solutions</h1>
-							<h1>for Delivery</h1>
+						<div className="md:text-6xl md:font-bold text-center font-semibold text-4xl ">
+							<h1 class="title-word title-word-1">Emergency</h1>
+							<h1 class="title-word title-word-2">Solutions</h1>
+							<h1 class="title-word title-word-3">for</h1>
+							<h1 class="title-word title-word-4">Delivery</h1>
 						</div>
 						<div className="pl-6 pt-8">
 							<p>
