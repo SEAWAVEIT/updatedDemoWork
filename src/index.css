@@ -316,9 +316,28 @@ body {
  .check:hover {
 	color: green;
 } */
+.hover-effect {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	/* Adjust if needed */
+	padding: 4px;
+	/* Adjust if needed */
+}
 
-/* Main page Heading for Full Sustainable */
+.icon {
+	transition: transform 0.3s ease, fill 0.3s ease, filter 0.3s ease;
+}
 
+.hover-effect:hover .icon {
+	transform: rotate(16deg);
+	fill: green;
+	filter: drop-shadow(0 0 8px green);
+	/* Creates a glowing effect */
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
 .animate-charcter {
 	text-transform: uppercase;
 	background-image: linear-gradient(-225deg,

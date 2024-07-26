@@ -19,10 +19,10 @@ function Hero01() {
 
     return (
         <div ref={MainHeadingEffect} className=" Hero01 h-auto z-0 w-full px-4 md:px-8 ">
-            <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-8 mb-4">
+            <div className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl  font-medium text-center mt-8 mb-4">
 
-                <h1 className="animate-charcter py-2" data-text="Full Sustainable">Full Sustainable</h1>
-                <h1 className="GradientText py-4">Cargo Solution</h1>
+                <h1 className="animate-charcter whitespace-nowrap py-2" data-text="Full Sustainable">Full Sustainable</h1>
+                <h1 className="animate-charcter whitespace-nowrap py-4">Cargo Solution</h1>
             </div>
             <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-center mt-8 mb-4">
                 <p>
