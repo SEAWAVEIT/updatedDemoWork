@@ -31,11 +31,9 @@ const Header = () => {
     }
   };
 
-
   useEffect(() => {
     animateMenu(isOpen);
   }, [isOpen]);
-
 
   useEffect(() => {
     const handleResize = () => {

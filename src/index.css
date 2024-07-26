@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
-
 
 * {
 	margin: 0;
@@ -24,13 +22,11 @@ body {
 	/* font-family: sans-serif; */
 }
 
-
 .App {
 	height: 100%;
 	width: 100%;
 	overflow-x: hidden;
 }
-
 
 /* .Hero01,
 .Hero02,
@@ -81,13 +77,9 @@ body {
 	scroll-snap-align: start;
 } */
 
-
-
-
-
 /* =========================================================================================================== */
 /* new hero02 code */
-.scrollContainer {
+/* .scrollContainer {
 	height: 30%;
 
 	width: 100%;
@@ -111,7 +103,7 @@ body {
 }
 
 .photobanner img {
-	margin: 0 0.5em
+	margin: 0 0.5em;
 }
 
 @keyframes bannermove {
@@ -122,10 +114,9 @@ body {
 	100% {
 		transform: translate(-50%, 0);
 	}
-}
+} */
 
 /* =========================================================================================================== */
-
 
 /* Hero03.css */
 
@@ -183,15 +174,12 @@ body {
 	/* Animation for sliding in new image */
 }
 
-
-
 */
 
 /* section active  */
 .active {
 	opacity: 1;
 	animation: slidein 0.5s ease forwards;
-
 }
 
 @keyframes slidein {
@@ -214,8 +202,6 @@ body {
 
 	/* margin: auto; */
 }
-
-
 
 .CustomBorder-Sub {
 	height: 1px;
@@ -246,14 +232,10 @@ body {
 }
 */
 
-
-
-
 /* rolling button on contact page */
 /* customm Button */
 
 /* =========================================================================================================== */
-
 
 /* =========================================================================================================== */
 /* Hero07 */
@@ -275,7 +257,6 @@ body {
 .GradientText2 {
 	font-size: 40px;
 	font-family: Arial, Helvetica, sans-serif;
-
 }
 
 @keyframes textShine {
@@ -302,8 +283,7 @@ body {
 .lino {
 	height: 4px;
 	width: 90px;
-	background: linear-gradient(to right, #f32170,
-			#ff6b08, #cf23cf, #eedd44);
+	background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
 	-webkit-text-fill-color: transparent;
 	/* -webkit-background-clip: text; */
 	background-size: 500% auto;
@@ -341,7 +321,6 @@ body {
 /* Faq */
 .faq-details {
 	transition: all 0.45s ease;
-
 }
 
 .faq-details[open] {
@@ -356,8 +335,7 @@ body {
 	}
 }
 
-@media only screen and (max-width:600px) {
-
+@media only screen and (max-width: 600px) {
 	.faq h2 {
 		font-size: 20px;
 	}
@@ -375,16 +353,12 @@ body {
 		font-size: 22px;
 	}
 
-
 	.faq-details[open] {
-
 		color: white;
 		background-color: black;
 		transition: all 0.45s ease;
 	}
-
 }
-
 
 /* =========================================================================================================== */
 
@@ -469,7 +443,6 @@ body {
 	-moz-transform: rotateX(-90deg);
 	transform: rotateX(-90deg);
 }
-
 
 /* uncomment card  */
 /* 

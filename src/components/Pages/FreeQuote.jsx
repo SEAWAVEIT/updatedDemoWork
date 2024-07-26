@@ -4,50 +4,50 @@ import { useGSAP } from "@gsap/react";
 
 function FreeQuote() {
 	return (
-		<div className="h-auto z-1 bg-white text-black px-6 py-10 w-full flex flex-col gap-6 ">
-			<div className="relative bg-black rounded-xl overflow-hidden">
+		<div className="h-auto z-1 bg-white text-black px-6 py-10 w-full flex flex-col gap-6">
+			<div className="relative bg-black rounded-xl overflow-hidden mb-6 md:mb-8">
 				<img
-					className="absolute z-1 inset-0 w-full h-full object-cover opacity-30"
+					className="absolute inset-0 w-full h-full object-cover opacity-30"
 					src="https://www.seawave.in/images/inner-pages/logistic_banner.webp"
-					alt=""
+					alt="getafreequote"
 				/>
-				<div className="relative flex justify-center items-center h-96">
-					<h1 className="Heading text-white md:text-6xl 4xl z-10">
+				<div className="relative flex justify-center items-center h-60 md:h-96">
+					<h1 className="text-white text-2xl md:text-6xl z-0 text-center">
 						Get A Free Quote
 					</h1>
 				</div>
 			</div>
 			<div>
-				<div className="InputDetails w-full grid grid-cols-2 gap-4">
-					<div className="col-span-1">
+				<div className="InputDetails w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div className="col-span-1 w-full">
 						<input
 							type="text"
 							placeholder="Your Name"
 							className="w-full mt-2 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
 						/>
 					</div>
-					<div className="col-span-1">
+					<div className="col-span-1 w-full">
 						<input
 							type="text"
 							placeholder="Your Email"
 							className="w-full mt-2 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
 						/>
 					</div>
-					<div className="col-span-1">
+					<div className="col-span-1 w-full">
 						<input
 							type="text"
 							placeholder="Company Name"
 							className="w-full mt-2 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
 						/>
 					</div>
-					<div className="col-span-1">
+					<div className="col-span-1 w-full">
 						<input
 							type="text"
 							placeholder="Contact Number"
 							className="w-full mt-2 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
 						/>
 					</div>
-					<div className="col-span-2">
+					<div className="col-span-1 md:col-span-2 w-full">
 						<input
 							type="text"
 							placeholder="Company Address"
@@ -60,7 +60,7 @@ function FreeQuote() {
 						<h2>Services:</h2>
 					</div>
 					<div>
-						<div className="grid grid-cols-3 gap-4">
+						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 							<div className="flex items-center gap-2">
 								<input
 									id="service1"
@@ -147,7 +147,7 @@ function FreeQuote() {
 						name="Comments"
 						id="Comments"
 						placeholder="Comments/Remarks"
-						className="w-full h-40  py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
+						className="w-full h-40 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
 					></textarea>
 				</div>
 			</div>

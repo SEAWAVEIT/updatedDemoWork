@@ -39,7 +39,7 @@ function Hero09() {
 							{/* <FollowButton/> */}
 						</div>
 					</div>
-					<div className=" ">
+					<div className="my-2 md:my-none ">
 						{/* <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHk5dWtvaTMzaGdxZHhweTZobGdydGxkMm5rejh2OG11c3J2NnVjZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TIeTxUeyPeFI771jTF/giphy.webp" alt="" /> */}
 						<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXdzaXc3NGN1YWZxOGxseG5pdTdtcmZpMW02eGtvMW85NW8yZXA4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/N0Pp6pLX8YpPpDJMQZ/giphy.webp" alt="" />
 
