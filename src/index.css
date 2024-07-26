@@ -240,7 +240,7 @@ body {
 
 /* =========================================================================================================== */
 /* Hero07 */
-
+/* customs */
 .GradientText {
 	background: linear-gradient(to right,
 			#7953cd 20%,
@@ -316,6 +316,66 @@ body {
  .check:hover {
 	color: green;
 } */
+
+/* Main page Heading for Full Sustainable */
+
+.animate-charcter {
+	text-transform: uppercase;
+	background-image: linear-gradient(-225deg,
+			#231557 0%,
+			#44107a 29%,
+			#ff1361 67%,
+			#fff800 100%);
+	background-size: auto auto;
+	background-clip: border-box;
+	background-size: 200% auto;
+	color: #fff;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: textclip 2s linear infinite;
+	display: inline-block;
+
+}
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+
+/* wavily for free quote  */
+
+.waviy {
+	position: relative;
+	-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+	font-size: 60px;
+}
+
+.waviy span {
+	font-family: 'Alfa Slab One', cursive;
+	position: relative;
+	display: inline-block;
+	color: #fff;
+	text-transform: uppercase;
+	animation: waviy 1s infinite;
+	animation-delay: calc(.1s * var(--i));
+
+}
+
+@keyframes waviy {
+
+	0%,
+	40%,
+	100% {
+		transform: translateY(0)
+	}
+
+	20% {
+		transform: translateY(-20px)
+	}
+}
 
 /* =========================================================================================================== */
 
