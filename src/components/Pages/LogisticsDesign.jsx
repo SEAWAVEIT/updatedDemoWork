@@ -1,5 +1,5 @@
 import React from "react";
-import check from "../../assets/svgs/check.svg";
+import ServiceItem from "./ServiceItem";
 import logisticsDesign from "../../assets/specialization/logisticDesign.jpg";
 import "../../index.css";
 
@@ -47,26 +47,14 @@ function LogisticsDesign() {
 					<h2 className="text-xl md:text-2xl my-2">
 						Values of Logistics Design:
 					</h2>
-					<div className="flex items-center p-2">
-						<img src={check} alt="" className="h-5 md:h-6 mr-2" />
-						<p className="text-sm md:text-base">
-							It reduces the costs & environmental impact.
-						</p>
-					</div>
-					<div className="flex items-center p-2">
-						<img src={check} alt="" className="h-5 md:h-6 mr-2" />
-						<p className="text-sm md:text-base">
-							Simplifying planning & improving operational
-							efficiency.
-						</p>
-					</div>
-					<div className="flex items-center p-2">
-						<img src={check} alt="" className="h-5 md:h-6 mr-2" />
-						<p className="text-sm md:text-base">
-							Marketing benefits such as products that look good
-							on shelves.
-						</p>
-					</div>
+
+
+					<ServiceItem text="It reduces the costs & environmental impact." />
+					<ServiceItem text="Simplifying planning & improving operational
+							efficiency."/>
+					<ServiceItem text="Marketing benefits such as products that look good
+							on shelves."/>
+
 				</div>
 			</div>
 		</div>

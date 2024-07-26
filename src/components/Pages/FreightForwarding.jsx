@@ -1,5 +1,5 @@
 import React from "react";
-import check from "../../assets/svgs/check.svg";
+import ServiceItem from "./ServiceItem";
 import freightForward from "../../assets/specialization/freightForward.jpg";
 import "../../index.css";
 
@@ -32,35 +32,16 @@ function FreightForwarding() {
                 </div>
                 <div>
                     <h2 className="text-xl md:text-2xl my-2">It Requires:</h2>
-                    <div className="flex items-center p-2">
-                        <img src={check} alt="" className="h-5 md:h-6 mr-2" />
-                        <p className="text-sm md:text-base">
-                            Expert knowledge of customs standards and protocols,
-                            which vary country to country and even port to port
-                        </p>
-                    </div>
-                    <div className="flex items-center p-2">
-                        <img src={check} alt="" className="h-5 md:h-6 mr-2" />
-                        <p className="text-sm md:text-base">
-                            Agile problem-solving, for when the weather,
+
+                    <ServiceItem text="Expert knowledge of customs standards and protocols,
+                            which vary country to country and even port to port"/>
+                    <ServiceItem text="Agile problem-solving, for when the weather,
                             technology or human nature fail to cater to timely
-                            travels, as they are all wont to do
-                        </p>
-                    </div>
-                    <div className="flex items-center p-2">
-                        <img src={check} alt="" className="h-5 md:h-6 mr-2" />
-                        <p className="text-sm md:text-base">
-                            An instinct for network building, because in many
+                            travels, as they are all wont to do"/>
+                    <ServiceItem text="An instinct for network building, because in many
                             ways, a supply chain is only as strong as the
-                            parties propelling it.
-                        </p>
-                    </div>
-                    <div className="flex items-center p-2">
-                        <img src={check} alt="" className="h-5 md:h-6 mr-2" />
-                        <p className="text-sm md:text-base">
-                            Also need a license to do it.
-                        </p>
-                    </div>
+                            parties propelling it."/>
+                    <ServiceItem text="Also need a license to do it." />
                 </div>
             </div>
 
@@ -99,26 +80,8 @@ function FreightForwarding() {
                             <h2 className="text-lg md:text-xl my-2">
                                 Services:
                             </h2>
-                            <div className="flex items-center p-2">
-                                <img
-                                    src={check}
-                                    alt=""
-                                    className="h-5 md:h-6 mr-2"
-                                />
-                                <p className="text-sm md:text-base">
-                                    Air Freight Booking
-                                </p>
-                            </div>
-                            <div className="flex items-center p-2">
-                                <img
-                                    src={check}
-                                    alt=""
-                                    className="h-5 md:h-6 mr-2"
-                                />
-                                <p className="text-sm md:text-base">
-                                    World Wide Consolidation
-                                </p>
-                            </div>
+                            <ServiceItem text="Air Freight Booking" />
+                            <ServiceItem text="World Wide Consolidation" />
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 flex justify-center items-center">
@@ -170,54 +133,11 @@ function FreightForwarding() {
                             <h2 className="text-lg md:text-xl my-2">
                                 Services:
                             </h2>
-                            <div className="flex items-center p-2">
-                                <img
-                                    src={check}
-                                    alt=""
-                                    className="h-5 md:h-6 mr-2"
-                                />
-                                <p className="text-sm md:text-base">
-                                    Freight Booking
-                                </p>
-                            </div>
-                            <div className="flex items-center p-2">
-                                <img
-                                    src={check}
-                                    alt=""
-                                    className="h-5 md:h-6 mr-2"
-                                />
-                                <p className="text-sm md:text-base">
-                                    World Wide Consolidation
-                                </p>
-                            </div>
-                            <div className="flex items-center p-2">
-                                <img
-                                    src={check}
-                                    alt=""
-                                    className="h-5 md:h-6 mr-2"
-                                />
-                                <p className="text-sm md:text-base">
-                                    Handling FCL’s & LCL’s shipments world wide
-                                </p>
-                            </div>
-                            <div className="flex items-center p-2">
-                                <img
-                                    src={check}
-                                    alt=""
-                                    className="h-5 md:h-6 mr-2"
-                                />
-                                <p className="text-sm md:text-base">NVOCC</p>
-                            </div>
-                            <div className="flex items-center p-2">
-                                <img
-                                    src={check}
-                                    alt=""
-                                    className="h-5 md:h-6 mr-2"
-                                />
-                                <p className="text-sm md:text-base">
-                                    Handling of Projects & Break Bulk
-                                </p>
-                            </div>
+                            <ServiceItem text="Freight Booking" />
+                            <ServiceItem text="World Wide Consolidation" />
+                            <ServiceItem text="Handling FCL’s & LCL’s shipments world wide" />
+                            <ServiceItem text="NVOCC" />
+                            <ServiceItem text="Handling of Projects & Break Bulk" />
                         </div>
                     </div>
                 </div>

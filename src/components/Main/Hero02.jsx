@@ -87,7 +87,7 @@ function Hero02() {
               key={logo.id}
               loading="lazy"
               src={logo.src}
-              className="h-28"
+              className="h-28 hover:h-32"
               alt={logo.alt}
             />
           ))}

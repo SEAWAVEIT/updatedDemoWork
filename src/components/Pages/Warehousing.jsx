@@ -1,5 +1,5 @@
 import React from "react";
-import check from "../../assets/svgs/check.svg";
+import ServiceItem from "./ServiceItem";
 import warehouse from "../../assets/specialization/warehouse.jpg";
 import "../../index.css";
 
@@ -45,123 +45,26 @@ function Warehousing() {
 						<h2 className="text-xl md:text-2xl my-2">
 							SEAWAVE provides its expertise in:
 						</h2>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								Warehouse Identification.
-							</p>
-						</div>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								Record Management and Storage.
-							</p>
-						</div>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								Warehouse Management.
-							</p>
-						</div>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								Inventory & Distribution Management.
-							</p>
-						</div>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								Just in Time (JIT) Deliveries.
-							</p>
-						</div>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								Opening & repacking facilities.
-							</p>
-						</div>
+						<ServiceItem text="Warehouse Identification." />
+						<ServiceItem text="Record Management and Storage." />
+						<ServiceItem text="Warehouse Management." />
+						<ServiceItem text="Inventory & Distribution Management." />
+						<ServiceItem text="Just in Time (JIT) Deliveries." />
+						<ServiceItem text="Opening & repacking facilities." />
 					</div>
 					<div>
 						<h2 className="text-xl md:text-2xl my-2">
 							Our Warehousing Infrastructure Advantages:
 						</h2>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								Safe & systematic storage of goods.
-							</p>
-						</div>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								Hygienic & clean environment.
-							</p>
-						</div>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								In-house Computerized Weigh bridge facility.
-							</p>
-						</div>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								Container repair facility of IICL standard.
-							</p>
-						</div>
-						<div className="flex items-center p-2">
-							<img
-								src={check}
-								alt=""
-								className="check h-5 md:h-6 mr-4"
-							/>
-							<p className="text-sm md:text-base">
-								Helps our clients to reduce fixed overheads,
+
+						<ServiceItem text="Safe & systematic storage of goods." />
+						<ServiceItem text="Hygienic & clean environment." />
+						<ServiceItem text="In-house Computerized Weigh bridge facility." />
+						<ServiceItem text="Container repair facility of IICL standard." />
+						<ServiceItem text="Helps our clients to reduce fixed overheads,
 								increase efficiency, cut down valuable
-								management time and offer great efficiency.
-							</p>
-						</div>
+								management time and offer great efficiency." />
+
 					</div>
 				</div>
 				<div className="mt-6 md:mt-8">

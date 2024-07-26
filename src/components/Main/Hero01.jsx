@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 
 function Hero01() {
     const MainHeadingEffect = useRef();
-  
+
     useGSAP(() => {
         gsap.from(MainHeadingEffect.current.children, {
             opacity: 0,
@@ -20,8 +20,8 @@ function Hero01() {
     return (
         <div ref={MainHeadingEffect} className=" Hero01 h-auto z-0 w-full px-4 md:px-8 ">
             <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-8 mb-4">
-                <h1 className="GradientText">Full Sustainable</h1>
-                <h1 className="GradientText">Cargo Solution</h1>
+                <h1 className="GradientText py-2">Full Sustainable</h1>
+                <h1 className="GradientText py-4">Cargo Solution</h1>
             </div>
             <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-center mt-8 mb-4">
                 <p>

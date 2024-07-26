@@ -1,5 +1,5 @@
 import React from "react";
-import check from "../../assets/svgs/check.svg";
+import ServiceItem from "./ServiceItem";
 import landFreight from "../../assets/specialization/landFreight.jpg";
 import "../../index.css";
 
@@ -30,47 +30,11 @@ function LandFreight() {
 				</div>
 				<div>
 					<h2 className="text-xl md:text-2xl my-2">Services:</h2>
-					<div className="flex items-center p-2">
-						<img
-							src={check}
-							alt=""
-							className="check h-5 md:h-6 mr-4"
-						/>
-						<p className="text-sm md:text-base">
-							Truck/Trailer Freight Booking
-						</p>
-					</div>
-					<div className="flex items-center p-2">
-						<img
-							src={check}
-							alt=""
-							className="check h-5 md:h-6 mr-4"
-						/>
-						<p className="text-sm md:text-base">
-							Consolidation of cargo for truck
-						</p>
-					</div>
-					<div className="flex items-center p-2">
-						<img
-							src={check}
-							alt=""
-							className="check h-5 md:h-6 mr-4"
-						/>
-						<p className="text-sm md:text-base">
-							Loading-Unloading facilities
-						</p>
-					</div>
-					<div className="flex items-center p-2">
-						<img
-							src={check}
-							alt=""
-							className="check h-5 md:h-6 mr-4"
-						/>
-						<p className="text-sm md:text-base">
-							Shipments through land customs (Especially for Nepal
-							& Bangladesh)
-						</p>
-					</div>
+					<ServiceItem text="Truck/Trailer Freight Booking" />
+					<ServiceItem text="Consolidation of cargo for truck" />
+					<ServiceItem text="Loading-Unloading facilities" />
+					<ServiceItem text="Shipments through land customs (Especially for Nepal
+							& Bangladesh)"/>
 				</div>
 			</div>
 
@@ -96,37 +60,11 @@ function LandFreight() {
 							<h2 className="text-lg md:text-xl my-2">
 								Cargo pickup facility round the clock by own:
 							</h2>
-							<div className="flex items-center p-2">
-								<img
-									src={check}
-									alt=""
-									className="check h-5 md:h-6 mr-2"
-								/>
-								<p className="text-sm md:text-base">
-									Fleets of close body
-								</p>
-							</div>
-							<div className="flex items-center p-2">
-								<img
-									src={check}
-									alt=""
-									className="check h-5 md:h-6 mr-2"
-								/>
-								<p className="text-sm md:text-base">
-									Transportation of Sea/Air/Land Cargo
-								</p>
-							</div>
-							<div className="flex items-center p-2">
-								<img
-									src={check}
-									alt=""
-									className="check h-5 md:h-6 mr-2"
-								/>
-								<p className="text-sm md:text-base">
-									Custom Cleared in Hinterlands to
-									International Sea/Air ports
-								</p>
-							</div>
+							<ServiceItem text="Fleets of close body" />
+							<ServiceItem text="Transportation of Sea/Air/Land Cargo" />
+							<ServiceItem text="Custom Cleared in Hinterlands to
+									International Sea/Air ports"/>
+							<ServiceItem text="Fleets of close body" />
 						</div>
 						<div className="flex flex-col gap-2">
 							<p>
@@ -178,57 +116,12 @@ function LandFreight() {
 							<h2 className="text-lg md:text-xl my-2">
 								Services:
 							</h2>
-							<div className="flex items-center p-2">
-								<img
-									src={check}
-									alt=""
-									className="check h-5 md:h-6 mr-2"
-								/>
-								<p className="text-sm md:text-base">
-									Driver Management
-								</p>
-							</div>
-							<div className="flex items-center p-2">
-								<img
-									src={check}
-									alt=""
-									className="check h-5 md:h-6 mr-2"
-								/>
-								<p className="text-sm md:text-base">
-									Vehicle Management
-								</p>
-							</div>
-							<div className="flex items-center p-2">
-								<img
-									src={check}
-									alt=""
-									className="check h-5 md:h-6 mr-2"
-								/>
-								<p className="text-sm md:text-base">
-									Vehicle operations like Loading-Unloading
-								</p>
-							</div>
-							<div className="flex items-center p-2">
-								<img
-									src={check}
-									alt=""
-									className="check h-5 md:h-6 mr-2"
-								/>
-								<p className="text-sm md:text-base">
-									Tracking of vehicle and follow up with
-									transport
-								</p>
-							</div>
-							<div className="flex items-center p-2">
-								<img
-									src={check}
-									alt=""
-									className="check h-5 md:h-6 mr-2"
-								/>
-								<p className="text-sm md:text-base">
-									Vehicle paper work & RTO charges.
-								</p>
-							</div>
+							<ServiceItem text="Driver Management" />
+							<ServiceItem text="Vehicle Management" />
+							<ServiceItem text="Vehicle operations like Loading-Unloading" />
+							<ServiceItem text="Tracking of vehicle and follow up with
+									transport" />
+							<ServiceItem text="Vehicle paper work & RTO charges" />
 						</div>
 					</div>
 				</div>
