@@ -12,11 +12,12 @@ function FreightForwarding() {
                     src={freightForward}
                     alt="Freight Forwarding"
                 />
-                <div className="relative flex justify-center items-center h-60 md:h-96">
-                    <h1 className="text-white text-2xl md:text-6xl z-0 text-center">
-                        Freight Forwarding
-                    </h1>
+                <div className=" relative flex justify-center items-center h-60 md:h-96">
+                    <div class="logo-container GradientText">
+                        <h1 id="page-logo" className="text-white  md:font-medium font-semibold text-2xl md:text-6xl z-0 text-center">Freight Forwarding</h1>
+                    </div>
                 </div>
+
             </div>
 
             <div className="px-4 md:px-20 mb-6 md:mb-8">
