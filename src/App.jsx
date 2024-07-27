@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import Header from "./components/Header/Header";
+// import NavBar from "./components/Header/NavBar";
 import Footer from "./components/Footer/Footer";
 import Main1 from "./components/Main/Hero01";
 import Main2 from "./components/Main/Hero02";
@@ -41,6 +42,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      {/* <NavBar /> */}
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

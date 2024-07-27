@@ -4,11 +4,16 @@ import { gsap } from "gsap";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const menuRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen((prevOpen) => !prevOpen);
+  };
+
+  const toggleServices = () => {
+    setIsServicesOpen((prevOpen) => !prevOpen);
   };
 
   const animateMenu = (open) => {
@@ -19,7 +24,7 @@ const Header = () => {
       tl.to(menu, {
         duration: 0.3,
         height: "auto",
-        width: 8,
+        width: 198,
         opacity: 1,
       });
     } else {
@@ -74,32 +79,53 @@ const Header = () => {
             </button>
             {isOpen && (
               <ul
-                className={`menu menu-sm dropdown-content rounded-box absolute z-20 mt-3 w-full md:w-80 p-2 shadow bg-black text-white ${isMobile ? "block" : "hidden"
-                  }`}
+                className={`menu whitespace-nowrap menu-sm dropdown-content rounded-box absolute z-20 mt-3 w-full md:w-80 p-2 shadow bg-black text-white ${isMobile ? "block" : "hidden"}`}
                 ref={menuRef}
               >
                 <li>
                   <Link to={"about"}>About</Link>
                 </li>
                 <li>
-                  <span>Services</span>
-                  <ul className="p-2 bg-black text-white z-1 4 rounded-lg focus:shadow-[2px]">
-                    <li>
-                      <Link to={"customclearance"}>Custom Clearance</Link>
-                    </li>
-                    <li>
-                      <Link to={"freightforwarding"}>Freight Forwarding</Link>
-                    </li>
-                    <li>
-                      <Link to={"landfreight"}>Land Freight</Link>
-                    </li>
-                    <li>
-                      <Link to={"warehousing"}>Warehousing</Link>
-                    </li>
-                    <li>
-                      <Link to={"logisticsdesign"}>Logistics Design</Link>
-                    </li>
-                  </ul>
+                  <button
+                    className="w-full text-left"
+                    onClick={toggleServices}
+                    aria-expanded={isServicesOpen}
+                  >
+                    Services
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`h-5 w-5 inline ml-2 transition-transform ${isServicesOpen ? "rotate-180" : ""}`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {isServicesOpen && (
+                    <ul className="p-2 bg-black text-white z-1 rounded-lg mt-2">
+                      <li>
+                        <Link to={"customclearance"}>Custom Clearance</Link>
+                      </li>
+                      <li>
+                        <Link to={"freightforwarding"}>Freight Forwarding</Link>
+                      </li>
+                      <li>
+                        <Link to={"landfreight"}>Land Freight</Link>
+                      </li>
+                      <li>
+                        <Link to={"warehousing"}>Warehousing</Link>
+                      </li>
+                      <li>
+                        <Link to={"logisticsdesign"}>Logistics Design</Link>
+                      </li>
+                    </ul>
+                  )}
                 </li>
                 <li>
                   <Link to={"contact"}>Contact</Link>
@@ -115,7 +141,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="whitespace-nowrap menu menu-horizontal px-1">
             <li>
               <Link to={"about"}>About</Link>
             </li>
