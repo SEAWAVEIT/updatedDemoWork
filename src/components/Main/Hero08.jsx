@@ -1,48 +1,95 @@
-import React from "react";
-import "../../index.css"
+import React from 'react';
+import truck from "../../assets/specialization/truck.svg"
+import business from "../../assets/specialization/business.svg"
+import docker from "../../assets/specialization/docker.svg"
+import globe from "../../assets/specialization/globe.svg"
+import checkshield from "../../assets/specialization/checkshield.svg"
+import map from "../../assets/specialization/map.svg"
+import grid from "../../assets/specialization/grid.svg"
+
 
 function Hero08() {
-  return (
-    <div className="Hero07 h-auto bg-white py-4">
-      <section className="container mx-auto px-4 py-8 md:p-8">
-        <h1 className="text-4xl md:text-6xl mb-8 text-center">FAQS</h1>
-
-        <div className="space-y-4">
-          <details className="w-full border rounded-lg faq-details">
-            <summary className="question px-4 py-6 focus:outline-none focus-visible:dark:ring-violet-600">
-              Ex orci laoreet egestas sapien magna egestas
-              scelerisque?
-            </summary>
-            <p className="answer px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-600">
-              Lectus iaculis orci metus vitae ligula dictum per. Nisl per
-              nullam taciti at adipiscing est.
-            </p>
-          </details>
-          <details className="w-full border rounded-lg faq-details">
-            <summary className="question px-4 py-6 focus:outline-none focus-visible:dark:ring-violet-600">
-              Lorem at arcu rutrum viverra metus sapien venenatis
-              lobortis odio?
-            </summary>
-            <p className="answer px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-600">
-              Tincidunt ut hac condimentum rhoncus phasellus nostra. Magna
-              porttitor egestas tincidunt neque vehicula potenti.
-            </p>
-          </details>
-          <details className="w-full border rounded-lg faq-details">
-            <summary className="question px-4 py-6 focus:outline-none focus-visible:dark:ring-violet-600">
-              Eleifend feugiat sollicitudin laoreet adipiscing bibendum
-              suscipit erat?
-            </summary>
-            <p className="answer px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-600">
-              Justo libero tellus integer tincidunt justo semper consequat
-              venenatis aliquet imperdiet. Ultricies urna proin fusce nulla
-              pretium sodales vel magna et massa euismod vulputate sed.
-            </p>
-          </details>
+    return (
+        <div className='flexi p-4 m-auto gap-8'>
+            <div className="cardBox">
+                <div className="SpecializationCard">
+                    <div>
+                        <img src={checkshield} alt="" />
+                    </div>
+                    <h3>SVB</h3>
+                    <div className="SpecializationContent">
+                        <p>Tn the Indian customs system, the Special Valuation Branch (SVB) investigates the valuation of goods when they are imported between related parties.</p>
+                    </div>
+                </div>
+            </div>
+            <div className="cardBox">
+                <div className="SpecializationCard">
+                    <div>
+                        <img src={truck} alt="" />
+                    </div>
+                    <h3>Capital Goods Clearance</h3>
+                    <div className="SpecializationContent">
+                        <p>We do New/2nd Hand Capital Goods Clearance</p>
+                    </div>
+                </div>
+            </div>
+            <div className="cardBox">
+                <div className="SpecializationCard">
+                    <div>
+                        <img src={docker} alt="" />
+                    </div>
+                    <h3>Proper Cargo Handling</h3>
+                    <div className="SpecializationContent">
+                        <p>Equipment used at seaports and rail yards to lift or move containerized, bulk or break-bulk cargo is considered cargo handling equipment.</p>
+                    </div>
+                </div>
+            </div>
+            <div className="cardBox">
+                <div className="SpecializationCard">
+                    <div>
+                        <img src={map} alt="" />
+                    </div>
+                    <h3>Nepal & Bangladesh Border Clearance</h3>
+                    <div className="SpecializationContent">
+                        <p>In order to facilitate exports and imports, transportation, and warehousing between neighboring countries, Seawave has branches in Nepal and Bangladesh. Door-to-door services are provided between India and its neighbors.</p>
+                    </div>
+                </div>
+            </div>
+            <div className="cardBox">
+                <div className="SpecializationCard">
+                    <div>
+                        <img src={business} alt="" />
+                    </div>
+                    <h3>AEO Application</h3>
+                    <div className="SpecializationContent">
+                        <p>In accordance with our customers' needs, we offer registered AEO applications</p>
+                    </div>
+                </div>
+            </div>
+            <div className="cardBox">
+                <div className="SpecializationCard">
+                    <div>
+                        <img src={globe} alt="" />
+                    </div>
+                    <h3>DPD Handling</h3>
+                    <div className="SpecializationContent">
+                        <p>In this system, importers can clear their cargo directly from the port within 48 hours of arrival.</p>
+                    </div>
+                </div>
+            </div>
+            <div className="cardBox">
+                <div className="SpecializationCard">
+                    <div>
+                        <img src={grid} alt="" />
+                    </div>
+                    <h3>Palletization</h3>
+                    <div className="SpecializationContent">
+                        <p>A palletization process consists of placing goods onto a pallet for easier handling and transportation, allowing the load to be consolidated.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-    </div>
-  );
+    );
 }
 
 export default Hero08;

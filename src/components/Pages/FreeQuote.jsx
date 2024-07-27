@@ -12,13 +12,13 @@ function FreeQuote() {
 					alt="getafreequote"
 				/>
 				<div className="relative flex justify-center items-center  h-60 md:h-96 ">
-					<h1 className="text-white text-2xl md:text-6xl z-0  text-center">
+					<h1 className="text-white text-3xl md:text-6xl z-0  text-center">
 						Get A {""}
-						<div className="waviy inline text-3xl md:text-6xl ">
-							<span style={{ '--i': 1 }}	>F</span>
-							<span style={{ '--i': 2 }}	>r</span>
-							<span style={{ '--i': 3 }}	>e</span>
-							<span style={{ '--i': 4 }}	>e</span>
+						<div className="waviy inline  md:text-6xl ">
+							<span className="text-3xl md:text-6xl" style={{ '--i': 1 }}	>F</span>
+							<span className="text-3xl md:text-6xl" style={{ '--i': 2 }}	>r</span>
+							<span className="text-3xl md:text-6xl" style={{ '--i': 3 }}	>e</span>
+							<span className="text-3xl md:text-6xl" style={{ '--i': 4 }}	>e</span>
 						</div>
 						{""} Quote
 

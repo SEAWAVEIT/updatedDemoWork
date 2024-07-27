@@ -1,53 +1,48 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import "../../index.css"
 
 function Hero09() {
-	return (
-		<div className="Hero08 w-full h-screen bg-white flex justify-center items-center">
-			<div className="h-[90%] w-[90%] md:border-2 md:border-black-900 flex justify-center items-center">
-				<div className="flex flex-col md:flex-row justify-center items-center  p-4">
-					<div className=" ">
-						<div>
-							<h1 className="md:text-6xl text-[#0ea5e9] text-3xl  font-bold">
-								Lets's Connect
-							</h1>
-						</div>
-						<div className="my-4 text-lg text-[#0369a1]">
-							<p>
-								Cursus congue tortor turpis faucibus ollicitudin
-								diam
-							</p>
-							<p>massa accumsan egestas habitant ut placerat</p>
-						</div>
+  return (
+    <div className="Hero07 h-auto bg-white py-4">
+      <section className="container mx-auto px-4 py-8 md:p-8">
+        <h1 className="text-4xl md:text-6xl mb-8 text-center">FAQS</h1>
 
-						<div className="flex flex-col gap-4 ">
-							<input
-								className="bg-white w-full px-6 py-4 rounded-full border-2 border-[rgba(131,204,22,0.38)] outline-none"
-								type="text"
-								placeholder="Add me"
-							/>
-							<div>
-								<a href="#_" className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-[#1e6a8d41] rounded-full shadow-md group">
-									<span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#0ea5e9] group-hover:translate-x-0 ease">
-										<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-									</span>
-									<span className="absolute flex items-center justify-center w-full h-full font-semibold text-[#196a8f] transition-all duration-300 transform group-hover:translate-x-full ease">Button Text</span>
-									<span className="relative invisible">Button Text</span>
-								</a>
-							</div>
-							{/* <FollowButton/> */}
-						</div>
-					</div>
-					<div className="my-2 md:my-none ">
-						{/* <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHk5dWtvaTMzaGdxZHhweTZobGdydGxkMm5rejh2OG11c3J2NnVjZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TIeTxUeyPeFI771jTF/giphy.webp" alt="" /> */}
-						<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXdzaXc3NGN1YWZxOGxseG5pdTdtcmZpMW02eGtvMW85NW8yZXA4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/N0Pp6pLX8YpPpDJMQZ/giphy.webp" alt="" />
-
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+        <div className="space-y-4">
+          <details className="w-full border rounded-lg faq-details">
+            <summary className="question px-4 py-6 focus:outline-none focus-visible:dark:ring-violet-600">
+              Ex orci laoreet egestas sapien magna egestas
+              scelerisque?
+            </summary>
+            <p className="answer px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-600">
+              Lectus iaculis orci metus vitae ligula dictum per. Nisl per
+              nullam taciti at adipiscing est.
+            </p>
+          </details>
+          <details className="w-full border rounded-lg faq-details">
+            <summary className="question px-4 py-6 focus:outline-none focus-visible:dark:ring-violet-600">
+              Lorem at arcu rutrum viverra metus sapien venenatis
+              lobortis odio?
+            </summary>
+            <p className="answer px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-600">
+              Tincidunt ut hac condimentum rhoncus phasellus nostra. Magna
+              porttitor egestas tincidunt neque vehicula potenti.
+            </p>
+          </details>
+          <details className="w-full border rounded-lg faq-details">
+            <summary className="question px-4 py-6 focus:outline-none focus-visible:dark:ring-violet-600">
+              Eleifend feugiat sollicitudin laoreet adipiscing bibendum
+              suscipit erat?
+            </summary>
+            <p className="answer px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-600">
+              Justo libero tellus integer tincidunt justo semper consequat
+              venenatis aliquet imperdiet. Ultricies urna proin fusce nulla
+              pretium sodales vel magna et massa euismod vulputate sed.
+            </p>
+          </details>
+        </div>
+      </section>
+    </div>
+  );
 }
 
 export default Hero09;

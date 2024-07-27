@@ -1,7 +1,7 @@
 import React from "react";
 import "../../index.css";
 import ServiceItem from "./ServiceItem";
-import customClearance from "../../assets/specialization/customClearance.jpg";
+import customClearance from "../../assets/services/customClearance.jpg";
 
 function CustomClearance() {
 	return (

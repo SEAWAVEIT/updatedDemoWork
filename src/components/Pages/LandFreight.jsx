@@ -1,6 +1,6 @@
 import React from "react";
 import ServiceItem from "./ServiceItem";
-import landFreight from "../../assets/specialization/landFreight.jpg";
+import landFreight from "../../assets/services/landFreight.jpg";
 import "../../index.css";
 
 function LandFreight() {

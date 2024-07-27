@@ -1,6 +1,6 @@
 import React from "react";
 import ServiceItem from "./ServiceItem";
-import warehouse from "../../assets/specialization/warehouse.jpg";
+import warehouse from "../../assets/services/warehouse.jpg";
 import "../../index.css";
 
 function Warehousing() {
@@ -62,6 +62,8 @@ function Warehousing() {
 						<ServiceItem text="Hygienic & clean environment." />
 						<ServiceItem text="In-house Computerized Weigh bridge facility." />
 						<ServiceItem text="Container repair facility of IICL standard." />
+
+						{/* Need to fix */}
 						<ServiceItem text="Helps our clients to reduce fixed overheads,
 								increase efficiency, cut down valuable
 								management time and offer great efficiency." />

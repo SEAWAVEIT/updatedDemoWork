@@ -1,6 +1,6 @@
 import React from "react";
 import ServiceItem from "./ServiceItem";
-import logisticsDesign from "../../assets/specialization/logisticDesign.jpg";
+import logisticsDesign from "../../assets/services/logisticDesign.jpg";
 import "../../index.css";
 
 function LogisticsDesign() {

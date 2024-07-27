@@ -12,6 +12,7 @@ import Main6 from "./components/Main/Hero06";
 import Main7 from "./components/Main/Hero07";
 import Main8 from "./components/Main/Hero08";
 import Main9 from "./components/Main/Hero09";
+import Main10 from "./components/Main/Hero10";
 import FreeQuote from "./components/Pages/FreeQuote";
 import CustomClearance from "./components/Pages/CustomClearance";
 import FreightForwarding from "./components/Pages/FreightForwarding";
@@ -34,6 +35,7 @@ function Home() {
       <Main7 />
       <Main8 />
       <Main9 />
+      <Main10 />
     </div>
   );
 }

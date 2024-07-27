@@ -1,6 +1,6 @@
 import React from "react";
 import ServiceItem from "./ServiceItem";
-import freightForward from "../../assets/specialization/freightForward.jpg";
+import freightForward from "../../assets/services/freightForward.jpg";
 import "../../index.css";
 
 function FreightForwarding() {

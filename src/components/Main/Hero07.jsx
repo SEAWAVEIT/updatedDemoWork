@@ -15,7 +15,7 @@ function Hero07() {
         </p>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
-        <div className="card">
+        <div className="ServiceCard">
           <div className="content">
             <div className="icon">
               <svg
@@ -43,7 +43,7 @@ function Hero07() {
         </div>
 
         {/* Repeat similar structure for other cards */}
-        <div className="card">
+        <div className="ServiceCard">
           <div className="content">
             <div className="icon">
               <img src={boat} className="h-20 md:h-28" alt="Boat" />
@@ -57,7 +57,7 @@ function Hero07() {
           </div>
         </div>
 
-        <div className="card">
+        <div className="ServiceCard">
           <div className="content">
             <div className="icon">
               <img src={calender} className="h-16 md:h-24" alt="Calendar" />
@@ -71,7 +71,7 @@ function Hero07() {
           </div>
         </div>
 
-        <div className="card">
+        <div className="ServiceCard">
           <div className="content">
             <div className="icon">
               <img src={truck} className="h-20 md:h-28" alt="Truck" />
@@ -85,7 +85,7 @@ function Hero07() {
           </div>
         </div>
 
-        <div className="card">
+        <div className="ServiceCard">
           <div className="content">
             <div className="icon">
               <img src={warehouse} className="h-20 md:h-28" alt="Warehouse" />
@@ -99,7 +99,7 @@ function Hero07() {
           </div>
         </div>
 
-        <div className="card">
+        <div className="ServiceCard">
           <div className="content">
             <div className="icon">
               <img src={pad} className="h-20 md:h-28" alt="Pad" />
