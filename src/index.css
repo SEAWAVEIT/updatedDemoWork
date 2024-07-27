@@ -719,7 +719,6 @@ body {
 	transition-delay: 0.2s;
 } */
 /* =========================================================================================================== */
-
 .Hero07 {
 	padding: 2em;
 	background-color: #FFF;
@@ -728,7 +727,12 @@ body {
 .Hero07 .ServiceCard {
 	position: relative;
 	display: flex;
+	flex-direction: column;
+	/* Ensures vertical alignment */
 	justify-content: center;
+	/* Centers content vertically */
+	align-items: center;
+	/* Centers content horizontally */
 	cursor: pointer;
 	width: 100%;
 	max-width: 22em;
@@ -765,15 +769,9 @@ body {
 	transition: width .5s ease;
 }
 
-.Hero07 .ServiceCard .content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-}
-
 .Hero07 .ServiceCard .icon {
-	margin: 0 0 1em;
+	margin-bottom: 1em;
+	/* Space below the icon */
 }
 
 .Hero07 .ServiceCard h2 {
@@ -781,6 +779,7 @@ body {
 	font-weight: 600;
 	text-transform: uppercase;
 	margin: 0.5em 0;
+	/* Space around the h2 */
 }
 
 .Hero07 .ServiceCard .hover_content {
@@ -817,6 +816,22 @@ body {
 	max-height: 10em;
 	transform: none;
 }
+
+/* Media Query for Smaller Devices */
+@media (max-width: 768px) {
+	.Hero07 .ServiceCard {
+		padding: 1.5em;
+	}
+
+	.Hero07 .ServiceCard .icon {
+		margin-bottom: 1em;
+	}
+
+	.Hero07 .ServiceCard h2 {
+		margin: 0.5em 0;
+	}
+}
+
 
 /* =========================================================================================================== */
 /* =========================================================================================================== */

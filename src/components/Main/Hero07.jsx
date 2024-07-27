@@ -16,7 +16,7 @@ function Hero07() {
       </div>
       <div className="grid gap-4 md:grid-cols-3 justify-items-center">
         <div className="ServiceCard relative group">
-          <div className="icon mb-2">
+          <div className="icon mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -32,69 +32,69 @@ function Hero07() {
               />
             </svg>
           </div>
-          <h2 className="text-xl text-center mb-2">Custom Clearance</h2>
+          <h2 className="text-xl text-center mb-4">Custom Clearance</h2>
           <div className="hover_content absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p className="text-sm text-slate-700 text-center">
+            <p className="text-sm text-slate-700 text-center p-4">
               As a customs clearance specialist, this division can handle general cargo as well as project cargo.
             </p>
           </div>
         </div>
 
         <div className="ServiceCard relative group">
-          <div className="icon mb-2">
+          <div className="icon mb-4">
             <img src={boat} className="h-20" alt="Boat" />
           </div>
-          <h2 className="text-xl text-center mb-2">Freight Forwarding</h2>
+          <h2 className="text-xl text-center mb-4">Freight Forwarding</h2>
           <div className="hover_content absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p className="text-sm text-slate-700 text-center">
+            <p className="text-sm text-slate-700 text-center p-4">
               It consists of strategic logistics planning and execution for the international movement of goods, on behalf of shippers.
             </p>
           </div>
         </div>
 
         <div className="ServiceCard relative group">
-          <div className="icon mb-2">
+          <div className="icon mb-4">
             <img src={calender} className="h-16" alt="Calendar" />
           </div>
-          <h2 className="text-xl text-center mb-2">Logistics Design</h2>
+          <h2 className="text-xl text-center mb-4">Logistics Design</h2>
           <div className="hover_content absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p className="text-sm text-slate-700 text-center">
+            <p className="text-sm text-slate-700 text-center p-4">
               Logistics cost directly relates to time, mode of transportation, route of transport, and selection of carriers for export and import.
             </p>
           </div>
         </div>
 
         <div className="ServiceCard relative group">
-          <div className="icon mb-2">
+          <div className="icon mb-4">
             <img src={truck} className="h-20" alt="Truck" />
           </div>
-          <h2 className="text-xl text-center mb-2">Land Freight</h2>
+          <h2 className="text-xl text-center mb-4">Land Freight</h2>
           <div className="hover_content absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p className="text-sm text-slate-700 text-center">
+            <p className="text-sm text-slate-700 text-center p-4">
               Land Transport, Delivery, Distribution Carrier & Own Vehicles
             </p>
           </div>
         </div>
 
         <div className="ServiceCard relative group">
-          <div className="icon mb-2">
+          <div className="icon mb-4">
             <img src={warehouse} className="h-20" alt="Warehouse" />
           </div>
-          <h2 className="text-xl text-center mb-2">Warehousing</h2>
+          <h2 className="text-xl text-center mb-4">Warehousing</h2>
           <div className="hover_content absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p className="text-sm text-slate-700 text-center">
+            <p className="text-sm text-slate-700 text-center p-4">
               Own Godown & Storage Area
             </p>
           </div>
         </div>
 
         <div className="ServiceCard relative group">
-          <div className="icon mb-2">
+          <div className="icon mb-4">
             <img src={pad} className="h-20" alt="Pad" />
           </div>
-          <h2 className="text-xl text-center mb-2">Exim Consultancy</h2>
+          <h2 className="text-xl text-center mb-4">Exim Consultancy</h2>
           <div className="hover_content absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p className="text-sm text-slate-700 text-center">
+            <p className="text-sm text-slate-700 text-center p-4">
               Consultancy related to Law, Act, Provisions, Circulars, Notifications, etc
             </p>
           </div>
