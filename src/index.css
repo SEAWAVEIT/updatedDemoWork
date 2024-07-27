@@ -821,12 +821,13 @@ body {
 /* =========================================================================================================== */
 /* =========================================================================================================== */
 /* Base Styles */
+/* Base Styles */
 .cardBox {
 	width: 100%;
-	max-width: 300px;
-	/* Restrict max width for cards */
-	height: 400px;
-	/* Adjust height if needed */
+	max-width: 280px;
+	/* Slightly smaller max-width for the cards */
+	height: 350px;
+	/* Slightly smaller height for the cards */
 	position: relative;
 	display: grid;
 	place-items: center;
@@ -839,8 +840,10 @@ body {
 /* Card styling */
 .SpecializationCard {
 	position: absolute;
-	width: 95%;
-	height: 95%;
+	width: 90%;
+	/* Slightly smaller width to fit well inside the cardBox */
+	height: 90%;
+	/* Slightly smaller height to fit well inside the cardBox */
 	background: #000814;
 	border-radius: 20px;
 	z-index: 5;
@@ -851,7 +854,8 @@ body {
 	text-align: center;
 	color: #ffffff;
 	overflow: hidden;
-	padding: 20px;
+	padding: 15px;
+	/* Slightly smaller padding */
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
 		rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
@@ -860,7 +864,8 @@ body {
 
 /* Card Header */
 .SpecializationCard h3 {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
+	/* Slightly smaller font size */
 	color: white;
 	margin: 0;
 	/* Remove margin to center it properly */
@@ -880,7 +885,8 @@ body {
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
 	text-align: center;
-	padding: 10px 20px;
+	padding: 8px 16px;
+	/* Slightly smaller padding */
 }
 
 /* Hover Effect */
@@ -890,10 +896,12 @@ body {
 
 /* Ensure image and heading are centered */
 .SpecializationCard img {
-	width: 100px;
-	height: 100px;
-	margin: 0 0 20px 0;
-	/* Center image and add margin below */
+	width: 80px;
+	/* Slightly smaller image width */
+	height: 80px;
+	/* Slightly smaller image height */
+	margin: 0 0 15px 0;
+	/* Adjust margin below */
 	transition: opacity 0.3s ease-in-out;
 }
 
@@ -936,24 +944,29 @@ body {
 }
 
 /* Responsive Layout */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 	.flexi {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 16px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, auto) auto;
+		gap: 20px;
+		/* Increased gap for better spacing */
 		justify-content: center;
 		/* Center cards horizontally */
 	}
 
+	.flexi .cardBox:nth-child(7) {
+		grid-column: span 3;
+		/* Span 3 columns for the 7th card */
+	}
+
 	.flexi .cardBox {
-		flex: 1 1 calc(33.333% - 16px);
-		/* 3 cards per row */
-		max-width: 300px;
-		/* Ensure max-width is maintained */
+		max-width: none;
+		/* Remove max-width for grid layout */
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
 	.flexi {
 		display: flex;
 		flex-direction: column;
