@@ -855,7 +855,6 @@ body {
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
 		rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
-	position: relative;
 	transition: transform 0.3s ease-in-out;
 }
 
@@ -863,13 +862,21 @@ body {
 .SpecializationCard h3 {
 	font-size: 1.6rem;
 	color: white;
-	margin-bottom: 20px;
+	margin: 0;
+	/* Remove margin to center it properly */
 	transition: opacity 0.3s ease-in-out;
 }
 
 /* Card Content */
 .SpecializationCard .SpecializationContent {
-	position: relative;
+	position: absolute;
+	top: 50%;
+	/* Center vertically */
+	left: 50%;
+	/* Center horizontally */
+	transform: translate(-50%, -50%);
+	/* Offset by 50% of its width and height */
+	width: 100%;
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
 	text-align: center;
@@ -881,16 +888,18 @@ body {
 	opacity: 1;
 }
 
+/* Ensure image and heading are centered */
 .SpecializationCard img {
 	width: 100px;
 	height: 100px;
-	margin-bottom: 20px;
+	margin: 0 0 20px 0;
+	/* Center image and add margin below */
 	transition: opacity 0.3s ease-in-out;
 }
 
 .SpecializationCard:hover img,
 .SpecializationCard:hover h3 {
-	opacity: 0.1;
+	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
 }
 

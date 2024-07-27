@@ -10,7 +10,7 @@ import grid from "../../assets/specialization/grid.svg"
 
 function Hero08() {
     return (
-        <div className='flexi bg-white p-4 m-auto gap-8'>
+        <div className='flexi  p-4 m-auto gap-8'>
             <div className="cardBox">
                 <div className="SpecializationCard">
                     <div>
