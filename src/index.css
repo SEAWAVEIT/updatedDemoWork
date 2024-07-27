@@ -839,10 +839,10 @@ body {
 /* Base Styles */
 .cardBox {
 	width: 100%;
-	max-width: 280px;
-	/* Slightly smaller max-width for the cards */
-	height: 350px;
-	/* Slightly smaller height for the cards */
+	max-width: 240px;
+	/* Adjusted max-width for smaller cards */
+	height: 300px;
+	/* Adjusted height for smaller cards */
 	position: relative;
 	display: grid;
 	place-items: center;
@@ -869,7 +869,7 @@ body {
 	text-align: center;
 	color: #ffffff;
 	overflow: hidden;
-	padding: 15px;
+	padding: 12px;
 	/* Slightly smaller padding */
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
@@ -879,7 +879,7 @@ body {
 
 /* Card Header */
 .SpecializationCard h3 {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	/* Slightly smaller font size */
 	color: white;
 	margin: 0;
@@ -900,7 +900,7 @@ body {
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
 	text-align: center;
-	padding: 8px 16px;
+	padding: 8px 12px;
 	/* Slightly smaller padding */
 }
 
@@ -911,11 +911,11 @@ body {
 
 /* Ensure image and heading are centered */
 .SpecializationCard img {
-	width: 80px;
+	width: 60px;
 	/* Slightly smaller image width */
-	height: 80px;
+	height: 60px;
 	/* Slightly smaller image height */
-	margin: 0 0 15px 0;
+	margin: 0 0 10px 0;
 	/* Adjust margin below */
 	transition: opacity 0.3s ease-in-out;
 }
