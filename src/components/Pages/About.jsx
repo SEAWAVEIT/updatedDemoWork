@@ -80,7 +80,7 @@ function About() {
                 />
               </div>
             </div>
-            <div ref={ParaEffect} className='md:order-2 order-1 mb-8 text-center  md:mb-0'>
+            <div ref={ParaEffect} className='md:order-2 order-1 mb-8 text-center mx-auto md:mb-none'>
               <p className='md:w-96 w-80 text-center text-sm md:text-lg md:font-medium font-light'>Road transportation has a crucial role.
                 coordinated transportation in the
                 countries of origin destination makes all the difference.</p>
