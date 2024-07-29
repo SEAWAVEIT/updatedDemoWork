@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Hero10() {
 	return (
-		<div className="Hero08 w-full h-screen bg-white flex justify-center items-center">
+		<div className="Hero08 w-full h-auto bg-white flex justify-center items-center">
 			<div className="h-[90%] w-[90%] md:border-2 md:border-black-900 flex justify-center items-center">
 				<div className="flex flex-col md:flex-row justify-center items-center  p-4">
 					<div className=" ">

@@ -7,7 +7,7 @@ import pad from "./../../assets/svgs/pad.svg";
 
 function Hero07() {
   return (
-    <div className="Hero07 bg-white text-black px-auto mx-auto max-w-7xl">
+    <div className="Hero07 bg-white text-black h-auto  px-auto mx-auto max-w-7xl">
       <div className="text-center mb-8">
         <h1 className="GradientText text-4xl">Services</h1>
         <p className="my-4">

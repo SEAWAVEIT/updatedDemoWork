@@ -526,46 +526,66 @@ body {
 /* =========================================================================================================== */
 
 /* Faq */
+/* General Faq Styles */
 .faq-details {
 	transition: all 0.45s ease;
 }
 
 .faq-details[open] {
 	padding-bottom: 1rem;
-	/* Adjust as needed */
 	color: white;
 	background-color: black;
 	transition: all 0.45s ease;
-
-	.question {
-		color: rgba(179, 179, 179, 0.37);
-	}
 }
 
+.faq-details[open] .question {
+	color: rgba(179, 179, 179, 0.37);
+}
+
+.faq-details[open] .answer {
+	color: white;
+	/* background-color: black; */
+}
+
+/* Mobile-specific styles */
 @media only screen and (max-width: 600px) {
-	.faq h2 {
-		font-size: 20px;
+	.container {
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 
-	.accordian .content {
-		font-size: 14px;
+	/* Adjust the width of FAQ details for mobile */
+	.faq-details {
+		width: 100%;
 	}
 
-	.accordian li label {
-		padding: 10px;
-		font-size: 14px;
+	.faq-details .question {
+		font-size: 1.2rem;
+		/* Adjust font size if needed */
 	}
 
-	label::after {
-		font-size: 22px;
-	}
-
-	.faq-details[open] {
-		color: white;
-		background-color: black;
-		transition: all 0.45s ease;
+	.faq-details .answer {
+		font-size: 1rem;
+		/* Adjust font size if needed */
 	}
 }
+
+@media (min-width: 601px) {
+
+	/* Desktop-specific styles */
+	.container {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.faq-details {
+		width: 80%;
+		/* Adjust width for desktop */
+		max-width: 800px;
+		/* Limit max-width */
+	}
+}
+
 
 /* =========================================================================================================== */
 
