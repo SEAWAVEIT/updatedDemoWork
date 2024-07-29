@@ -9,7 +9,7 @@ function Hero06() {
 	// };
 
 	return (
-		<div className="Hero06 md:h-screen h-auto py-2 md:py-none flex md:flex-row flex-col flex-start items-center bg-white  ">
+		<div className="Hero06  h-auto py-2 md:py-none flex md:flex-row flex-col flex-start items-center bg-white  ">
 			<div className="md:w-[40%] ">
 				<div className="md:p-8 md:my-20 md:text-start text-center ">
 					<h1 className="text-4xl md:text-6xl">Why choose us</h1>
