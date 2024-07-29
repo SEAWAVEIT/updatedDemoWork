@@ -54,11 +54,11 @@ function About() {
   });
 
   return (
-    <div className='md:h-auto md:p-none p-8 w-full bg-white text-black  '>
+    <div className=' h-auto md:p-none p-8 px-auto w-full bg-white text-black  '>
       <div className='md:flex md:flex-col'>
         <div className='section1 flex flex-col md:flex-row items-center justify-between m-auto md:py-2 py-2'>
           <div ref={HeadingEffect} className='md:text-6xl text-3xl font-medium GradientText'>
-            <h1 className='text-center my-2'>Safe reliable</h1>
+            <h1 className='text-center md:my-2'>Safe reliable</h1>
             <h1 className='text-center '>Logistic Solutions</h1>
           </div>
           <div className=''>

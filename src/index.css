@@ -1015,3 +1015,11 @@ body {
 		/* Remove max-width */
 	}
 }
+
+
+.custonCheck {
+	height: 330px;
+	width: 330px;
+	size: 190px;
+	font-size: 920px;
+}
