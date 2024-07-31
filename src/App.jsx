@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import Header from "./components/Header/Header";
 import NavBar from "./components/Header/NavBar";
+import Admin from "./components/Admin/Admin";
 import Footer from "./components/Footer/Footer";
 import Main1 from "./components/Main/Hero01";
 import Main2 from "./components/Main/Hero02";
@@ -22,6 +23,7 @@ import LogisticsDesign from "./components/Pages/LogisticsDesign";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import "./App.css";
+import SignIn from "./components/Pages/SignIn";
 
 function Home() {
   return (
@@ -55,6 +57,8 @@ function App() {
         <Route path="/landfreight" element={<LandFreight />} />
         <Route path="/warehousing" element={<Warehousing />} />
         <Route path="/logisticsdesign" element={<LogisticsDesign />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
       <Footer />
     </div>
