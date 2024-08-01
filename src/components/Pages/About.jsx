@@ -56,8 +56,8 @@ function About() {
   return (
     <div className=' h-auto md:p-none p-8 px-auto w-full bg-white text-black  '>
       <div className='md:flex md:flex-col'>
-        <div className='section1 flex flex-col md:flex-row items-center justify-between m-auto md:py-2 py-2'>
-          <div ref={HeadingEffect} className='md:text-6xl text-3xl font-medium GradientText'>
+        <div className='section1 flex flex-col md:gap-20 md:flex-row items-center justify-between m-auto md:py-2 py-2'>
+          <div ref={HeadingEffect} className='md:text-6xl text-3xl p-4 font-medium GradientText'>
             <h1 className='text-center md:my-2'>Safe reliable</h1>
             <h1 className='text-center '>Logistic Solutions</h1>
           </div>
@@ -65,11 +65,12 @@ function About() {
             <img ref={truck1Ref} src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f1f1dde1e45ab1ef4ad094_mini%20track.png" alt="" />
           </div>
         </div>
-        <div className='section2 flex flex-col md:flex-row items-center justify-between m-auto py-6'>
+        <div className='section2 flex flex-col md:gap-20 md:flex-row items-center justify-between m-auto md:py-2 py-2'>
           <div className='flex md:flex-row flex-col'>
             <div className=' flex flex-row md:order-1 order-2'>
-              <div ref={personRef} className='pr-8 pt-6'>
+              <div ref={personRef} className=' pr-8 pt-6'>
                 <img
+                  className='md:h-28'
                   src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2f5ea222b9b7f59eacfc7_logi%20man.png" alt="" />
               </div>
               <div ref={truck2Ref}>

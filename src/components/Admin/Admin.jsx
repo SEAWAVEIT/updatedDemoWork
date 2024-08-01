@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { db, collection, addDoc } from '../../firebase/firebase.js';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../../firebase/firebase.js';
-import { signOut } from 'firebase/auth';
+import { useAuth } from '../Pages/AuthProvider';
+// import { signOut } from 'firebase/auth';
 import SignIn from "../Pages/SignIn.jsx"
 
 function Admin() {
@@ -11,24 +11,30 @@ function Admin() {
     const [description, setDescription] = useState("")
     const [message, setMessage] = useState("")
     const navigate = useNavigate();
-    const [user, setUser] = useState("")
+    const { user } = useAuth()
+
+    // useEffect(() => {
+    //     const unsubscribe = auth.onAuthStateChanged((user) => {
+    //         if (user) {
+    //             setUser(user)
+    //         }
+    //         else {
+    //             navigate("/signin")
+    //         }
+    //     })
+    //     return () => unsubscribe()
+    // }, [navigate])
 
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged((user) => {
-            if (user) {
-                setUser(user)
-            }
-            else {
-                navigate("./signin")
-            }
-        })
-        return () => unsubscribe()
-    }, [navigate])
+        if (!user) {
+            navigate("/signin");
+        }
+    }, [user, navigate]);
 
     const handleSignOut = async () => {
         try {
             await signOut(auth)
-            navigate("./signin")
+            navigate("/")
         } catch (error) {
             console.error('Sign Out Error', err);
         }

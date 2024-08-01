@@ -124,6 +124,7 @@ const Header = () => {
                       <li>
                         <Link to={"logisticsdesign"}>Logistics Design</Link>
                       </li>
+
                     </ul>
                   )}
                 </li>
@@ -132,6 +133,9 @@ const Header = () => {
                 </li>
                 <li>
                   <Link to={"getafreequote"}>Get A Free Quote</Link>
+                </li>
+                <li>
+                  <Link to={"admin"}>Admin</Link>
                 </li>
               </ul>
             )}
@@ -172,6 +176,9 @@ const Header = () => {
             </li>
             <li>
               <Link to={"getafreequote"}>Get A Free Quote</Link>
+            </li>
+            <li>
+              <Link to={"admin"}>Admin</Link>
             </li>
           </ul>
         </div>

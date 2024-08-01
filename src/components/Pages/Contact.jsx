@@ -1,9 +1,8 @@
 import React, { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import WAVESVG from "../WaveSVG"
-import BackgroundSlide from "../Button";
+
 import plane from "../../assets/editedplane-2.png"
 
 function Contact() {
@@ -53,13 +52,13 @@ function Contact() {
 			className="bg-white md:h-screen w-full  p-12"
 		>
 			<div>
-				<div class="grid md:grid-cols-3 grid-flow-row gap-4 md:h-80">
-					<div class="col-span-1 row-span-2 flex-col flex md:pl-6 justify-center">
+				<div className="grid md:grid-cols-3 grid-flow-row gap-4 md:h-80">
+					<div className="col-span-1 row-span-2 flex-col flex md:pl-6 justify-center">
 						<div className="md:text-6xl md:font-bold text-center font-semibold text-4xl ">
-							<h1 class="title-word title-word-1">Emergency</h1>
-							<h1 class="title-word title-word-2">Solutions</h1>
-							<h1 class="title-word title-word-3">for</h1>
-							<h1 class="title-word title-word-4">Delivery</h1>
+							<h1 className="title-word title-word-1">Emergency</h1>
+							<h1 className="title-word title-word-2">Solutions</h1>
+							<h1 className="title-word title-word-3">for</h1>
+							<h1 className="title-word title-word-4">Delivery</h1>
 						</div>
 						<div className="pl-6 pt-8">
 							<p>
@@ -69,7 +68,7 @@ function Contact() {
 							<p> Ullamcorper Molestie</p>
 						</div>
 					</div>
-					<div class=" md:px-1 md:py-1 py-8 col-span-1 row-span-2 flex items-center justify-center">
+					<div className=" md:px-1 md:py-1 py-8 col-span-1 row-span-2 flex items-center justify-center">
 						<div>
 							<img
 								ref={droneRef}
@@ -77,7 +76,7 @@ function Contact() {
 							/>
 						</div>
 					</div>
-					<div class="col-span-1 flex md:flex-col flex-row items-center md:pt-18 gap-4">
+					<div className="col-span-1 flex md:flex-col flex-row items-center md:pt-18 gap-4 ">
 						<div className=" flex-1 md:flex items-center order-2 justify-center">
 							<div
 								ref={circleRef}
@@ -86,41 +85,42 @@ function Contact() {
 								<p className="md:text-2xl text-[12px]">Quote</p>
 							</div>
 						</div>
-						<div class="md:text-xl text-sm flex-1 flex flex-col gap-4 pt-20 align-bottom order-3">
-							<div className=" text-start list-none">
-								<div className="flex items-center gap-x-2 mb-2">
-									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4 hover:border-sky-200 hover:shadow-[green]">
+						<div className="paraContactDiv md:text-xl text-sm flex-1  flex flex-col gap-4 pt-20 align-bottom order-3">
+							<div className=" text-start list-none ">
+								<div className="flex items-center gap-x-2 mb-2 ">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4">
 										<path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
 									</svg>
-									<li>Fastest Trait Times</li>
+									<li className="hover:text-pink-400">Fastest Trait Times</li>
+								</div>
+
+								<div className="flex items-center gap-2 mb-2">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4">
+										<path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+									</svg>
+									<li className="text-nowrap hover:text-pink-400">Security and Protection</li>
+								</div>
+
+								<div className="` flex items-center gap-2 hover:text-pink-400 mb-2">
+
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4">
+										<path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+									</svg>
+									<li className="hover:text-pink-400">Safe Packaging</li>
 								</div>
 
 								<div className="flex items-center gap-2  mb-2">
-									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4 hover:border-sky-200 hover:shadow-[green]">
-										<path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-									</svg>
-									<li className="text-nowrap">Security and Protection</li>
-								</div>
-
-								<div className="flex items-center gap-2  mb-2">
-									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4 hover:border-sky-200 hover:shadow-[green]">
-										<path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-									</svg>
-									<li>Safe Packaging</li>
-								</div>
-
-								<div className="flex items-center gap-2  mb-2">
-									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4 hover:border-sky-200 hover:shadow-[green]">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="md:size-6 size-4">
 										<path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
 									</svg>
 									{/* <WAVESVG /> */}
-									<li>Guaranteed Delivery</li>
+									<li className="hover:text-pink-400">Guaranteed Delivery</li>
 								</div>
 
 
 							</div>
 							<div className="">
-								<button class="custom-btn btn-12">
+								<button className="custom-btn btn-12">
 									<span>Click!</span>
 									<span>Read More</span>
 								</button>
@@ -129,7 +129,7 @@ function Contact() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</div >
 	);
 }
 
