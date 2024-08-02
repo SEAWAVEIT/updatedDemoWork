@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
 import { db, getDocs, collection } from "../../firebase/firebase";
 
-function BlogPublished() {
+function AllBlogs() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -32,7 +32,7 @@ function BlogPublished() {
                             {/* <p className="mt-4 text-gray-800 leading-relaxed">{post.description}</p> */}
                             {/* <p className="mt-2 text-gray-700 italic">{post.message}</p> */}
 
-                            <Link to="/">
+                            <Link to={`/blog/${post.id}`}>
                                 <button className='bg-blue-500 hover:cursor-pointer px-4 my-2 hover:bg-blue-700 py-1 text-white rounded-lg '>View</button>
                             </Link>
                         </div>
@@ -45,4 +45,4 @@ function BlogPublished() {
     );
 }
 
-export default BlogPublished;
+export default AllBlogs;

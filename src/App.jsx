@@ -22,7 +22,7 @@ import Warehousing from "./components/Pages/Warehousing";
 import LogisticsDesign from "./components/Pages/LogisticsDesign";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
-import Blog from "./components/Pages/BlogPublished";
+import AllBlog from "./components/Pages/AllBlogs";
 import SingleBlog from "./components/Pages/SingleBlog";
 import "./App.css";
 import SignIn from "./components/Pages/SignIn";
@@ -61,8 +61,8 @@ function App() {
         <Route path="/logisticsdesign" element={<LogisticsDesign />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/blogs" element={<Blog />} />
-        <Route path="/blog" element={<SingleBlog />} />
+        <Route path="/allblogs" element={<AllBlog />} />
+        <Route path="/blog/:postId" element={<SingleBlog />} />
       </Routes>
       <Footer />
     </div>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { db, collection, addDoc } from '../../firebase/firebase.js';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../Pages/AuthProvider';
-// import { signOut } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../firebase/firebase.js';
 import SignIn from "../Pages/SignIn.jsx"
 
 function Admin() {
@@ -44,7 +45,7 @@ function Admin() {
     const addPost = async (e) => {
         e.preventDefault();
         try {
-            await addDoc(collection(db, 'posts'), {
+            const docRef = await addDoc(collection(db, 'posts'), {
                 name,
                 topic,
                 description,
@@ -55,7 +56,7 @@ function Admin() {
             setTopic("")
             setDescription("")
             setMessage("")
-            console.log(name, topic, description, message)
+            console.log(name, topic, description, message, docRed.id)
             navigate('/blog');
         } catch (error) {
             console.log("Eroor : ", error);
@@ -207,18 +208,18 @@ function Admin() {
                         ></textarea>
                     </div>
 
-                    <div>
-                        <button
-                            type="submit"
 
-                            className="bg-blue-500 text-white font-semibold px-4 py-2 hover:text-slate-400 rounded-xl"
-                        >
-                            Post
-                        </button>
-                    </div>
+                    <button
+                        type="submit"
+                        navigate="/"
+                        className="bg-blue-500 text-white font-semibold px-4 py-2 hover:text-slate-400 rounded-xl"
+                    >
+                        Post
+                    </button>
+
                 </form>
             </div>
-        </div>
+        </div >
     );
 }
 

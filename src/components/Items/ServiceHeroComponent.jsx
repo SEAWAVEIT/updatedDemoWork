@@ -1,6 +1,5 @@
 import React from 'react'
 import "../../index.css"
-import ServiceHead from "../Items/ServiceHeroComponent"
 
 function ServiceHeroComponent({ imageSrc, Text }) {
     return (
