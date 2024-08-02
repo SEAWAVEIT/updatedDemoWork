@@ -144,7 +144,7 @@ function Hero03() {
                 ref={buttonRefTruck}
                 onMouseEnter={animateButtonOverTruck}
                 onMouseLeave={animateButtonOutTruck}
-                className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full"
+                className="bg-white text-black border-2 border-black hover:bg-white hover:text-black p-3 rounded-full"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ function Hero03() {
                 ref={buttonRefShip}
                 onMouseEnter={animateButtonOverShip}
                 onMouseLeave={animateButtonOutShip}
-                className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full"
+                className="bg-white text-black border-2 border-black hover:bg-white hover:text-black p-3 rounded-full"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +224,7 @@ function Hero03() {
                 ref={buttonRefPlane}
                 onMouseEnter={animateButtonOverPlane}
                 onMouseLeave={animateButtonOutPlane}
-                className="bg-white text-black border-2 border-black hover:bg-black hover:text-white p-3 rounded-full"
+                className="bg-white text-black border-2 border-black hover:bg-white hover:text-black p-3 rounded-full"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

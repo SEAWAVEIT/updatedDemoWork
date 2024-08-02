@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import "../../index.css"
 
 function Hero06() {
 
@@ -41,7 +42,7 @@ function Hero06() {
 						<div className="w-1/3 ">
 							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009b0314aa349233739d_why%20choose.svg" alt="" /></div>
 						<div className="w-2/3 pt-8">
-							<h1 className="text-xl font-semibold ">Online Support</h1>
+							<h1 className="text-xl font-semibold ">Online Support1</h1>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
 						</div>
 					</div>
@@ -52,7 +53,7 @@ function Hero06() {
 						<div className="w-1/3 ">
 							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009b7d75415a8cb4c30a_why%20choose-3.svg" alt="" /></div>
 						<div className="w-2/3 pt-8">
-							<h1 className="text-xl font-semibold ">Online Support</h1>
+							<h1 className="text-xl font-semibold ">Online Support2</h1>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
 						</div>
 					</div>
@@ -66,7 +67,7 @@ function Hero06() {
 						<div className="w-1/3 ">
 							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009b7d7541f38bb4c309_why%20choose-2.svg" alt="" /></div>
 						<div className="w-2/3 pt-8">
-							<h1 className="text-xl font-semibold pb-2">Online Support</h1>
+							<h1 className="text-xl font-semibold pb-2">Online Support3</h1>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
 						</div>
 					</div>
@@ -75,7 +76,7 @@ function Hero06() {
 						<div className="w-1/3 ">
 							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009bdff26411a67191d3_why%20choose-1.svg" alt="" /></div>
 						<div className="w-2/3 pt-8">
-							<h1 className="text-xl font-semibold ">Online Support</h1>
+							<h1 className="text-xl font-semibold ">Online Support4</h1>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
 						</div>
 					</div>

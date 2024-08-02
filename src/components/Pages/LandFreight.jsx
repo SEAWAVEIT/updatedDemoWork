@@ -1,25 +1,13 @@
 import React from "react";
 import ServiceItem from "./ServiceItem";
 import landFreight from "../../assets/services/landFreight.jpg";
+import ServiceHead from "../Items/ServiceHeroComponent"
 import "../../index.css";
 
 function LandFreight() {
 	return (
 		<div className="bg-white p-4 md:p-8">
-			<div className="relative bg-black rounded-xl overflow-hidden mb-6 md:mb-8">
-				<img
-					className="absolute inset-0 w-full h-full object-cover opacity-30"
-					src={landFreight}
-					alt="Land Freight"
-				/>
-				<div className=" relative flex justify-center items-center h-60 md:h-96">
-					<div class="logo-container GradientText">
-						<h1 id="page-logo" className="text-white  md:font-medium font-semibold text-3xl md:text-6xl z-0 text-center">Land Freight</h1>
-					</div>
-				</div>
-
-			</div>
-
+			<ServiceHead imageSrc={landFreight} Text={"Land Freight"} />
 			<div className="px-4 md:px-20 mb-6 md:mb-8">
 				<div className="mb-6 md:mb-8">
 					<p>

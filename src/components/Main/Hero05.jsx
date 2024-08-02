@@ -149,14 +149,14 @@ function Hero05() {
 						/>
 						<div className="flex flex-col text-center items-center gap-2">
 							<Headquote />
-							<p className="text-sm transition-transform transform hover:translate-y-1">
+							<p className="text-sm ">
 								{testimonial.quote}
 							</p>
 							<Tailquote />
-							<h1 className="text-md mt-2 font-medium whitespace-nowrap transition-transform transform hover:translate-y-1">
+							<h1 className="text-md mt-2 font-medium whitespace-nowrap ">
 								{testimonial.name}
 							</h1>
-							<p className="text-sm font-regular transition-transform transform hover:translate-y-1">
+							<p className="text-sm font-regular ">
 								{testimonial.position}
 							</p>
 						</div>

@@ -196,9 +196,9 @@ body {
 
 /* Hero 06 */
 .CustomBorder-main {
-	height: 20rem;
-	width: 0.1rem;
-	background-color: rgba(104, 104, 104, 0.233);
+	height: 252px;
+	width: 2px;
+	background-color: rgba(104, 104, 104, 0.521);
 
 	/* margin: auto; */
 }
@@ -206,7 +206,7 @@ body {
 .CustomBorder-Sub {
 	height: 1px;
 	width: 222px;
-	background-color: rgba(104, 104, 104, 0.233);
+	background-color: rgba(104, 104, 104, 0.534);
 }
 
 .serviceText {
@@ -859,174 +859,93 @@ body {
 /* =========================================================================================================== */
 /* =========================================================================================================== */
 /* Base Styles */
-/* Base Styles */
-.cardBox {
-	width: 100%;
-	max-width: 240px;
-	/* Adjusted max-width for smaller cards */
-	height: 300px;
-	/* Adjusted height for smaller cards */
-	position: relative;
-	display: grid;
-	place-items: center;
-	overflow: hidden;
-	border-radius: 20px;
-	box-shadow:
-		rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
-		rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
-}
-
-/* Card styling */
 .SpecializationCard {
-	position: absolute;
-	width: 90%;
-	/* Slightly smaller width to fit well inside the cardBox */
-	height: 90%;
-	/* Slightly smaller height to fit well inside the cardBox */
-	background: #000814;
-	border-radius: 20px;
-	z-index: 5;
+	width: 360px;
+	height: 280px;
+	background-color: #fafafa;
+	border-radius: 7px;
+	box-shadow: 0px 20px 20px -17px rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	text-align: center;
-	color: #ffffff;
+	justify-content: center;
+	gap: 8px;
+	padding: 1em;
+	transition: all 0.3s ease-in-out;
+	position: relative;
 	overflow: hidden;
-	padding: 12px;
-	/* Slightly smaller padding */
-	cursor: pointer;
-	box-shadow:
-		rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
-		rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
-	transition: transform 0.3s ease-in-out;
-}
-
-/* Card Header */
-.SpecializationCard h3 {
-	font-size: 1.2rem;
-	/* Slightly smaller font size */
-	color: white;
-	margin: 0;
-	/* Remove margin to center it properly */
-	transition: opacity 0.3s ease-in-out;
-}
-
-/* Card Content */
-.SpecializationCard .SpecializationContent {
-	position: absolute;
-	top: 50%;
-	/* Center vertically */
-	left: 50%;
-	/* Center horizontally */
-	transform: translate(-50%, -50%);
-	/* Offset by 50% of its width and height */
-	width: 100%;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
 	text-align: center;
-	padding: 8px 12px;
-	/* Slightly smaller padding */
 }
 
-/* Hover Effect */
+.SpecializationImage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.SpecializationImage img {
+	/* width: 3em;
+	height: 3em; */
+	transition: opacity 0.3s ease-in-out;
+	opacity: 1;
+	margin: 0 auto;
+}
+
+.SpecializationImage h3 {
+	margin: 0.5em 0;
+	font-size: 1.25em;
+	color: #333;
+	font-weight: 400;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 1;
+}
+
+.SpecializationContent {
+	text-align: center;
+	font-size: 0.9em;
+	color: #f5f5f5;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 1em;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+}
+
+/* Hover effect to turn background black */
+.SpecializationCard:hover {
+	background-color: #000;
+	transform: translateY(-5px);
+	box-shadow: 0px 20px 35px -16px rgba(0, 0, 0, 0.3);
+}
+
+/* Change text color on hover to ensure readability */
+.SpecializationCard:hover .SpecializationImage {
+	opacity: 0;
+}
+
+.SpecializationCard:hover .SpecializationImage {
+	opacity: 0;
+}
+
 .SpecializationCard:hover .SpecializationContent {
 	opacity: 1;
 }
 
-/* Ensure image and heading are centered */
-.SpecializationCard img {
-	width: 60px;
-	/* Slightly smaller image width */
-	height: 60px;
-	/* Slightly smaller image height */
-	margin: 0 0 10px 0;
-	/* Adjust margin below */
-	transition: opacity 0.3s ease-in-out;
-}
-
-.SpecializationCard:hover img,
-.SpecializationCard:hover h3 {
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-}
-
-/* Card Border Animation */
-.cardBox::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 20px;
-	border: 5px solid transparent;
-	background:
-		linear-gradient(white, white) padding-box,
-		linear-gradient(to right, #15ecd0, #024d4d, #1ca4e4) border-box;
-	z-index: 1;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-}
-
-.cardBox:hover::before {
-	opacity: 1;
-	animation: glowing 5s linear infinite;
-}
-
-@keyframes glowing {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-/* Responsive Layout */
-@media (min-width: 1024px) {
-	.flexi {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, auto) auto;
-		gap: 20px;
-		/* Increased gap for better spacing */
-		justify-content: center;
-		/* Center cards horizontally */
-	}
-
-	.flexi .cardBox:nth-child(7) {
-		grid-column: span 3;
-		/* Span 3 columns for the 7th card */
-	}
-
-	.flexi .cardBox {
-		max-width: none;
-		/* Remove max-width for grid layout */
-	}
-}
-
-@media (max-width: 1023px) {
-	.flexi {
-		display: flex;
-		flex-direction: column;
-		gap: 16px;
-	}
-
-	.flexi .cardBox {
-		width: 100%;
-		/* Full width on mobile */
-		max-width: none;
-		/* Remove max-width */
-	}
-}
-
-.custonCheck {
-	height: 330px;
-	width: 330px;
-	size: 190px;
-	font-size: 920px;
+.SpecializationCard.wiide {
+	width: 600px;
 }
 
 /* =========================================================================================================== */

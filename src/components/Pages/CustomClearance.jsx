@@ -1,23 +1,13 @@
 import React from "react";
 import "../../index.css";
-import ServiceItem from "./ServiceItem";
 import customClearance from "../../assets/services/customClearance.jpg";
+import ServiceItem from "./ServiceItem";
+import ServiceHead from "../Items/ServiceHeroComponent"
 
 function CustomClearance() {
 	return (
 		<div className="bg-white p-4 md:p-8">
-			<div className="relative bg-black rounded-xl overflow-hidden mb-6 md:mb-8">
-				<img
-					className="absolute inset-0 w-full h-full object-cover opacity-30"
-					src={customClearance}
-					alt="Custom Clearance"
-				/>
-				<div className=" relative flex justify-center items-center h-60 md:h-96">
-					<div class="logo-container GradientText">
-						<h1 id="page-logo" className="text-white md:font-medium font-semibold  text-3xl md:text-6xl z-0 text-center">Custom Clearance</h1>
-					</div>
-				</div>
-			</div>
+			<ServiceHead imageSrc={customClearance} Text={"Custom Clearance"} />
 
 			<div className="px-4 md:px-20 mb-6 md:mb-8">
 				<p className="mb-4">

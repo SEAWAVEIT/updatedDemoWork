@@ -10,29 +10,3 @@
     transform: scale(1.05);
     box-shadow: 0 8px 16px #78c5f291;
 }
-
-.quote-icon {
-    transition: transform 0.3s ease;
-}
-
-.quote-icon:hover {
-    transform: scale(1.1);
-}
-
-.text-sm:hover,
-.text-md:hover {
-    color: #2874d2;
-    cursor: pointer;
-}
-
-.transition-transform {
-    transition: transform 0.3s ease;
-}
-
-.transform:hover {
-    transform: translateX(0.5rem);
-}
-
-.hover\:translate-x-1:hover {
-    transform: translateX(0.5rem);
-}

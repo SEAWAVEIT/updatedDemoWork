@@ -2,24 +2,13 @@ import React from "react";
 import ServiceItem from "./ServiceItem";
 import warehouse from "../../assets/services/warehouse.jpg";
 import "../../index.css";
+import ServiceHead from "../Items/ServiceHeroComponent"
+
 
 function Warehousing() {
 	return (
 		<div className="bg-white p-4 md:p-8">
-			<div className="relative bg-black rounded-xl overflow-hidden mb-6 md:mb-8">
-				<img
-					className="absolute inset-0 w-full h-full object-cover opacity-30"
-					src={warehouse}
-					alt="Warehousing"
-				/>
-				<div className="relative flex justify-center items-center h-60 md:h-96">
-					<div className="logo-container GradientText">
-						<h1 id="page-logo" className="text-white md:font-medium font-semibold text-3xl md:text-6xl z-0 text-center">
-							Warehousing
-						</h1>
-					</div>
-				</div>
-			</div>
+			<ServiceHead Text={"Warehousing"} imageSrc={warehouse} />
 
 			<div className="px-4 md:px-20 mb-6 md:mb-8">
 				<div className="mb-6 md:mb-8">

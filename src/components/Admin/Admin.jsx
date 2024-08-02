@@ -36,7 +36,7 @@ function Admin() {
             await signOut(auth)
             navigate("/")
         } catch (error) {
-            console.error('Sign Out Error', err);
+            console.error('Sign Out Error', error);
         }
     }
 
@@ -56,8 +56,9 @@ function Admin() {
             setDescription("")
             setMessage("")
             console.log(name, topic, description, message)
+            navigate('/blog');
         } catch (error) {
-            console.log("Eroor : ", e);
+            console.log("Eroor : ", error);
         }
     }
     if (!user) {
