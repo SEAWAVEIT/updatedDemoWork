@@ -25,7 +25,7 @@ function FreeQuote() {
 					</h1>
 				</div>
 			</div>
-			<div>
+			<div className="px-8">
 				<div className="InputDetails w-full grid grid-cols-1 md:grid-cols-2 gap-4">
 					<div className="col-span-1 w-full">
 						<input
@@ -63,8 +63,8 @@ function FreeQuote() {
 						/>
 					</div>
 				</div>
-				<div>
-					<div className="text-xl my-4">
+				<div className="px-6 py-2">
+					<div className="md:text-2xl my-4">
 						<h2>Services:</h2>
 					</div>
 					<div>

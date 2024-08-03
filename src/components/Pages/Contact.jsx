@@ -47,12 +47,13 @@ function Contact() {
 	});
 
 	return (
-		<div
+		<div className="px-12 py-40">
+			<div
 			ref={EntirePageEffect}
-			className="bg-white md:h-screen w-full  p-12"
+			className="bg-white md:h-auto w-full flex justify-center items-center "
 		>
 			<div>
-				<div className="grid md:grid-cols-3 grid-flow-row gap-4 md:h-80">
+				<div className="grid md:grid-cols-3 grid-flow-row gap-4 ">
 					<div className="col-span-1 row-span-2 flex-col flex md:pl-6 justify-center">
 						<div className="md:text-6xl md:font-bold text-center font-semibold text-4xl ">
 							<h1 className="title-word title-word-1">Emergency</h1>
@@ -130,6 +131,8 @@ function Contact() {
 				</div>
 			</div>
 		</div >
+		</div>
+		
 	);
 }
 
