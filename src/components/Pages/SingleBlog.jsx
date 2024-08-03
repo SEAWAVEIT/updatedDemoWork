@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { db, getDoc, doc } from "../../firebase/firebase";
-import './SingleBlog.css';
+// import './SingleBlog.css';
 import { format } from 'date-fns'; // Import date-fns
 
 function SingleBlog() {
@@ -38,31 +38,36 @@ function SingleBlog() {
     }, [postId]);
 
     if (!post) {
-        return <div><div class="flex items-center justify-center h-screen">
-            <div class="relative">
-                <div class="h-24 w-24 rounded-full border-t-8 border-b-8 border-gray-200"></div>
-                <div class="absolute top-0 left-0 h-24 w-24 rounded-full border-t-8 border-b-8 border-blue-500 animate-spin">
+        return (
+            <div clas>
+                <div class="flex items-center justify-center h-auto">
+                    <div class="relative">
+                        <div class="h-24 w-24 rounded-full border-t-8 border-b-8 border-gray-200"></div>
+                        <div class="absolute top-0 left-0 h-24 w-24 rounded-full border-t-8 border-b-8 border-blue-500 animate-spin">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div></div>;
+            </div>);
     }
 
     return (
-        <div className='SingleBlog p-8 mx-12 my-4 rounded-xl'>
+       <div className="bg-white h-auto py-8 px-12 ">
+         <div className='SingleBlog rounded-xl'>
             <div className='BlogTopic text-5xl font-semibold mb-4 text-center'>
                 <h1>{post.topic}</h1>
             </div>
-            <div className='BlogAuthor text-center mb-8'>
-                <h1 className='inline mr-6'>{post.name}</h1>
-                <span>
+            <div className='BlogAuthor text-center mb-8 border-y-2 border-spacing-6 py-2 my-1'>
+                <h1 className='inline text-blue-700 font-semibold mr-6'>{post.name}</h1>
+                <span className='text-slate-700 font-normal'>
                     {post.createdAt
                         ? format(post.createdAt, 'MMMM d, yyyy') // Format date
                         : 'No date available'}
                 </span>
             </div>
-            <div className='BlogDescription mb-8'>{post.description}</div>
-            <div className='BlogMessage'>{post.message}</div>
+            <div className='BlogDescription mb-4  text-slate-800 font-serif' >{post.description}</div>
+            <div className='BlogMessage text-slate-800 font-serif'>{post.message}</div>
         </div>
+       </div>
     );
 }
 

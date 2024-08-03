@@ -85,7 +85,7 @@ function Hero08() {
                         </div>
                     </div>
                     <div className="cardBox">
-                        <div className="SpecializationCard wiide">
+                        <div className="SpecializationCard wiide ">
                             <div className="SpecializationImage">
                                 <img src={grid} alt="" />
                                 <h3>Palletization</h3>

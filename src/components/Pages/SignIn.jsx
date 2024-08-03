@@ -34,15 +34,25 @@ function SignIn() {
 
     return (
         <div className='bg-white flex justify-center gap-4 h-11/12 my-20 items-center flex-col'>
-            <h2 className='text-5xl font-medium text-blue-400'>Sign In</h2>
+            <h2 className='text-6xl font-medium text-blue-400'>Sign In</h2>
 
             <div className='flex gap-2'>
-                <button onClick={handleGoogleSignIn} className="bg-blue-500 text-white p-2 rounded">
+                {/* <button onClick={handleGoogleSignIn} className="bg-blue-500 text-white p-2 rounded">
                     Sign In with Google
-                </button>
-                <button onClick={handleGoogleSignOut} className="bg-red-500 text-white p-2 rounded">
+                </button> */}
+
+
+                <button 
+                onClick={handleGoogleSignIn} 
+                className="btn glass bg-blue-500 hover:bg-blue-800 text-white whitespace-nowrap w-32 text-lg">Sign In</button>
+                <button 
+                onClick={handleGoogleSignOut}
+                className="btn glass bg-red-500 hover:bg-red-800 text-white whitespace-nowrap  w-32 text-lg">Sign Out</button>
+
+
+                {/* <button onClick={handleGoogleSignOut} className="bg-red-500 text-white p-2 rounded">
                     Sign Out
-                </button>
+                </button> */}
             </div>
         </div>
     );
