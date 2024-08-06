@@ -1,8 +1,8 @@
 import React from "react";
 import ServiceItem from "./ServiceItem";
-import landFreight from "../../assets/services/landFreight.jpg";
-import ServiceHead from "../Items/ServiceHeroComponent"
-import "../../index.css";
+import landFreight from "../../../assets/services/landFreight.jpg";
+import ServiceHead from "../../Items/ServiceHeroComponent"
+
 
 function LandFreight() {
 	return (

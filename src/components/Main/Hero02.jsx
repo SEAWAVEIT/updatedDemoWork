@@ -35,7 +35,7 @@ import logo33 from "../../assets/logos/33.webp";
 import logo34 from "../../assets/logos/34.webp";
 import logo35 from "../../assets/logos/35.webp";
 import logo36 from "../../assets/logos/36.webp";
-import "./../../index.css"; // Import your custom CSS for animations
+import "./../../index.css";
 
 const logos = [
   { id: 1, src: logo1, alt: "Image 1" },

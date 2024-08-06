@@ -1,6 +1,5 @@
 import React from "react";
 import "./Hero05.css";
-// import quote from "../../assets/quote.png";
 
 function Headquote() {
 	return (

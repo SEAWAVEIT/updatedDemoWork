@@ -1,8 +1,7 @@
 import React from "react";
 import ServiceItem from "./ServiceItem";
-import logisticsDesign from "../../assets/services/logisticDesign.jpg";
-import ServiceHead from "../Items/ServiceHeroComponent"
-import "../../index.css";
+import logisticsDesign from "../../../assets/services/logisticDesign.jpg";
+import ServiceHead from "../../Items/ServiceHeroComponent"
 
 function LogisticsDesign() {
 	return (

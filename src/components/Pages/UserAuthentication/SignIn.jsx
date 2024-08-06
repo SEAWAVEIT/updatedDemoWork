@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { auth, googleProvider } from '../../firebase/firebase.js'; // Ensure correct imports
+import { auth, googleProvider } from '../../../firebase/firebase.js';
 import { signInWithPopup, signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
@@ -42,12 +42,12 @@ function SignIn() {
                 </button> */}
 
 
-                <button 
-                onClick={handleGoogleSignIn} 
-                className="btn glass bg-blue-500 hover:bg-blue-800 text-white whitespace-nowrap w-32 text-lg">Sign In</button>
-                <button 
-                onClick={handleGoogleSignOut}
-                className="btn glass bg-red-500 hover:bg-red-800 text-white whitespace-nowrap  w-32 text-lg">Sign Out</button>
+                <button
+                    onClick={handleGoogleSignIn}
+                    className="btn glass bg-blue-500 hover:bg-blue-800 text-white whitespace-nowrap w-32 text-lg">Sign In</button>
+                <button
+                    onClick={handleGoogleSignOut}
+                    className="btn glass bg-red-500 hover:bg-red-800 text-white whitespace-nowrap  w-32 text-lg">Sign Out</button>
 
 
                 {/* <button onClick={handleGoogleSignOut} className="bg-red-500 text-white p-2 rounded">

@@ -1,8 +1,7 @@
 import React from "react";
-import "../../index.css";
-import customClearance from "../../assets/services/customClearance.jpg";
-import ServiceItem from "./ServiceItem";
-import ServiceHead from "../Items/ServiceHeroComponent"
+import customClearance from "../../../assets/services/customClearance.jpg";
+import ServiceItem from "../Services/ServiceItem";
+import ServiceHead from "../../Items/ServiceHeroComponent"
 
 function CustomClearance() {
 	return (

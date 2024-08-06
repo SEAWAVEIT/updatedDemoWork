@@ -14,18 +14,20 @@ import Main7 from "./components/Main/Hero07";
 import Main8 from "./components/Main/Hero08";
 import Main9 from "./components/Main/Hero09";
 import Main10 from "./components/Main/Hero10";
-import FreeQuote from "./components/Pages/FreeQuote";
-import CustomClearance from "./components/Pages/CustomClearance";
-import FreightForwarding from "./components/Pages/FreightForwarding";
-import LandFreight from "./components/Pages/LandFreight";
-import Warehousing from "./components/Pages/Warehousing";
-import LogisticsDesign from "./components/Pages/LogisticsDesign";
-import About from "./components/Pages/About";
-import Contact from "./components/Pages/Contact";
-import AllBlog from "./components/Pages/AllBlogs";
-import SingleBlog from "./components/Pages/SingleBlog";
+import FreeQuote from "./components/Pages/FreeQuote/FreeQuote";
+import CustomClearance from "./components/Pages/Services/CustomClearance";
+import FreightForwarding from "./components/Pages/Services/FreightForwarding";
+import LandFreight from "./components/Pages/Services/LandFreight";
+import Warehousing from "./components/Pages/Services/Warehousing";
+import LogisticsDesign from "./components/Pages/Services/LogisticsDesign";
+import About from "./components/Pages/About/About";
+import Contact from "./components/Pages/Contact/Contact";
+import AllBlog from "./components/Pages/Blog/AllBlogs";
+import SingleBlog from "./components/Pages/Blog/SingleBlog";
 import "./App.css";
-import SignIn from "./components/Pages/SignIn";
+import SignIn from "./components/Pages/UserAuthentication/SignIn";
+import Career from "./components/Pages/Careers/Career";
+import CareerInputField from "./components/Pages/Careers/CareerInputField";
 
 function Home() {
   return (
@@ -63,6 +65,8 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/allblogs" element={<AllBlog />} />
         <Route path="/blog/:postId" element={<SingleBlog />} />
+        <Route path="/careers" element={<Career />} />
+        <Route path="/careerinputfield" element={<CareerInputField />} />
       </Routes>
       <Footer />
     </div>

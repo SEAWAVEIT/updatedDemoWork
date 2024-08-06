@@ -4,8 +4,33 @@ import truck from "./../../assets/svgs/truck.svg";
 import warehouse from "./../../assets/svgs/warehouse2.svg";
 import calender from "./../../assets/svgs/calendar.svg";
 import pad from "./../../assets/svgs/pad.svg";
+import { useNavigate } from "react-router-dom"
 
 function Hero07() {
+
+  const navigate = useNavigate();
+
+  const customClearance = () => {
+    navigate('/customclearance');
+  };
+
+  const freightForwarding = () => {
+    navigate('/freightforwarding');
+  };
+
+  const landFreight = () => {
+    navigate('/landfreight');
+  };
+
+  const logisticsDesign = () => {
+    navigate('/logisticsdesign');
+  };
+
+  const warehousing = () => {
+    navigate('/warehousing');
+  };
+
+
   return (
     <div className="Hero07 bg-white text-black h-auto  px-auto mx-auto ">
       <div className="text-center mb-8">
@@ -15,7 +40,9 @@ function Hero07() {
         </p>
       </div>
       <div className="grid gap-4 md:grid-cols-3 justify-items-center">
-        <div className="ServiceCard relative group">
+        <div
+          onClick={customClearance}
+          className="ServiceCard relative group">
           <div className="icon mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +67,7 @@ function Hero07() {
           </div>
         </div>
 
-        <div className="ServiceCard relative group">
+        <div onClick={freightForwarding} className="ServiceCard relative group">
           <div className="icon mb-4">
             <img src={boat} className="h-20" alt="Boat" />
           </div>
@@ -52,7 +79,7 @@ function Hero07() {
           </div>
         </div>
 
-        <div className="ServiceCard relative group">
+        <div onClick={logisticsDesign} className="ServiceCard relative group">
           <div className="icon mb-4">
             <img src={calender} className="h-16" alt="Calendar" />
           </div>
@@ -64,7 +91,7 @@ function Hero07() {
           </div>
         </div>
 
-        <div className="ServiceCard relative group">
+        <div onClick={landFreight} className="ServiceCard relative group">
           <div className="icon mb-4">
             <img src={truck} className="h-20" alt="Truck" />
           </div>
@@ -76,7 +103,7 @@ function Hero07() {
           </div>
         </div>
 
-        <div className="ServiceCard relative group">
+        <div onClick={warehousing} className="ServiceCard relative group">
           <div className="icon mb-4">
             <img src={warehouse} className="h-20" alt="Warehouse" />
           </div>
@@ -88,7 +115,7 @@ function Hero07() {
           </div>
         </div>
 
-        <div className="ServiceCard relative group">
+        <div onClick={warehousing} className="ServiceCard relative group">
           <div className="icon mb-4">
             <img src={pad} className="h-20" alt="Pad" />
           </div>

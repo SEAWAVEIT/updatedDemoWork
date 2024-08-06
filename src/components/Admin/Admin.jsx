@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { db, collection, addDoc } from '../../firebase/firebase.js';
 import { useNavigate, Link } from 'react-router-dom';
-import { useAuth } from '../Pages/AuthProvider';
+import { useAuth } from '../Pages/UserAuthentication/AuthProvider.jsx';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebase/firebase.js';
-import SignIn from "../Pages/SignIn.jsx"
+import SignIn from "../Pages/UserAuthentication/SignIn.jsx"
 
 function Admin() {
     const [name, setName] = useState("")

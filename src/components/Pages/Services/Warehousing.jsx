@@ -1,8 +1,7 @@
 import React from "react";
 import ServiceItem from "./ServiceItem";
-import warehouse from "../../assets/services/warehouse.jpg";
-import "../../index.css";
-import ServiceHead from "../Items/ServiceHeroComponent"
+import warehouse from "../../../assets/services/warehouse.jpg";
+import ServiceHead from "../../Items/ServiceHeroComponent"
 
 
 function Warehousing() {

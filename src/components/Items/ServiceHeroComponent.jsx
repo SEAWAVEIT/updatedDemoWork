@@ -1,5 +1,4 @@
 import React from 'react'
-import "../../index.css"
 
 function ServiceHeroComponent({ imageSrc, Text }) {
     return (
