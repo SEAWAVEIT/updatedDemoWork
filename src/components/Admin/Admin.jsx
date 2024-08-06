@@ -56,7 +56,7 @@ function Admin() {
             setTopic("")
             setDescription("")
             setMessage("")
-            console.log(name, topic, description, message, docRed.id)
+            console.log(name, topic, description, message, docRef.id)
             navigate('/blog');
         } catch (error) {
             console.log("Eroor : ", error);

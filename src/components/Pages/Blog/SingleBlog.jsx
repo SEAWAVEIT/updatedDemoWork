@@ -6,19 +6,18 @@ import { format } from 'date-fns';
 
 function SingleBlog() {
     const [post, setPost] = useState(null);
-    const { postId } = useParams(); // Get postId from URL parameters
+    const { postId } = useParams();
 
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const docRef = doc(db, 'posts', postId); // Reference to the specific document
-                const docSnap = await getDoc(docRef); // Use getDoc to fetch a single document
+                const docRef = doc(db, 'posts', postId);
+                const docSnap = await getDoc(docRef);
 
                 if (docSnap.exists()) {
                     const data = docSnap.data();
-                    const createdAt = data.createdAt?.toDate(); // Convert Firestore Timestamp to JavaScript Date
+                    const createdAt = data.createdAt?.toDate();
 
-                    // Debugging: Log the value of createdAt
                     console.log('CreatedAt:', createdAt);
 
                     setPost({

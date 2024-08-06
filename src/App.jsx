@@ -28,6 +28,8 @@ import "./App.css";
 import SignIn from "./components/Pages/UserAuthentication/SignIn";
 import Career from "./components/Pages/Careers/Career";
 import CareerInputField from "./components/Pages/Careers/CareerInputField";
+import AllApplicants from "./components/Pages/Careers/ViewApplicants";
+import ApplicantDetails from "./components/Pages/Careers/ApplicantDetail";
 
 function Home() {
   return (
@@ -67,6 +69,8 @@ function App() {
         <Route path="/blog/:postId" element={<SingleBlog />} />
         <Route path="/careers" element={<Career />} />
         <Route path="/careerinputfield" element={<CareerInputField />} />
+        <Route path="/allapplicants" element={<AllApplicants />} />
+        <Route path="/applicantDetail" element={<ApplicantDetails />} />
       </Routes>
       <Footer />
     </div>
