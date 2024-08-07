@@ -32,7 +32,7 @@ function ViewApplicants() {
                                     <h2 className="text-2xl font-semibold text-gray-900">{applicant.position}</h2>
                                     <h3 className="text-lg text-gray-600 mt-1 truncate">{applicant.name}</h3>
                                 </div>
-                                <Link to={`/blog/${applicant.id}`} className="absolute bottom-6 left-6">
+                                <Link to={`/applicantDetail/${applicant.id}`} className="absolute bottom-6 left-6">
                                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg">
                                         View
                                     </button>

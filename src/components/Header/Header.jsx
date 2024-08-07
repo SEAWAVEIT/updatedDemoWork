@@ -138,6 +138,9 @@ const Header = () => {
                   <Link to={"admin"}>Admin</Link>
                 </li>
                 <li>
+                  <Link to={"careers"}>Career</Link>
+                </li>
+                <li>
                   <Link to={"allblogs"}>Blog</Link>
                 </li>
               </ul>
@@ -182,6 +185,9 @@ const Header = () => {
             </li>
             <li>
               <Link to={"admin"}>Admin</Link>
+            </li>
+            <li>
+              <Link to={"careers"}>Career</Link>
             </li>
             <li>
               <Link to={"allblogs"}>Blog</Link>

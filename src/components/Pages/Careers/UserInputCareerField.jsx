@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { db, collection, addDoc, storage } from '../../../firebase/firebase.js';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { useNavigate } from 'react-router-dom';
 
 function UserInputCareerField() {
     const [name, setName] = useState('');
@@ -10,6 +11,8 @@ function UserInputCareerField() {
     const [relocate, setRelocate] = useState('yes');
     const [experience, setExperience] = useState('0-1');
     const [resume, setResume] = useState(null);
+
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { id, value, type, files } = e.target;
@@ -53,13 +56,14 @@ function UserInputCareerField() {
                 name, email, number, position, relocate, experience, resumeURL
             })
             alert('Application submitted successfully!');
-            // setName('');
-            // setEmail('');
-            // setNumber('');
-            // setPosition('');
-            // setRelocate('yes');
-            // setExperience('0-1');
-            // setResume(null);
+            setName('');
+            setEmail('');
+            setNumber('');
+            setPosition('');
+            setRelocate('yes');
+            setExperience('0-1');
+            setResume(null);
+            navigate('/');
         } catch (error) {
             console.log("Eroor : ", error);
             alert('An error occurred while submitting the application.');
