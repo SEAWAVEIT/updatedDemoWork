@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { db, collection, addDoc, storage } from '../../../firebase/firebase.js';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
-function CareerInputField() {
+function UserInputCareerField() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [number, setNumber] = useState('');
@@ -45,25 +45,21 @@ function CareerInputField() {
             return;
         }
         try {
-
             const resumeRef = ref(storage, `resume/${resume.name}`)
-
             await uploadBytes(resumeRef, resume)
-
             const resumeURL = await getDownloadURL(resumeRef)
-
             const applicantRef = collection(db, "applicants")
             await addDoc(applicantRef, {
                 name, email, number, position, relocate, experience, resumeURL
             })
             alert('Application submitted successfully!');
-            setName('');
-            setEmail('');
-            setNumber('');
-            setPosition('');
-            setRelocate('yes');
-            setExperience('0-1');
-            setResume(null);
+            // setName('');
+            // setEmail('');
+            // setNumber('');
+            // setPosition('');
+            // setRelocate('yes');
+            // setExperience('0-1');
+            // setResume(null);
         } catch (error) {
             console.log("Eroor : ", error);
             alert('An error occurred while submitting the application.');
@@ -82,9 +78,9 @@ function CareerInputField() {
 
     return (
         <div className="bg-gray-50 p-10 max-w-lg mx-auto rounded-lg shadow-lg">
-            <h1 className="text-3xl font-semibold text-center text-gray-800 mb-6">Job Application</h1>
 
             <form onSubmit={handleSubmit} className="space-y-6">
+                <h1 className="text-3xl font-semibold text-center text-gray-800 mb-6">Apply for a Job</h1>
                 <div className="form-group">
                     <label htmlFor="name" className="block text-lg font-medium text-gray-700 mb-2">Name</label>
                     <input
@@ -230,4 +226,4 @@ function CareerInputField() {
     );
 }
 
-export default CareerInputField;
+export default UserInputCareerField;

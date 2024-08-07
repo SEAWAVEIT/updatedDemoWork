@@ -21,7 +21,7 @@ function ApplicantDetail() {
 
                     console.log('CreatedAt:', createdAt);
 
-                    setPost({
+                    setApplicant({
                         id: docSnap.id,
                         ...data,
                         createdAt
@@ -52,20 +52,24 @@ function ApplicantDetail() {
     return (
         <div>
             <div className="bg-white h-auto py-8 px-12 ">
-                <div className='SingleBlog rounded-xl'>
+                <div className=' rounded-xl'>
                     <div className='ApplicantPosition text-5xl font-semibold mb-4 text-center'>
                         <h1>{applicant.position}</h1>
                     </div>
-                    <div className='BlogAuthor text-center mb-8 border-y-2 border-spacing-6 py-2 my-1'>
-                        <h1 className='inline text-blue-700 font-semibold mr-6'>{post.name}</h1>
+                    <div className=' text-center mb-8 border-y-2 border-spacing-6 py-2 my-1'>
+                        <h1 className='inline text-blue-700 font-semibold mr-6'>{applicant.name}</h1>
                         <span className='text-slate-700 font-normal'>
                             {post.createdAt
                                 ? format(post.createdAt, 'MMMM d, yyyy') // Format date
                                 : 'No date available'}
                         </span>
                     </div>
-                    <div className='BlogDescription mb-4  text-slate-800 font-serif' >{post.description}</div>
-                    <div className='BlogMessage text-slate-800 font-serif'>{post.message}</div>
+                    <div className=' mb-4  text-slate-800 font-serif' >{applicant.email}</div>
+                    <div className=' text-slate-800 font-serif'>{applicant.position}</div>
+                    <div className=' text-slate-800 font-serif'>{applicant.relocate}</div>
+                    <div className=' text-slate-800 font-serif'>{applicant.experience}</div>
+                    <div className=' text-slate-800 font-serif'>{applicant.resume}</div>
+
                 </div>
             </div>
         </div>

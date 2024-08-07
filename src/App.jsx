@@ -3,6 +3,8 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import NavBar from "./components/Header/NavBar";
 import Admin from "./components/Admin/Admin";
+import AdminBlogPostAllowance from "./components/Pages/Blog/AdminBlogPostAllowance";
+import AdminCareerPostAllowance from "./components/Pages/Careers/AdminCareerPostAllowance";
 import Footer from "./components/Footer/Footer";
 import Main1 from "./components/Main/Hero01";
 import Main2 from "./components/Main/Hero02";
@@ -27,9 +29,10 @@ import SingleBlog from "./components/Pages/Blog/SingleBlog";
 import "./App.css";
 import SignIn from "./components/Pages/UserAuthentication/SignIn";
 import Career from "./components/Pages/Careers/Career";
-import CareerInputField from "./components/Pages/Careers/CareerInputField";
+import UserCareerInputField from "./components/Pages/Careers/UserInputCareerField";
 import AllApplicants from "./components/Pages/Careers/ViewApplicants";
 import ApplicantDetails from "./components/Pages/Careers/ApplicantDetail";
+import JobDetails from "./components/Pages/Careers/JobDetails";
 
 function Home() {
   return (
@@ -64,13 +67,16 @@ function App() {
         <Route path="/warehousing" element={<Warehousing />} />
         <Route path="/logisticsdesign" element={<LogisticsDesign />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/adminblogpostallowance" element={<AdminBlogPostAllowance />} />
+        <Route path="/admincareerpostallowance" element={<AdminCareerPostAllowance />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/allblogs" element={<AllBlog />} />
         <Route path="/blog/:postId" element={<SingleBlog />} />
         <Route path="/careers" element={<Career />} />
-        <Route path="/careerinputfield" element={<CareerInputField />} />
+        <Route path="/careerinputfield" element={<UserCareerInputField />} />
         <Route path="/allapplicants" element={<AllApplicants />} />
         <Route path="/applicantDetail" element={<ApplicantDetails />} />
+        <Route path="/jobdetails/:jobId" element={<JobDetails />} />
       </Routes>
       <Footer />
     </div>
