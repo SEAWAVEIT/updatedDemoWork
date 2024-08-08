@@ -7,25 +7,19 @@ import SignIn from "../Pages/UserAuthentication/SignIn.jsx"
 
 function Admin() {
     const navigate = useNavigate();
-    const { user } = useAuth()
-
-    // useEffect(() => {
-    //     const unsubscribe = auth.onAuthStateChanged((user) => {
-    //         if (user) {
-    //             setUser(user)
-    //         }
-    //         else {
-    //             navigate("/signin")
-    //         }
-    //     })
-    //     return () => unsubscribe()
-    // }, [navigate])
+    const { user, setUser } = useAuth();
 
     useEffect(() => {
-        if (!user) {
-            navigate("/signin");
-        }
-    }, [user, navigate]);
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            if (user) {
+                setUser(user)
+            }
+            else {
+                navigate("/signin")
+            }
+        })
+        return () => unsubscribe()
+    }, [navigate])
 
     const handleSignOut = async () => {
         try {
@@ -210,7 +204,7 @@ function Admin() {
         <>
             <div className='bg-white p-8'>
                 <div><h1 className='text-5xl font-medium text-center'>Admin Dashboard</h1></div>
-                <div className='bg-white p-8 flex gap-16'>
+                <div className='bg-white p-8 flex md:flex-row items-center flex-col gap-16'>
                     <div className="card bg-base-100 image-full w-96 h-40 shadow-xl">
                         <figure>
                             <img
@@ -256,6 +250,7 @@ function Admin() {
                 </div>
             </div>
         </>
+
     );
 }
 

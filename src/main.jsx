@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Router } from "react-router-dom";
 import "./index.css";
 import { AuthProvider } from "./components/Pages/UserAuthentication/AuthProvider.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -11,5 +11,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <App />
       </AuthProvider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
