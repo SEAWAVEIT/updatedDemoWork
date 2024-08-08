@@ -22,7 +22,7 @@ function Career() {
     }, []);
 
     return (
-        <div className=' p-6 md:p-12'>
+        <div className='bg-white h-auto p-6 md:p-12'>
             <div className='text-center '>
                 <h1 className='text-4xl md:text-6xl font-semibold text-gray-800'>Career</h1>
             </div>

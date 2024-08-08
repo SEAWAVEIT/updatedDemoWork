@@ -91,7 +91,7 @@ function UserInputCareerField() {
                         type="text"
                         id="name"
                         placeholder="Enter your name"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none bg-transparent text-black focus:ring-2 focus:ring-blue-500"
                         value={name}
                         onChange={handleChange}
                     />
@@ -103,7 +103,7 @@ function UserInputCareerField() {
                         type="email"
                         id="email"
                         placeholder="Enter your email"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none  bg-transparent text-black focus:ring-2 focus:ring-blue-500"
                         value={email}
                         onChange={handleChange}
                     />
@@ -115,7 +115,7 @@ function UserInputCareerField() {
                         type="tel"
                         id="number"
                         placeholder="Enter your phone number"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none  bg-transparent text-black focus:ring-2 focus:ring-blue-500"
                         value={number}
                         onChange={handleChange}
                     />
@@ -127,7 +127,7 @@ function UserInputCareerField() {
                         type="text"
                         id="position"
                         placeholder="Enter your current position"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none  bg-transparent text-black focus:ring-2 focus:ring-blue-500"
                         value={position}
                         onChange={handleChange}
                     />
@@ -135,7 +135,7 @@ function UserInputCareerField() {
 
                 <div className="form-group">
                     <label className="block text-lg font-medium text-gray-700 mb-2">Willing to Relocate?</label>
-                    <div className="flex space-x-6">
+                    <div className="flex bg-white space-x-6">
                         <label className="inline-flex items-center">
                             <input
                                 type="radio"
@@ -174,7 +174,7 @@ function UserInputCareerField() {
                                 value="0-1"
                                 checked={experience === '0-1'}
                                 onChange={handleChange}
-                                className="mr-2"
+                                className="mr-2 bg-white"
                             />
                             <span>0-1 years</span>
                         </label>
