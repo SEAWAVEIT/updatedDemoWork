@@ -4,35 +4,19 @@ import truck from "./../../assets/svgs/truck.svg";
 import warehouse from "./../../assets/svgs/warehouse2.svg";
 import calender from "./../../assets/svgs/calendar.svg";
 import pad from "./../../assets/svgs/pad.svg";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 function Hero07() {
-
   const navigate = useNavigate();
 
-  const customClearance = () => {
-    navigate('/customclearance');
+  const navigateTo = (path) => {
+    // Scroll to the top of the page before navigation
+    window.scrollTo(0, 0);
+    navigate(path);
   };
-
-  const freightForwarding = () => {
-    navigate('/freightforwarding');
-  };
-
-  const landFreight = () => {
-    navigate('/landfreight');
-  };
-
-  const logisticsDesign = () => {
-    navigate('/logisticsdesign');
-  };
-
-  const warehousing = () => {
-    navigate('/warehousing');
-  };
-
 
   return (
-    <div className="Hero07 bg-white text-black h-auto  px-auto mx-auto ">
+    <div className="Hero07 bg-white text-black h-auto px-auto mx-auto">
       <div className="text-center mb-8">
         <h1 className="GradientText text-4xl">Services</h1>
         <p className="my-4">
@@ -41,8 +25,9 @@ function Hero07() {
       </div>
       <div className="grid gap-4 md:grid-cols-3 justify-items-center">
         <div
-          onClick={customClearance}
-          className="ServiceCard relative group">
+          onClick={() => navigateTo('/customclearance')}
+          className="ServiceCard relative group"
+        >
           <div className="icon mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +52,10 @@ function Hero07() {
           </div>
         </div>
 
-        <div onClick={freightForwarding} className="ServiceCard relative group">
+        <div
+          onClick={() => navigateTo('/freightforwarding')}
+          className="ServiceCard relative group"
+        >
           <div className="icon mb-4">
             <img src={boat} className="h-20" alt="Boat" />
           </div>
@@ -79,7 +67,10 @@ function Hero07() {
           </div>
         </div>
 
-        <div onClick={logisticsDesign} className="ServiceCard relative group">
+        <div
+          onClick={() => navigateTo('/logisticsdesign')}
+          className="ServiceCard relative group"
+        >
           <div className="icon mb-4">
             <img src={calender} className="h-16" alt="Calendar" />
           </div>
@@ -91,7 +82,10 @@ function Hero07() {
           </div>
         </div>
 
-        <div onClick={landFreight} className="ServiceCard relative group">
+        <div
+          onClick={() => navigateTo('/landfreight')}
+          className="ServiceCard relative group"
+        >
           <div className="icon mb-4">
             <img src={truck} className="h-20" alt="Truck" />
           </div>
@@ -103,7 +97,10 @@ function Hero07() {
           </div>
         </div>
 
-        <div onClick={warehousing} className="ServiceCard relative group">
+        <div
+          onClick={() => navigateTo('/warehousing')}
+          className="ServiceCard relative group"
+        >
           <div className="icon mb-4">
             <img src={warehouse} className="h-20" alt="Warehouse" />
           </div>
@@ -115,7 +112,10 @@ function Hero07() {
           </div>
         </div>
 
-        <div onClick={warehousing} className="ServiceCard relative group">
+        <div
+          onClick={() => navigateTo('/eximconsultancy')}
+          className="ServiceCard relative group"
+        >
           <div className="icon mb-4">
             <img src={pad} className="h-20" alt="Pad" />
           </div>

@@ -202,10 +202,10 @@ function Admin() {
         //     </div>
         // </div >
         <>
-            <div className='bg-white p-8'>
+            <div className='bg-white p-8 z-1'>
                 <div><h1 className='text-5xl font-medium text-center'>Admin Dashboard</h1></div>
                 <div className='bg-white p-8 flex md:flex-row items-center flex-col gap-16'>
-                    <div className="card bg-base-100 image-full w-96 h-40 shadow-xl">
+                    <div className="card z-0 bg-base-100 image-full md:w-96 w-80 h-40 shadow-xl">
                         <figure>
                             <img
                                 src="https://img.freepik.com/free-vector/business-leader-standing-arrow-holding-flag-flat-vector-illustration-cartoon-people-training-doing-business-plan-leadership-victory-challenge-concept_74855-9812.jpg?ga=GA1.1.66059567.1723013766&semt=ais_hybrid"
@@ -215,11 +215,11 @@ function Admin() {
                             <h2 className="card-title">Careers</h2>
                             <p>Post Requirement</p>
                             <div className="card-actions justify-end">
-                                <button onClick={postCareer} className="btn btn-primary py-none">Add</button>
+                                <button onClick={postCareer} className="btn btn-sm btn-primary py-none">Add</button>
                             </div>
                         </div>
                     </div>
-                    <div className="card bg-base-100 image-full w-96 h-40 shadow-xl">
+                    <div className="card z-0  bg-base-100 image-full md:w-96 w-80 h-40 shadow-xl">
                         <figure>
                             <img
                                 src="https://img.freepik.com/free-vector/organic-flat-blog-post-illustration-with-people_23-2148955260.jpg?ga=GA1.1.66059567.1723013766&semt=ais_hybrid"
@@ -229,11 +229,11 @@ function Admin() {
                             <h2 className="card-title">Blog</h2>
                             <p>Create Blog </p>
                             <div className="card-actions justify-end">
-                                <button onClick={postBlog} className="btn btn-primary py-none">Add</button>
+                                <button onClick={postBlog} className="btn  btn-sm btn-primary py-none">Add</button>
                             </div>
                         </div>
                     </div>
-                    <div className="card bg-base-100 image-full w-96 h-40 shadow-xl">
+                    <div className="card z-0  bg-base-100 image-full md:w-96 w-80 h-40 shadow-xl">
                         <figure>
                             <img
                                 src="https://img.freepik.com/free-vector/recruitment-agency-searching-job-applicants_1262-19873.jpg?ga=GA1.1.66059567.1723013766&semt=ais_hybrid"
@@ -243,7 +243,7 @@ function Admin() {
                             <h2 className="card-title">Applicants</h2>
                             <p>View All Applied Applicants </p>
                             <div className="card-actions justify-end">
-                                <button onClick={allapplicants} className="btn btn-primary py-none">View</button>
+                                <button onClick={allapplicants} className="btn btn-sm btn-primary py-none">View</button>
                             </div>
                         </div>
                     </div>

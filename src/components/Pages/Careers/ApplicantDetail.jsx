@@ -70,7 +70,7 @@ function ApplicantDetail() {
                         <strong>Experience:</strong> {applicant.experience}
                     </div>
                     <div className="text-lg text-gray-800">
-                        <strong>Resume:</strong> <a href={applicant.resume} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">View Resume</a>
+                        <strong>Resume:</strong> <a href={applicant.resumeURL} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">View Resume</a>
                     </div>
                 </div>
             </div>

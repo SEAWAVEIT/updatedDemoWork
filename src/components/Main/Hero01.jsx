@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import './dna.css';
+// import './dna.css';
 function Loader() {
     return (
         <div className="loader-background">
