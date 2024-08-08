@@ -45,7 +45,7 @@ function ApplicantDetail() {
     }
 
     return (
-        <div className="bg-gray-50 min-h-screen py-12 px-6 lg:px-12">
+        <div className="bg-white h-auto py-12 px-6 lg:px-12">
             <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
                 <div className="text-center mb-8">
                     <h1 className="text-4xl font-semibold text-gray-800">{applicant.position}</h1>

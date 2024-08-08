@@ -46,7 +46,7 @@ function AdminCareerPostAllowance() {
     };
 
     return (
-        <div>
+        <div className='bg-white h-auto'>
             <div>
                 <div className="h-auto z-1 bg-white text-black px-6 py-10 w-full flex flex-col gap-6">
                     <div className="relative rounded-xl mb-6 md:mb-8">

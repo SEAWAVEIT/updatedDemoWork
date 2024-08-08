@@ -81,7 +81,7 @@ function UserInputCareerField() {
     };
 
     return (
-        <div className="bg-gray-50 p-10 max-w-lg mx-auto rounded-lg shadow-lg">
+        <div className="bg-gray-50 h-auto p-10 max-w-lg mx-auto shadow-lg">
 
             <form onSubmit={handleSubmit} className="space-y-6">
                 <h1 className="text-3xl font-semibold text-center text-gray-800 mb-6">Apply for a Job</h1>
@@ -135,7 +135,7 @@ function UserInputCareerField() {
 
                 <div className="form-group">
                     <label className="block text-lg font-medium text-gray-700 mb-2">Willing to Relocate?</label>
-                    <div className="flex bg-white space-x-6">
+                    <div className="flex space-x-6">
                         <label className="inline-flex items-center">
                             <input
                                 type="radio"
