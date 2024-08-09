@@ -1,8 +1,83 @@
-import React from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { db, collection, addDoc } from '../../../firebase/firebase';
 
 function FreeQuote() {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [companyName, setCompanyName] = useState("");
+	const [contactNumber, setContactNumber] = useState("");
+	const [companyAddress, setCompanyAddress] = useState("");
+	const [services, setServices] = useState([]);
+	const [comments, setComments] = useState("");
+
+	const navigate = useNavigate();
+
+	const handleChange = (e) => {
+		const { id, value, type, checked } = e.target;
+
+		if (type === "checkbox") {
+			setServices(prevServices =>
+				checked ? [...prevServices, value] : prevServices.filter(service => service !== value)
+			);
+		} else {
+			switch (id) {
+				case "name":
+					setName(value);
+					break;
+				case "email":
+					setEmail(value);
+					break;
+				case "companyName":
+					setCompanyName(value);
+					break;
+				case "contactNumber":
+					setContactNumber(value);
+					break;
+				case "companyAddress":
+					setCompanyAddress(value);
+					break;
+				case "comments":
+					setComments(value);
+					break;
+				default:
+					break;
+			}
+		}
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		if (!name || !email || !companyAddress || !companyName || !services.length || !contactNumber) {
+			alert('Please fill in all required fields');
+			return;
+		}
+
+		if (!/\S+@\S+\.\S+/.test(email)) {
+			alert('Please enter a valid email address');
+			return;
+		}
+
+		try {
+			const quoteRef = collection(db, "quotes");
+			await addDoc(quoteRef, {
+				name, email, contactNumber, companyName, companyAddress, services, comments
+			});
+			alert("Quote Sent!");
+			setName("");
+			setEmail("");
+			setContactNumber("");
+			setCompanyName("");
+			setCompanyAddress("");
+			setServices([]);
+			setComments("");
+			navigate('/');
+		} catch (error) {
+			console.error("Error: ", error);
+			alert('An error occurred while submitting the request.');
+		}
+	}
+
 	return (
 		<div className="h-auto z-1 bg-white text-black px-6 py-10 w-full flex flex-col gap-6">
 			<div className="relative bg-black rounded-xl overflow-hidden mb-6 md:mb-8">
@@ -11,55 +86,69 @@ function FreeQuote() {
 					src="https://www.seawave.in/images/inner-pages/logistic_banner.webp"
 					alt="getafreequote"
 				/>
-				<div className="relative flex justify-center items-center  h-60 md:h-96 ">
-					<h1 className="text-white text-3xl md:text-6xl z-0  text-center">
+				<div className="relative flex justify-center items-center h-60 md:h-96">
+					<h1 className="text-white text-3xl md:text-6xl z-0 text-center">
 						Get A {""}
-						<div className="waviy inline  md:text-6xl ">
-							<span className="text-3xl md:text-6xl" style={{ '--i': 1 }}	>F</span>
-							<span className="text-3xl md:text-6xl" style={{ '--i': 2 }}	>r</span>
-							<span className="text-3xl md:text-6xl" style={{ '--i': 3 }}	>e</span>
-							<span className="text-3xl md:text-6xl" style={{ '--i': 4 }}	>e</span>
+						<div className="waviy inline md:text-6xl">
+							<span className="text-3xl md:text-6xl" style={{ "--i": 1 }}>F</span>
+							<span className="text-3xl md:text-6xl" style={{ "--i": 2 }}>r</span>
+							<span className="text-3xl md:text-6xl" style={{ "--i": 3 }}>e</span>
+							<span className="text-3xl md:text-6xl" style={{ "--i": 4 }}>e</span>
 						</div>
 						{""} Quote
-
 					</h1>
 				</div>
 			</div>
-			<div className="px-8">
+			<form onSubmit={handleSubmit} className="px-8">
 				<div className="InputDetails w-full grid grid-cols-1 md:grid-cols-2 gap-4">
 					<div className="col-span-1 w-full">
+						<label className="text-lg text-slate-800 font-medium">Name : </label>
 						<input
 							type="text"
-							placeholder="Your Name"
 							className="w-full mt-2 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
+							value={name}
+							id="name"
+							onChange={handleChange}
 						/>
 					</div>
 					<div className="col-span-1 w-full">
+						<label className="text-lg text-slate-800 font-medium">Email : </label>
 						<input
-							type="text"
-							placeholder="Your Email"
+							type="email"
 							className="w-full mt-2 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
+							value={email}
+							id="email"
+							onChange={handleChange}
 						/>
 					</div>
 					<div className="col-span-1 w-full">
+						<label className="text-lg text-slate-800 font-medium">Contact Number : </label>
 						<input
 							type="text"
-							placeholder="Company Name"
 							className="w-full mt-2 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
+							value={contactNumber}
+							id="contactNumber"
+							onChange={handleChange}
 						/>
 					</div>
 					<div className="col-span-1 w-full">
+						<label className="text-lg text-slate-800 font-medium">Company Name : </label>
 						<input
 							type="text"
-							placeholder="Contact Number"
 							className="w-full mt-2 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
+							value={companyName}
+							id="companyName"
+							onChange={handleChange}
 						/>
 					</div>
 					<div className="col-span-1 md:col-span-2 w-full">
+						<label className="text-lg text-slate-800 font-medium">Company Address : </label>
 						<input
 							type="text"
-							placeholder="Company Address"
 							className="w-full mt-2 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
+							value={companyAddress}
+							id="companyAddress"
+							onChange={handleChange}
 						/>
 					</div>
 				</div>
@@ -69,96 +158,41 @@ function FreeQuote() {
 					</div>
 					<div>
 						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-							<div className="flex items-center gap-2">
-								<input
-									id="service1"
-									type="checkbox"
-									className="h-4 w-4 text-cyan-600 focus:ring-cyan-500 focus:ring-2"
-								/>
-								<label
-									htmlFor="service1"
-									className="ms-2 text-lg font-light"
-								>
-									Service 1
-								</label>
-							</div>
-							<div className="flex items-center gap-2">
-								<input
-									id="service2"
-									type="checkbox"
-									className="h-4 w-4 text-cyan-600 focus:ring-cyan-500 focus:ring-2"
-								/>
-								<label
-									htmlFor="service2"
-									className="ms-2 text-lg font-light"
-								>
-									Service 2
-								</label>
-							</div>
-							<div className="flex items-center gap-2">
-								<input
-									id="service3"
-									type="checkbox"
-									className="h-4 w-4 text-cyan-600 focus:ring-cyan-500 focus:ring-2"
-								/>
-								<label
-									htmlFor="service3"
-									className="ms-2 text-lg font-light"
-								>
-									Service 3
-								</label>
-							</div>
-							<div className="flex items-center gap-2">
-								<input
-									id="service4"
-									type="checkbox"
-									className="h-4 w-4 text-cyan-600 focus:ring-cyan-500 focus:ring-2"
-								/>
-								<label
-									htmlFor="service4"
-									className="ms-2 text-lg font-light"
-								>
-									Service 4
-								</label>
-							</div>
-							<div className="flex items-center gap-2">
-								<input
-									id="service5"
-									type="checkbox"
-									className="h-4 w-4 text-cyan-600 focus:ring-cyan-500 focus:ring-2"
-								/>
-								<label
-									htmlFor="service5"
-									className="ms-2 text-lg font-light"
-								>
-									Service 5
-								</label>
-							</div>
-							<div className="flex items-center gap-2">
-								<input
-									id="service6"
-									type="checkbox"
-									className="h-4 w-4 text-cyan-600 focus:ring-cyan-500 focus:ring-2"
-								/>
-								<label
-									htmlFor="service6"
-									className="ms-2 text-lg font-light"
-								>
-									Service 6
-								</label>
-							</div>
+							{["customClearance", "freightForwarding", "landFreight", "warehousing", "eximConsultancy", "logisticDesign"].map((service) => (
+								<div key={service} className="flex items-center gap-2">
+									<input
+										value={service}
+										id={service}
+										type="checkbox"
+										className="h-4 w-4 text-cyan-600 focus:ring-cyan-500 focus:ring-2"
+										checked={services.includes(service)}
+										onChange={handleChange}
+									/>
+									<label
+										htmlFor={service}
+										className="ms-2 text-lg font-light"
+									>
+										{service.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+									</label>
+								</div>
+							))}
 						</div>
 					</div>
 				</div>
 				<div className="my-4">
+					<label className="text-lg text-slate-800 font-medium">Comments/Remarks : </label>
 					<textarea
-						name="Comments"
-						id="Comments"
-						placeholder="Comments/Remarks"
+						name="comments"
 						className="w-full h-40 py-2 px-4 rounded-lg bg-white border border-gray-400 border-opacity-40 text-gray-800 font-semibold focus:border-cyan-500 focus:outline-none"
+						value={comments}
+						id="comments"
+						onChange={handleChange}
 					></textarea>
 				</div>
-			</div>
+				<div className="flex justify-center ">
+					<button className="btn btn-info w-40 text-white text-lg">Send</button>
+				</div>
+			</form>
 		</div>
 	);
 }

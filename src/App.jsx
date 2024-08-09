@@ -16,7 +16,6 @@ import Main7 from './components/Main/Hero07';
 import Main8 from './components/Main/Hero08';
 import Main9 from './components/Main/Hero09';
 import Main10 from './components/Main/Hero10';
-import FreeQuote from './components/Pages/FreeQuote/FreeQuote';
 import CustomClearance from './components/Pages/Services/CustomClearance';
 import FreightForwarding from './components/Pages/Services/FreightForwarding';
 import LandFreight from './components/Pages/Services/LandFreight';
@@ -32,6 +31,11 @@ import UserCareerInputField from './components/Pages/Careers/UserInputCareerFiel
 import AllApplicants from './components/Pages/Careers/ViewApplicants';
 import ApplicantDetails from './components/Pages/Careers/ApplicantDetail';
 import JobDetails from './components/Pages/Careers/JobDetails';
+
+
+import FreeQuote from './components/Pages/FreeQuote/FreeQuote';
+import QuoteDetails from './components/Pages/FreeQuote/QuoteDetails'
+import ViewQuoteResquests from './components/Pages/FreeQuote/ViewQuoteResquests'
 
 function Home() {
   return (
@@ -60,6 +64,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/getafreequote" element={<FreeQuote />} />
+        <Route path="/viewquoterequests" element={<ViewQuoteResquests />} />
+        <Route path="/quoteDetails/:quoteId" element={<QuoteDetails />} />
         <Route path="/customclearance" element={<CustomClearance />} />
         <Route path="/freightforwarding" element={<FreightForwarding />} />
         <Route path="/landfreight" element={<LandFreight />} />
