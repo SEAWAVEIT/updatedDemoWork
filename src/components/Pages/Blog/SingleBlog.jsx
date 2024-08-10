@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { db, getDoc, doc } from "../../../firebase/firebase";
-
+import Loader from "../../Items/Loader"
 import { format } from 'date-fns';
 
 function SingleBlog() {
@@ -37,16 +37,7 @@ function SingleBlog() {
     }, [postId]);
 
     if (!post) {
-        return (
-            <div>
-                <div className="flex items-center justify-center h-auto">
-                    <div className="relative">
-                        <div className="h-24 w-24 rounded-full border-t-8 border-b-8 border-gray-200"></div>
-                        <div className="absolute top-0 left-0 h-24 w-24 rounded-full border-t-8 border-b-8 border-blue-500 animate-spin">
-                        </div>
-                    </div>
-                </div>
-            </div>);
+        return <Loader />;
     }
 
     return (

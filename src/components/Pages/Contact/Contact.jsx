@@ -47,7 +47,7 @@ function Contact() {
 	});
 
 	return (
-		<div className="px-12 py-40">
+		<div className="px-6 bg-white py-10">
 			<div
 				ref={EntirePageEffect}
 				className="bg-white md:h-auto w-full flex justify-center items-center "

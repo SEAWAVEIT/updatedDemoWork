@@ -3,6 +3,7 @@ import career from "../../../assets/career/career.jpg";
 import { Link } from "react-router-dom";
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from "../../../firebase/firebase";
+import Loader from '../../Items/Loader';
 
 function Career() {
     const [jobs, setJobs] = useState([]);
@@ -50,12 +51,7 @@ function Career() {
                     </div>
                 </div>
             ) : (
-                <div className="flex items-center justify-center h-screen">
-                    <div className="relative">
-                        <div className="h-16 w-16 border-t-4 border-b-4 border-gray-300 rounded-full"></div>
-                        <div className="absolute top-0 left-0 h-16 w-16 border-t-4 border-b-4 border-blue-600 rounded-full animate-spin"></div>
-                    </div>
-                </div>
+                <Loader />
             )}
         </div>
     );
