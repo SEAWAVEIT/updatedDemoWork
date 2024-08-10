@@ -10,7 +10,6 @@ function Hero07() {
   const navigate = useNavigate();
 
   const navigateTo = (path) => {
-    // Scroll to the top of the page before navigation
     window.scrollTo(0, 0);
     navigate(path);
   };

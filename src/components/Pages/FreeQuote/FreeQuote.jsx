@@ -99,7 +99,7 @@ function FreeQuote() {
 					</h1>
 				</div>
 			</div>
-			<form onSubmit={handleSubmit} className="px-8">
+			<form onSubmit={handleSubmit} className="md:px-8">
 				<div className="InputDetails w-full grid grid-cols-1 md:grid-cols-2 gap-4">
 					<div className="col-span-1 w-full">
 						<label className="text-lg text-slate-800 font-medium">Name : </label>
@@ -190,7 +190,7 @@ function FreeQuote() {
 					></textarea>
 				</div>
 				<div className="flex justify-center ">
-					<button className="btn btn-info w-40 text-white text-lg">Send</button>
+					<button className="btn md:btn-md btn-sm btn-info md:w-40 w-28 h-8 md:h-10 text-sm text-white md:text-md">Send</button>
 				</div>
 			</form>
 		</div>

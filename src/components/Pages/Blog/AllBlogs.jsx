@@ -1,22 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { db, getDocs, collection } from "../../../firebase/firebase";
 import Loader from "../../Items/Loader"
+
 function AllBlogs() {
+    const navigate = useNavigate()
     const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
+
+    const navigateTo = (path) => {
+        window.scrollTo(0, 0)
+        navigate(path)
+    }
 
     useEffect(() => {
         const fetchPosts = async () => {
             try {
+                setLoading(true)
                 const querySnapshot = await getDocs(collection(db, 'posts'));
                 const postsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
                 setPosts(postsList);
             } catch (error) {
+                setError('Error fetching posts. Please try again later.');
                 console.error('Error fetching posts:', error);
+            }
+            finally {
+                setLoading(false)
             }
         };
         fetchPosts();
     }, []);
+
+    if (loading) return <Loader />
+    if (error) return <div className='text-center text-red-500'>{error}</div>
 
     return (
         <div className="flex flex-col bg-white h-auto px-6 md:px-12 mx-auto">
@@ -30,19 +47,21 @@ function AllBlogs() {
                             <div className="flex-1">
                                 <h2 className="text-2xl font-semibold text-gray-900">{post.name}</h2>
                                 <h3 className="text-lg text-gray-600 mt-1 truncate">{post.topic}</h3>
-                                {/* <p className="mt-4 text-gray-800 leading-relaxed">{post.description}</p> */}
-                                {/* <p className="mt-2 text-gray-700 italic">{post.message}</p> */}
                             </div>
-                            <Link to={`/blog/${post.id}`} className="absolute bottom-6 left-6">
-                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg">
-                                    View
-                                </button>
-                            </Link>
+
+                            <button
+                                aria-label={`View ${post.name}`}
+                                onClick={() => navigateTo(`/blog/${post.id}`)}
+                                className="absolute bottom-6 left-6 bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg">
+
+                                View
+                            </button>
+
                         </div>
                     ))}
                 </div>
             ) : (
-                <Loader />
+                <div className="text-center text-gray-500">No posts available.</div>
             )}
         </div>
     );
