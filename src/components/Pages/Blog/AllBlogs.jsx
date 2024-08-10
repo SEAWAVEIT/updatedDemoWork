@@ -61,7 +61,7 @@ function AllBlogs() {
                     ))}
                 </div>
             ) : (
-                <div className="text-center text-gray-500">No posts available.</div>
+                <div className="text-center bg-white text-gray-500">No posts available.</div>
             )}
         </div>
     );

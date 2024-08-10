@@ -119,9 +119,17 @@ function Hero03() {
 
   return (
     <div className="Hero03 bg-white h-auto py-1 flex flex-col justify-center items-center">
-      <div className="text-center mb-8">
+      {/* <div className="text-center mb-8">
         <h1 className="text-3xl sm:text-5xl">We Provide Safe </h1>
         <h1 className="text-3xl sm:text-5xl">And Reliable Cargo Solutions</h1>
+      </div> */}
+      <div className="flex flex-col justify-center">
+        <h1 className="text-3xl text-center ">We Provide Safe </h1>
+        <h1 className="text-3xl text-center ">And Reliable Cargo Solutions</h1>
+        <div className="flex items-center justify-center my-6">
+          <div className="lino "></div>
+        </div>
+        <p className="text-base text-center font-light my-2">WE AIM TO PROVIDE QUALITY SERVICES VIA BEST WAY OF TRANSPORTATION MEDIUM</p>
       </div>
       <div className="cards flex flex-wrap justify-center gap-8 sm:gap-12">
         <div className="card border-2 border-slate-800 md:w-1/4 w-80 px-8 shadow-xl m-8">

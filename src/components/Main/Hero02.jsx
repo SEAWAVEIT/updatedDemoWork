@@ -79,7 +79,14 @@ const logos = [
 function Hero02() {
   return (
     <div className="bg-white h-auto py-20">
-      <div className="flex overflow-hidden space-x-16 group">
+      <div className="flex flex-col justify-center">
+        <h1 className="text-3xl text-center ">Trusted Partners</h1>
+        <div className="flex items-center justify-center my-6">
+          <div className="lino "></div>
+        </div>
+        <p className="text-base text-center font-light my-2">WE AIM TO PROVIDE QUALITY SERVICES WHICH HAS LED TO PARTNER OURSELVES WITH THE LEADING INDUSTRY LEADERS</p>
+      </div>
+      <div className="flex overflow-hidden space-x-16 group my-4">
         {/* First set of logos */}
         <div className="flex space-x-16 animate-loop-scroll group-hover:paused">
           {logos.map((logo) => (

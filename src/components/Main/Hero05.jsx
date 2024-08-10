@@ -109,8 +109,13 @@ function Tailquote() {
 
 function Hero05() {
 	return (
-		<div className="bg-white flex justify-center py-16">
-			<div className="bg-white flex gap-12 px-12 py-8 flex-wrap justify-center">
+		<div className="bg-white flex flex-col justify-center px-6 py-16">
+			<h1 className="text-3xl text-center ">Message From Our Founders</h1>
+			<div className="flex items-center justify-center my-6">
+				<div className="lino "></div>
+			</div>
+			<p className="text-base text-center font-light my-2">INSPIRATIONAL MESSAGE BY THE PEOPLE WHO PUT FORWARD THE STEPPING STONE OF SEAWAVE FORWARDING AND LOGISTICS PVT. LTD.</p>
+			<div className="bg-white flex gap-12 md:px-12 px-4 py-8 flex-wrap justify-center">
 				{[
 					{
 						image: "https://www.seawave.in/images/message-from-founders/1.webp",
@@ -139,7 +144,7 @@ function Hero05() {
 				].map((testimonial, index) => (
 					<div
 						key={index}
-						className="testimonalCard w-64 p-6 rounded-md  flex flex-col gap-2 items-center"
+						className="testimonalCard md:w-64 w-80 p-6 rounded-md  flex flex-col gap-2 items-center"
 					>
 						<img
 							className="rounded-full h-28"
