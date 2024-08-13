@@ -31,7 +31,7 @@ import UserCareerInputField from './components/Pages/Careers/UserInputCareerFiel
 import AllApplicants from './components/Pages/Careers/ViewApplicants';
 import ApplicantDetails from './components/Pages/Careers/ApplicantDetail';
 import JobDetails from './components/Pages/Careers/JobDetails';
-
+import HeroMissionCard from './components/Main/HeroMissionCard'
 
 import FreeQuote from './components/Pages/FreeQuote/FreeQuote';
 import QuoteDetails from './components/Pages/FreeQuote/QuoteDetails'
@@ -42,6 +42,7 @@ function Home() {
     <div>
       <Main1 />
       <Main2 />
+      <HeroMissionCard />
       <Main3 />
       {/* <Main4 /> */}
       <Main5 />
