@@ -5,8 +5,8 @@ import solution from "../../assets/faqs/solution.png";
 
 const Hero09 = () => {
   return (
-    <div className='bg-white mx-auto '>
-      <div className='FAQChat mx-auto  md:px-24 md:py-8 bg-white h-auto'>
+    <div className='bg-white mx-auto'>
+      <div className='FAQChat mx-auto w-full md:px-24 py-8 bg-white h-auto'>
         <section className="chat w-full flex justify-between flex-col md:flex-row ">
 
           <div>

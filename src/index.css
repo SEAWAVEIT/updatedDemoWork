@@ -761,6 +761,7 @@ body {
 		transform 0.35s ease,
 		box-shadow 0.35s ease;
 	overflow: hidden;
+	opacity: 0.9;
 }
 
 .Hero07 .ServiceCard::before,
@@ -778,7 +779,7 @@ body {
 	width: 0;
 	opacity: 0;
 	transition:
-		opacity 0.5s ease,
+		opacity 0.2s ease,
 		width 0.5s ease;
 	transition-delay: 0.5s;
 }
@@ -813,7 +814,7 @@ body {
 
 .Hero07 .ServiceCard .hover_content p {
 	margin: 1.5em 0 0;
-	color: #6e6e70;
+	/* color: #6e6e70; */
 	line-height: 1.4em;
 }
 
@@ -951,7 +952,7 @@ body {
 	.SpecializationCard.wiide {
 		width: 360px;
 	}
-  }
+}
 
 /* =========================================================================================================== */
 
