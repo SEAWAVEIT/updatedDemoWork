@@ -4,13 +4,13 @@
 }
 
 .chat {
-    display: flex;
-    flex-direction: column-reverse;
+
     overflow: hidden;
+    /* gap: 80px; */
     font: .85rem/1.5 Arial;
     color: #313131;
     position: relative;
-    height: 100%;
+    /* height: 100%; */
     padding: 1rem;
     /* Added padding to ensure spacing on smaller screens */
 }
@@ -60,7 +60,7 @@
 }
 
 .chat__message_B {
-    flex-direction: row-reverse;
+    flex-direction: row;
     text-align: right;
     align-self: flex-end;
     transform-origin: 100% 0;

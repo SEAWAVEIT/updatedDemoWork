@@ -3,7 +3,7 @@ import './HeroMissionCard.css';
 
 function HeroMissionCard() {
     return (
-        <div className='bg-white px-20 my-12 flex flex-wrap justify-between md:gap-1 gap-6'>
+        <div className='bg-white px-20 py-12 flex flex-wrap justify-between md:gap-1 gap-6'>
             <div className="motivationCard missionCard">
                 <div className="profile-pic missionProfilePic">
                     <img src="https://img.freepik.com/free-vector/positive-tiny-people-sitting-walking-near-huge-target-with-arrow-isolated-flat-vector-illustration-cartoon-business-team-achieving-goal-aim-marketing-strategy-achievement-concept_74855-10139.jpg?ga=GA1.1.496832421.1723529480&semt=ais_hybrid" alt="Mission" />
