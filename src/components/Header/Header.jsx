@@ -6,7 +6,9 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const menuRef = useRef(null);
+  const servicesRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen((prevOpen) => !prevOpen);
@@ -52,8 +54,36 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="px-4 z-10 relative">
+    <div
+      className={`px-4 z-10 fixed top-0 left-0 right-0 ${isScrolled ? 'bg-black text-white' : 'bg-transparent text-black'} transition-duration-300`}
+      style={{
+        transitionProperty: 'background-color, color',
+      }}
+
+    >
       <div className="navbar justify-between">
         <div className="navbar-start">
           <div className="dropdown relative">
@@ -79,7 +109,7 @@ const Header = () => {
             </button>
             {isOpen && (
               <ul
-                className={`menu whitespace-nowrap menu-sm dropdown-content rounded-box absolute z-20 mt-3 w-full md:w-80 p-2 shadow bg-black text-white ${isMobile ? "block" : "hidden"}`}
+                className={`menu bg-black text-white whitespace-nowrap menu-sm dropdown-content rounded-box absolute z-20 mt-3 w-full md:w-80 p-2 shadow ${isMobile ? "block" : "hidden"}`}
                 ref={menuRef}
               >
                 <li>
@@ -108,7 +138,10 @@ const Header = () => {
                     </svg>
                   </button>
                   {isServicesOpen && (
-                    <ul className="p-2 bg-black text-white z-1 rounded-lg mt-2">
+                    <ul
+                      className="p-2 bg-black text-white z-10 rounded-lg mt-2"
+                      ref={servicesRef}
+                    >
                       <li>
                         <Link to={"customclearance"}>Custom Clearance</Link>
                       </li>
@@ -124,7 +157,6 @@ const Header = () => {
                       <li>
                         <Link to={"logisticsdesign"}>Logistics Design</Link>
                       </li>
-
                     </ul>
                   )}
                 </li>
