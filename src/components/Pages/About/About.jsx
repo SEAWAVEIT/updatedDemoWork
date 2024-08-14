@@ -75,12 +75,12 @@ function About() {
           </div>
           <div className='section2 flex flex-col md:flex-row items-center justify-between mx-auto md:py-2 py-2'>
             <div className='flex flex-col md:flex-row'>
-              <div className='flex flex-col md:flex-row'>
-                <div ref={personRef} className='pr-8 pt-6'>
-                  <img className='md:h-28 h-24 w-full' src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2f5ea222b9b7f59eacfc7_logi%20man.png" alt="Person" />
+              <div className='flex flex-col md:flex-row md:1/2'>
+                <div ref={personRef} className='md:pr-8 md:pt-6'>
+                  <img className='md:h-20 h-24 w-full' src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2f5ea222b9b7f59eacfc7_logi%20man.png" alt="Person" />
                 </div>
-                <div ref={truck2Ref} className='md:w-1/2'>
-                  <img className='w-full md:h-96 h-64' src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f1f1de63ea2217e333ebca_track.png" alt="Truck 2" />
+                <div ref={truck2Ref} className='md:w-1/2 '>
+                  <img className=' md:h-52 md:w-80 w-28 h-24' src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f1f1de63ea2217e333ebca_track.png" alt="Truck 2" />
                 </div>
               </div>
               <div ref={ParaEffect} className='md:order-2 text-center mx-auto md:mb-0 mb-8'>
@@ -93,7 +93,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className='px-4 md:px-16 py-4'>
+      <div className='px-1 md:px-16 py-4'>
         <p><span className='GradientText font-medium'>SEAWAVE FORWARDING AND LOGISTICS PVT LTD</span> has the ability to meet the everyday changes in the industry must be attributed to its dedicated and experienced staff.</p>
         <p><span className='GradientText font-medium'>SEAWAVE</span> is more than just another freight forwarding company. It is a dynamic organization that meets the challenges of the ever-changing freight industry.</p>
         <p>The company's efficient staff takes charge of the entire process of planning, implementing, and controlling the efficient and cost-effective flow of goods and related information from the point of origin to the final destination, for the purpose of confirming to customer requirements. The management team of <span className='GradientText font-medium'>SEAWAVE</span> is made up of highly experienced freight forwarding professionals who share SEAWAVE's commitment to achieving the highest standards of excellence.</p>
@@ -103,7 +103,7 @@ function About() {
         <p className='text-center font-light my-2'>A commitment to find the best solution for the individual needs of each customer, or as we like to think, each business partner. Studies are carried out for costs of transportation, for alternatives, customer service needs, communication etc.</p>
         <p className='text-center font-light my-2'>In-house training programs are conducted on various subjects like Customs, Carrier Procedures, and customer service.</p>
       </div>
-      <div className='px-4 md:px-16 py-6'>
+      <div className='px-1 md:px-16 py-6'>
         <div className='flex flex-col gap-2 justify-center items-center'>
           <h4 className='text-2xl md:text-3xl font-normal'>Special Expertise</h4>
           <div className='lino mb-4'></div>
@@ -119,7 +119,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className='px-4 md:px-16 py-8'>
+      <div className='px-1 md:px-16 py-8'>
         <div className='flex flex-col gap-2 justify-center items-center'>
           <h4 className='text-xl md:text-2xl font-normal'>About Our Managing Director</h4>
           <div className='lino my-4'></div>
@@ -136,7 +136,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className='px-4 md:px-16'>
+      <div className='px-1 md:px-16'>
         <div className='flex flex-col items-center'>
           <h4 className='text-xl md:text-2xl font-normal'>OUR AFFILIATIONS</h4>
           <div className='lino my-6'></div>
@@ -149,17 +149,17 @@ function About() {
           <div className='text-center'>AEO Certificate No.: INAAICS7836D0F236</div>
         </div>
       </div>
-      <div className='px-4 md:px-12'>
+      <div className='px-1 md:px-12'>
         <div className='my-6 font-light'>
           <span className='GradientText font-medium'>SEAWAVE FORWARDING AND LOGISTICS PVT LTD</span> is affiliated, endorsed, and certified with the following organizations and professional bodies:
         </div>
         <div className='flex flex-wrap justify-between'>
-          <img src="https://www.seawave.in/images/affiliation/1.webp" alt="Affiliation 1" className='p-2' />
-          <img src="https://www.seawave.in/images/affiliation/2.webp" alt="Affiliation 2" className='p-2' />
-          <img src="https://www.seawave.in/images/affiliation/3.webp" alt="Affiliation 3" className='p-2' />
-          <img src="https://www.seawave.in/images/affiliation/4.webp" alt="Affiliation 4" className='p-2' />
-          <img src="https://www.seawave.in/images/affiliation/5.webp" alt="Affiliation 5" className='p-2' />
-          <img src="https://www.seawave.in/images/affiliation/6.webp" alt="Affiliation 6" className='p-2' />
+          <img src="https://www.seawave.in/images/affiliation/1.webp" alt="Affiliation 1" className='p-2 md:w-32 w-16' />
+          <img src="https://www.seawave.in/images/affiliation/2.webp" alt="Affiliation 2" className='p-2 md:w-32 w-16' />
+          <img src="https://www.seawave.in/images/affiliation/3.webp" alt="Affiliation 3" className='p-2 md:w-32 w-16' />
+          <img src="https://www.seawave.in/images/affiliation/4.webp" alt="Affiliation 4" className='p-2 md:w-32 w-16' />
+          <img src="https://www.seawave.in/images/affiliation/5.webp" alt="Affiliation 5" className='p-2 md:w-32 w-16' />
+          <img src="https://www.seawave.in/images/affiliation/6.webp" alt="Affiliation 6" className='p-2 md:w-32 w-16' />
         </div>
       </div>
     </div>
