@@ -1067,3 +1067,34 @@ svg {
 	text-decoration: none;
 	/* Remove underline */
 }
+
+
+
+/* 
+============================================================================================================
+*/
+/* cargo solution text animate Gradient Text2 */
+svg text {
+	font-family: Lora;
+	letter-spacing: 10px;
+	stroke: #998e28;
+	/* font-size: 150px;
+	font-weight: 700; */
+	stroke-width: 1;
+	animation: textAnimate2 5s infinite alternate;
+}
+
+@keyframes textAnimate2 {
+	0% {
+		stroke-dasharray: 0 50%;
+		stroke-dashoffset: 20%;
+		fill: #E26274;
+	}
+
+	100% {
+		stroke-dasharray: 50% 0;
+		stroke-dashoffstet: -20%;
+		fill: hsla(189, 68%, 75%, 0%)
+	}
+
+}

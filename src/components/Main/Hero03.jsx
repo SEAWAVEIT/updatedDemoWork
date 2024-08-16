@@ -145,9 +145,22 @@ function Hero03() {
               style={{ opacity: 1, transition: "opacity 2s" }}
             />
           </figure>
-          <div className="card-body text-center p-4">
-            <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-2">Truck!</h2>
-            <div className="card-actions justify-center">
+          <div className="card-body text-center flex justify-center p-4">
+            {/* <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-2">Truck!</h2> */}
+            <div className="TextGradient2 text-5xl font-semibold ">
+              <svg width="100%" height="100%">
+                <defs>
+                  <pattern id="polka-dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                  </pattern>
+                </defs>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"> </rect>
+
+                <text x="50%" y="60%" textAnchor="middle"  >
+                  Truck
+                </text>
+              </svg>
+            </div>
+            {/* <div className="card-actions justify-center">
               <button
                 ref={buttonRefTruck}
                 onMouseEnter={animateButtonOverTruck}
@@ -169,7 +182,7 @@ function Hero03() {
                   />
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="card border-2 border-slate-800 md:w-1/4 w-80 px-8 shadow-xl m-8">
@@ -185,9 +198,9 @@ function Hero03() {
               style={{ opacity: 1, transition: "opacity 2s" }}
             />
           </figure>
-          <div className="card-body text-center p-4">
-            <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-2">Ship!</h2>
-            <div className="card-actions justify-center">
+          <div className="card-body text-center flex justify-center p-4">
+            {/* <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-2">Ship!</h2> */}
+            {/* <div className="card-actions justify-center">
               <button
                 ref={buttonRefShip}
                 onMouseEnter={animateButtonOverShip}
@@ -209,6 +222,19 @@ function Hero03() {
                   />
                 </svg>
               </button>
+            </div> */}
+            <div className="TextGradient2 text-5xl font-semibold ">
+              <svg width="100%" height="100%">
+                <defs>
+                  <pattern id="polka-dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                  </pattern>
+                </defs>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"> </rect>
+
+                <text x="50%" y="60%" textAnchor="middle"  >
+                  Ship
+                </text>
+              </svg>
             </div>
           </div>
         </div>
@@ -225,9 +251,9 @@ function Hero03() {
               style={{ opacity: 1, transition: "opacity 2s" }}
             />
           </figure>
-          <div className="card-body text-center p-4">
-            <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-2">Plane!</h2>
-            <div className="card-actions justify-center mb-none">
+          <div className="card-body text-center flex justify-center p-4">
+            {/* <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-2">Plane!</h2> */}
+            {/* <div className="card-actions justify-center mb-none">
               <button
                 ref={buttonRefPlane}
                 onMouseEnter={animateButtonOverPlane}
@@ -249,6 +275,19 @@ function Hero03() {
                   />
                 </svg>
               </button>
+            </div> */}
+            <div className="TextGradient2 text-5xl font-semibold ">
+              <svg width="100%" height="100%">
+                <defs>
+                  <pattern id="polka-dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                  </pattern>
+                </defs>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"> </rect>
+
+                <text x="50%" y="60%" textAnchor="middle"  >
+                  Plane
+                </text>
+              </svg>
             </div>
           </div>
         </div>

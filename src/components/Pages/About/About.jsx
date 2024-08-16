@@ -1,89 +1,87 @@
 import React, { useRef } from 'react';
-import { Link } from "react-router-dom";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import logo from "./../../../assets/seawave/seawaveblacktextlogo.png"
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import logo from './../../../assets/seawave/seawaveblacktextlogo.png';
 
 function About() {
-  const HeadingEffect = useRef();
-  const ParaEffect = useRef();
   const AboutEffect = useRef();
+  const logoRef = useRef();
   const truck1Ref = useRef();
   const truck2Ref = useRef();
   const personRef = useRef();
+  const HeadingEffect = useRef();
 
   useGSAP(() => {
-    let tl = gsap.timeline()
+    let tl = gsap.timeline();
 
-    tl.from(HeadingEffect.current, {
-      opacity: 0,
-      duration: 1,
-      y: 40,
-      delay: 0.4,
-    });
-    tl.from(ParaEffect.current, {
-      opacity: 0,
-      duration: 1,
-      y: 40,
-      delay: 0.4,
-    });
+    // Sequence the animations in the desired order
     tl.from(AboutEffect.current, {
       opacity: 0,
-      duration: 1,
-      y: 40,
-      delay: 0.1,
-    });
-
-    gsap.from(truck1Ref.current, {
-      opacity: 0,
-      duration: 1,
-      x: 40,
-      y: -40,
-      delay: 1,
-    });
-
-    gsap.from(truck2Ref.current, {
-      opacity: 0,
-      duration: 1,
-      x: -90,
-      y: -50,
-      delay: 1.4,
-    });
-    gsap.from(personRef.current, {
-      opacity: 0,
-      duration: 1,
-      x: -40,
-      delay: 2,
-    });
+      duration: 0.5,  // Reduced duration
+      y: 20,
+      delay: 0.1,     // Reduced delay
+    })
+      .from(logoRef.current, {
+        opacity: 0,
+        duration: 0.5,  // Reduced duration
+        x: -40,
+        delay: 0.2,     // Reduced delay
+      })
+      .from(truck1Ref.current, {
+        opacity: 0,
+        duration: 0.5,  // Reduced duration
+        x: 20,
+        y: -20,
+        delay: 0.3,     // Reduced delay
+      })
+      .from(truck2Ref.current, {
+        opacity: 0,
+        duration: 0.5,  // Reduced duration
+        x: -45,
+        y: -25,
+        delay: 0.4,     // Reduced delay
+      })
+      .from(personRef.current, {
+        opacity: 0,
+        duration: 0.5,  // Reduced duration
+        x: -20,
+        delay: 0.5,     // Reduced delay
+      })
+      .from(HeadingEffect.current, {
+        opacity: 0,
+        duration: 0.5,  // Reduced duration
+        x: 45,
+        delay: 0.6,     // Reduced delay
+      });
   });
 
   return (
     <div className='h-auto p-8 w-full bg-white text-black'>
       <div className='h-auto'>
         <div ref={AboutEffect} className='flex flex-col gap-4 justify-center items-center'>
-          <h1 className='text-3xl md:text-5xl'>About Us</h1>
+          <h1 className='text-2xl md:text-5xl'>About Us</h1>
           <div className='lino'></div>
         </div>
         <div className='md:flex md:flex-col'>
           <div className='section1 flex flex-col md:flex-row items-center justify-between mx-auto md:py-2 py-2'>
-            <div ref={HeadingEffect} className='md:text-6xl text-3xl p-4 font-medium GradientText'>
-              <img src={logo} className='w-full md:w-[500px]' alt="Logo" />
+            <div ref={logoRef} className='md:text-6xl text-3xl p-4 font-medium GradientText'>
+              <img src={logo} className='w-full md:w-[500px]' alt='Logo' />
             </div>
-            <div className='md:w-1/2'>
-              <img ref={truck1Ref} src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f1f1dde1e45ab1ef4ad094_mini%20track.png" alt="Truck 1" className='w-full' />
+            <div className='md:w-1/2 md:inline hidden'>
+              <img ref={truck1Ref} src='https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f1f1dde1e45ab1ef4ad094_mini%20track.png' alt='Truck 1' className='w-full' />
             </div>
           </div>
           <div className='section2 flex flex-col md:flex-row items-center justify-between mx-auto md:py-2 py-2'>
             <div className='flex flex-col md:flex-row'>
-              <div className='flex flex-col md:flex-row md:1/2'>
-                <div ref={personRef} className='md:pr-8 md:pt-6'>
-                  <img className='md:h-20 h-24 w-full' src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2f5ea222b9b7f59eacfc7_logi%20man.png" alt="Person" />
+              <div className='flex justify-center md: md:flex-row md:1/2'>
+                <div ref={personRef} className='md:pr-8  md:pt-6'>
+                  <img className='md:h-20 h-12 w-full' src='https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2f5ea222b9b7f59eacfc7_logi%20man.png' alt='Person' />
                 </div>
-                <div ref={truck2Ref} className='md:w-1/2 '>
-                  <img className=' md:h-52 md:w-80 w-28 h-24' src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f1f1de63ea2217e333ebca_track.png" alt="Truck 2" />
+                <div ref={truck2Ref} className='md:w-1/2'>
+                  <img className='md:h-52 md:w-80 w-28 h-24' src='https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f1f1de63ea2217e333ebca_track.png' alt='Truck 2' />
                 </div>
               </div>
-              <div ref={ParaEffect} className='md:order-2 text-center mx-auto md:mb-0 mb-8'>
+              <div ref={HeadingEffect} className='md:order-2 text-center mx-auto md:mb-0 mb-2'>
                 <div className='md:text-6xl text-3xl p-4 font-medium GradientText'>
                   <h1 className='text-center md:my-2'>Safe reliable</h1>
                   <h1 className='text-center'>Logistic Solutions</h1>
@@ -93,7 +91,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className='px-1 md:px-16 py-4'>
+      <div className='px-1 md:px-16 md:py-4 py-1'>
         <p><span className='GradientText font-medium'>SEAWAVE FORWARDING AND LOGISTICS PVT LTD</span> has the ability to meet the everyday changes in the industry must be attributed to its dedicated and experienced staff.</p>
         <p><span className='GradientText font-medium'>SEAWAVE</span> is more than just another freight forwarding company. It is a dynamic organization that meets the challenges of the ever-changing freight industry.</p>
         <p>The company's efficient staff takes charge of the entire process of planning, implementing, and controlling the efficient and cost-effective flow of goods and related information from the point of origin to the final destination, for the purpose of confirming to customer requirements. The management team of <span className='GradientText font-medium'>SEAWAVE</span> is made up of highly experienced freight forwarding professionals who share SEAWAVE's commitment to achieving the highest standards of excellence.</p>
@@ -115,7 +113,7 @@ function About() {
             <p>We use our sector-specific knowledge and understanding of company requirements to ensure clients achieve their objectives.</p>
           </div>
           <div className='flex justify-center items-center'>
-            <img className='w-full md:w-[482px] h-auto' src="https://www.seawave.in/images/inner-pages/special-expertise.webp" alt="Special Expertise" />
+            <img className='w-full md:w-[482px] h-auto' src='https://www.seawave.in/images/inner-pages/special-expertise.webp' alt='Special Expertise' />
           </div>
         </div>
       </div>
@@ -126,7 +124,7 @@ function About() {
         </div>
         <div className='flex flex-col md:flex-row justify-between px-4'>
           <div className='flex justify-center items-center my-6'>
-            <img className='w-full md:w-[500px] h-auto' src="https://www.seawave.in/images/message-from-founders/md-message.webp" alt="Managing Director" />
+            <img className='w-full md:w-[500px] h-auto' src='https://www.seawave.in/images/message-from-founders/md-message.webp' alt='Managing Director' />
           </div>
           <div className='w-full md:w-1/2 flex flex-col gap-2 font-light'>
             <p><span className='font-semibold'>Nalinikant Mishra - The Managing Director</span> - <span className='GradientText font-medium'>SEAWAVE FORWARDING AND LOGISTICS PVT LTD</span> is one of the most renowned names in the logistics industry today. With a B.E. (Civil) degree to his credit, he started his career with Asia Foundation & Constructions Limited (AFCONS) as a Site Engineer, where he was exposed to make strategy, planning, and implementation.</p>
@@ -154,12 +152,12 @@ function About() {
           <span className='GradientText font-medium'>SEAWAVE FORWARDING AND LOGISTICS PVT LTD</span> is affiliated, endorsed, and certified with the following organizations and professional bodies:
         </div>
         <div className='flex flex-wrap justify-between'>
-          <img src="https://www.seawave.in/images/affiliation/1.webp" alt="Affiliation 1" className='p-2 md:w-32 w-16' />
-          <img src="https://www.seawave.in/images/affiliation/2.webp" alt="Affiliation 2" className='p-2 md:w-32 w-16' />
-          <img src="https://www.seawave.in/images/affiliation/3.webp" alt="Affiliation 3" className='p-2 md:w-32 w-16' />
-          <img src="https://www.seawave.in/images/affiliation/4.webp" alt="Affiliation 4" className='p-2 md:w-32 w-16' />
-          <img src="https://www.seawave.in/images/affiliation/5.webp" alt="Affiliation 5" className='p-2 md:w-32 w-16' />
-          <img src="https://www.seawave.in/images/affiliation/6.webp" alt="Affiliation 6" className='p-2 md:w-32 w-16' />
+          <img src='https://www.seawave.in/images/affiliation/1.webp' alt='Affiliation 1' className='p-2 md:w-32 w-16' />
+          <img src='https://www.seawave.in/images/affiliation/2.webp' alt='Affiliation 2' className='p-2 md:w-32 w-16' />
+          <img src='https://www.seawave.in/images/affiliation/3.webp' alt='Affiliation 3' className='p-2 md:w-32 w-16' />
+          <img src='https://www.seawave.in/images/affiliation/4.webp' alt='Affiliation 4' className='p-2 md:w-32 w-16' />
+          <img src='https://www.seawave.in/images/affiliation/5.webp' alt='Affiliation 5' className='p-2 md:w-32 w-16' />
+          <img src='https://www.seawave.in/images/affiliation/6.webp' alt='Affiliation 6' className='p-2 md:w-32 w-16' />
         </div>
       </div>
     </div>

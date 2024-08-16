@@ -1,7 +1,8 @@
 import React from "react";
 import customClearance from "../../../assets/services/customClearance.jpg";
 import ServiceItem from "../Services/ServiceItem";
-import ServiceHead from "../../Items/ServiceHeroComponent"
+import ServiceHead from "../../Items/ServiceHeroComponent";
+import customvideo from "../../../assets/video/CUSTOMCLEARANCE.mp4";
 
 function CustomClearance() {
 	return (
@@ -46,21 +47,27 @@ function CustomClearance() {
 				</p>
 			</div>
 
-			<div className="px-4 md:px-20 mb-6 md:mb-">
-				<h2 className="text-xl md:text-2xl my-2 font-medium">
-					Services
-				</h2>
-				<div className="flex flex-col ">
-					<ServiceItem text="Custom Documentation" />
-					<ServiceItem text="Import & Export Documentation" />
-					<ServiceItem text="Examination of Import & Export Consignments" />
-					<ServiceItem text="Handling of stuffing & de-stuffing at ports" />
-					<ServiceItem text="Clearance at ICD’s, Land Customs (NEPAL & BANGLADESH BORDER)" />
+
+
+			<div className="px-4 md:px-20 flex md:flex-row flex-col  mb-6 md:mb-8">
+				<div className="order-2">
+					<h2 className="text-xl md:text-2xl my-2 font-medium">
+						Services
+					</h2>
+					<div className="flex flex-col ">
+						<ServiceItem text="Custom Documentation" />
+						<ServiceItem text="Import & Export Documentation" />
+						<ServiceItem text="Examination of Import & Export Consignments" />
+						<ServiceItem text="Handling of stuffing & de-stuffing at ports" />
+						<ServiceItem text="Clearance at ICD’s, Land Customs (NEPAL & BANGLADESH BORDER)" />
+					</div>
+				</div>
+				<div className="order-1 px-4 md:px-20 mb-6 md:mb-8 flex justify-center">
+					<video src={customvideo} autoPlay loop muted className="w-full md:w-96 h-auto rounded-lg " />
 				</div>
 			</div>
 		</div>
 	);
 }
-
 
 export default CustomClearance;

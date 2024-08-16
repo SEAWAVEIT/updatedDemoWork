@@ -2,7 +2,7 @@ import React from "react";
 import ServiceItem from "./ServiceItem";
 import warehouse from "../../../assets/services/warehouse.jpg";
 import ServiceHead from "../../Items/ServiceHeroComponent"
-
+import warehousevideo from "../../../assets/video/WAREHOUSING.mp4"
 
 function Warehousing() {
 	return (
@@ -31,6 +31,8 @@ function Warehousing() {
 					</p>
 				</div>
 
+
+
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20">
 					<div>
 						<h2 className="text-xl md:text-2xl my-2">
@@ -56,18 +58,25 @@ function Warehousing() {
 					</div>
 				</div>
 
-				<div className="mt-6 md:mt-8">
-					<p>
-						We provide high-level professional warehousing services
-						and care that is the assurance of the safe arrival of
-						your product anywhere, anytime. Through our integrated
-						inventory management system, we not only provide control
-						on a worldwide basis but also allow customers to
-						supplement and redistribute cargo. This approach reduces
-						cycle time while assuring constant availability of
-						product. We offer special warehousing facilities for
-						containerized, refrigerated, and hazardous materials.
-					</p>
+				<div className="mt-6 md:mt-8 flex flex-col justify-between items-center md:flex-row">
+					<div className="w-full md:w-1/2 order-2">
+						<p className="text-center ">
+							We provide high-level professional warehousing services
+							and care that is the assurance of the safe arrival of
+							your product anywhere, anytime. Through our integrated
+							inventory management system, we not only provide control
+							on a worldwide basis but also allow customers to
+							supplement and redistribute cargo. This approach reduces
+							cycle time while assuring constant availability of
+							product. We offer special warehousing facilities for
+							containerized, refrigerated, and hazardous materials.
+						</p>
+					</div>
+					<div className="w-full md:w-1/2 order-1">
+						<div className="px-4 md:px-20 mb-6 md:mb-8 flex justify-center">
+							<video src={warehousevideo} autoPlay loop muted className="w-full md:w-96 h-auto rounded-lg " />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
