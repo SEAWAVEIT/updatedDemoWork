@@ -44,7 +44,7 @@ function FreightForwarding() {
                     <ServiceItem text="Also need a license to do it." />
                 </div>
             </div>
-            <div className="mb-6 md:mb-8 px-6 py-4">
+            <div className="mb-6 md:mb-8 md:px-6 md:py-4">
                 <div className="text-center text-2xl md:text-4xl my-4">
                     Air Freight
                 </div>
@@ -93,7 +93,7 @@ function FreightForwarding() {
                 </div>
             </div>
 
-            <div className="mb-6 md:mb-8 px-6 py-1">
+            <div className="mb-6 md:mb-8 md:px-6 md:py-1">
                 <div className="text-center text-2xl md:text-4xl my-4">
                     Sea Freight
                 </div>
