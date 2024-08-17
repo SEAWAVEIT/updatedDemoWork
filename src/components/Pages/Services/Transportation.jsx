@@ -2,9 +2,9 @@ import React from "react";
 import ServiceItem from "./ServiceItem";
 import landFreight from "../../../assets/services/landFreight.jpg";
 import ServiceHead from "../../Items/ServiceHeroComponent"
+import transportvideo from "../../../assets/video/TRANSPORATION.mp4"
 
-
-function LandFreight() {
+function Transport() {
 	return (
 		<div className="bg-white p-4 md:p-8">
 			<ServiceHead imageSrc={landFreight} Text={"Land Freight"} />
@@ -17,13 +17,21 @@ function LandFreight() {
 						ICD’s, airports & overseas land destinations.
 					</p>
 				</div>
-				<div>
-					<h2 className="text-xl md:text-2xl my-2">Services:</h2>
-					<ServiceItem text="Truck/Trailer Freight Booking" />
-					<ServiceItem text="Consolidation of cargo for truck" />
-					<ServiceItem text="Loading-Unloading facilities" />
-					<ServiceItem text="Shipments through land customs (Especially for Nepal
+
+				<div className="flex md:flex-row justify-center items-center flex-col">
+					<div className="order-2">
+						<h2 className="text-xl md:text-2xl my-2">Services:</h2>
+						<ServiceItem text="Truck/Trailer Freight Booking" />
+						<ServiceItem text="Consolidation of cargo for truck" />
+						<ServiceItem text="Loading-Unloading facilities" />
+						<ServiceItem text="Shipments through land customs (Especially for Nepal
 							& Bangladesh)"/>
+					</div>
+					<div className="order-1">
+						<div className="px-4  md:px-20 mb-6 md:mb-8 flex justify-center">
+							<video src={transportvideo} autoPlay loop muted className="w-full md:w-96 h-auto rounded-lg " />
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -119,4 +127,4 @@ function LandFreight() {
 	);
 }
 
-export default LandFreight;
+export default Transport;

@@ -116,13 +116,16 @@ const Header = () => {
                         <Link to={"freightforwarding"}>Freight Forwarding</Link>
                       </li>
                       <li>
-                        <Link to={"landfreight"}>Land Freight</Link>
+                        <Link to={"transportation"}>Transportation</Link>
                       </li>
                       <li>
                         <Link to={"warehousing"}>Warehousing</Link>
                       </li>
                       <li>
                         <Link to={"logisticsdesign"}>Logistics Design</Link>
+                      </li>
+                      <li>
+                        <Link to={"eximconsultancy"}>Exim Consultancy</Link>
                       </li>
 
                     </ul>
@@ -166,13 +169,16 @@ const Header = () => {
                     <Link to={"freightforwarding"}>Freight Forwarding</Link>
                   </li>
                   <li>
-                    <Link to={"landfreight"}>Land Freight</Link>
+                    <Link to={"transportation"}>Transportation</Link>
                   </li>
                   <li>
                     <Link to={"warehousing"}>Warehousing</Link>
                   </li>
                   <li>
                     <Link to={"logisticsdesign"}>Logistics Design</Link>
+                  </li>
+                  <li>
+                    <Link to={"eximconsultancy"}>Exim Consultancy</Link>
                   </li>
                 </ul>
               </details>

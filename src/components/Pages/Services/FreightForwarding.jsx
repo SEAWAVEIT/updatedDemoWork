@@ -2,6 +2,9 @@ import React from "react";
 import freightForward from "../../../assets/services/freightForward.jpg";
 import ServiceItem from "./ServiceItem";
 import ServiceHead from "../../Items/ServiceHeroComponent"
+import freight from "../../../assets/video/FREIGHTFORWARDING.mp4"
+
+
 
 function FreightForwarding() {
     return (
@@ -19,6 +22,14 @@ function FreightForwarding() {
                         consolidation, among other tasks.
                     </p>
                 </div>
+
+            </div>
+            <div className="flex justify-center items-center md:flex-row flex-col">
+                <div className="w-full ">
+                    <div className="px-4 md:px-20 mb-6 md:mb-8 flex justify-center">
+                        <video src={freight} autoPlay loop muted className="w-full md:w-96 h-auto rounded-lg " />
+                    </div>
+                </div>
                 <div>
                     <h2 className="text-xl md:text-2xl my-2">It Requires:</h2>
 
@@ -33,8 +44,7 @@ function FreightForwarding() {
                     <ServiceItem text="Also need a license to do it." />
                 </div>
             </div>
-
-            <div className="mb-6 md:mb-8">
+            <div className="mb-6 md:mb-8 px-6 py-4">
                 <div className="text-center text-2xl md:text-4xl my-4">
                     Air Freight
                 </div>
@@ -83,7 +93,7 @@ function FreightForwarding() {
                 </div>
             </div>
 
-            <div>
+            <div className="mb-6 md:mb-8 px-6 py-1">
                 <div className="text-center text-2xl md:text-4xl my-4">
                     Sea Freight
                 </div>

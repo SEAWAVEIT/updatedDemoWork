@@ -18,7 +18,8 @@ import Main9 from './components/Main/Hero09';
 import Main10 from './components/Main/Hero10';
 import CustomClearance from './components/Pages/Services/CustomClearance';
 import FreightForwarding from './components/Pages/Services/FreightForwarding';
-import LandFreight from './components/Pages/Services/LandFreight';
+import Transportation from './components/Pages/Services/Transportation';
+import EximConsultancy from './components/Pages/Services/EximConsultancy';
 import Warehousing from './components/Pages/Services/Warehousing';
 import LogisticsDesign from './components/Pages/Services/LogisticsDesign';
 import About from './components/Pages/About/About';
@@ -58,8 +59,8 @@ function Home() {
 function App() {
   return (
     <AuthProvider>
-      {/* <Header /> */}
-      <NavBar />
+      <Header />
+      {/* <NavBar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -69,8 +70,9 @@ function App() {
         <Route path="/quoteDetails/:quoteId" element={<QuoteDetails />} />
         <Route path="/customclearance" element={<CustomClearance />} />
         <Route path="/freightforwarding" element={<FreightForwarding />} />
-        <Route path="/landfreight" element={<LandFreight />} />
+        <Route path="/transportation" element={<Transportation />} />
         <Route path="/warehousing" element={<Warehousing />} />
+        <Route path="/eximconsultancy" element={<EximConsultancy />} />
         <Route path="/logisticsdesign" element={<LogisticsDesign />} />
         <Route path="/adminblogpostallowance" element={<AdminBlogPostAllowance />} />
         <Route path="/admincareerpostallowance" element={<AdminCareerPostAllowance />} />
