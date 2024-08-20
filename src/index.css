@@ -22,11 +22,140 @@ body {
 	/* font-family: sans-serif; */
 }
 
+body {
+	margin-top: 60px;
+	/* Adjust this value based on your header height */
+}
+
 .App {
 	height: 100%;
 	width: 100%;
 	overflow-x: hidden;
 }
+
+.header {
+	position: fixed;
+	/* Make the header fixed */
+	top: 0;
+	/* Align it to the top */
+	left: 0;
+	/* Align it to the left */
+	right: 0;
+	/* Align it to the right */
+	z-index: 1000;
+	/* Ensure it's above other content */
+	/* background-color: white; /* Default background color */
+	/* color: black; /* Default text color */
+	background-color: black;
+	color: white;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+	/* Smooth transition for background and text color */
+}
+
+.borderDivider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.serviceBorder {
+	width: 52px;
+	height: 1px;
+	background: slategray;
+	opacity: 0.3;
+}
+
+.header.scrolled {
+	background-color: black;
+	/* Background color when scrolled */
+	color: white;
+	/* Text color when scrolled  */
+}
+
+.header.scrolled svg {
+	stroke: white;
+}
+
+.header .navbar a {
+	color: inherit;
+	/* Make sure text color inherits from the header */
+}
+
+.footerDividerLine {
+	height: 1px;
+	width: 75vw;
+	background-color: cyan;
+	opacity: 0.5;
+}
+
+/* ============================================================== */
+
+/* Background image with dark overlay */
+.centerHeroWhole {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	width: 100%;
+	background-image: url("./assets/backgroundImages/1.webp");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.centerHeroWhole::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	/* Dark overlay with 50% opacity */
+	z-index: 0;
+}
+
+.centerHeroWhole>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Animation for background image transition */
+@keyframes slideImages {
+	0% {
+		background-image: url("./assets/backgroundImages/1.webp");
+	}
+
+	20% {
+		background-image: url("./assets/backgroundImages/2.webp");
+	}
+
+	40% {
+		background-image: url("./assets/backgroundImages/3.webp");
+	}
+
+	60% {
+		background-image: url("./assets/backgroundImages/4.webp");
+	}
+
+	80% {
+		background-image: url("./assets/backgroundImages/5.webp");
+	}
+
+	100% {
+		background-image: url("./assets/backgroundImages/6.webp");
+	}
+}
+
+/* Apply the animation */
+.centerHeroWhole {
+	animation: slideImages 30s infinite;
+	transition: background-image 1s ease-in-out;
+}
+
+
+/* ============================================================== */
 
 /* .Hero01,
 .Hero02,
@@ -55,9 +184,7 @@ body {
 	animation-play-state: paused;
 }
 
-
 /* In your CSS file (e.g., styles.css) */
-
 
 /* =========================================================================================================== */
 /* previous code */
@@ -130,7 +257,7 @@ body {
 		transform: translateX(0);
 		opacity: 1;
 	}
-	
+
 	100% {
 		transform: translateX(-100%);
 		opacity: 0;
@@ -142,12 +269,12 @@ body {
 		transform: translateX(100%);
 		opacity: 0;
 	}
-	
+
 	100% {
 		transform: translateX(0);
 		opacity: 1;
 	}
-	
+
 }
 
 /* Applying animations to the image on hover */
@@ -675,7 +802,7 @@ body {
 /* =========================================================================================================== */
 
 /* uncomment card  */
-/* 
+/*
 .container {
 	position: relative;
 	width: 1100px;
@@ -982,7 +1109,7 @@ body {
 	}
 }
 
-/* 
+/*
 :root {
 	--font1: "Poppins", sans-serif;
 	--font2: "Lobster Two", cursive;
@@ -1058,7 +1185,6 @@ body {
 
 /* =========================================================================================================== */
 
-
 /* fixes */
 .paraContactDiv li,
 svg {
@@ -1068,9 +1194,7 @@ svg {
 	/* Remove underline */
 }
 
-
-
-/* 
+/*
 ============================================================================================================
 */
 /* cargo solution text animate Gradient Text2 */
@@ -1088,13 +1212,12 @@ svg text {
 	0% {
 		stroke-dasharray: 0 50%;
 		stroke-dashoffset: 20%;
-		fill: #E26274;
+		fill: #e26274;
 	}
 
 	100% {
 		stroke-dasharray: 50% 0;
 		stroke-dashoffstet: -20%;
-		fill: hsla(189, 68%, 75%, 0%)
+		fill: hsla(189, 68%, 75%, 0%);
 	}
-
 }

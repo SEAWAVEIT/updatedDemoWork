@@ -1,15 +1,22 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
+import navLogo from "../../assets/seawave/seawavewhitetextlogo.png"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen((prevOpen) => !prevOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    setIsServicesOpen(false);
   };
 
   const toggleServices = () => {
@@ -24,7 +31,7 @@ const Header = () => {
       tl.to(menu, {
         duration: 0.3,
         height: "auto",
-        width: 198,
+        width: 200,
         opacity: 1,
       });
     } else {
@@ -52,8 +59,37 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleLinkClick = (event) => {
+    closeMenu();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="px-4 z-10 relative">
+    <div
+      className={`px-4 z-10 relative header ${isScrolled ? "scrolled" : ""}`}
+    >
       <div className="navbar justify-between">
         <div className="navbar-start">
           <div className="dropdown relative">
@@ -67,7 +103,7 @@ const Header = () => {
                 className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="white"
               >
                 <path
                   strokeLinecap="round"
@@ -83,7 +119,9 @@ const Header = () => {
                 ref={menuRef}
               >
                 <li>
-                  <Link to={"about"}>About</Link>
+                  <Link to="about" onClick={handleLinkClick}>
+                    About
+                  </Link>
                 </li>
                 <li>
                   <button
@@ -108,95 +146,136 @@ const Header = () => {
                     </svg>
                   </button>
                   {isServicesOpen && (
-                    <ul className="p-2 bg-black text-white z-1 rounded-lg mt-2">
-                      <li>
-                        <Link to={"customclearance"}>Custom Clearance</Link>
+                    <ul className="p-2 bg-black text-sm whitespace-nowrap text-white z-1 rounded-lg mt-2">
+                      <li className="">
+                        <Link to="customclearance" onClick={handleLinkClick}>
+                          <p className="whitespace-nowrap">Custom Clearance</p>
+                        </Link>
                       </li>
-                      <li>
-                        <Link to={"freightforwarding"}>Freight Forwarding</Link>
+                      <div className="borderDivider">
+                        <div className="serviceBorder"> </div>
+                      </div>
+                      <li className="">
+                        <Link to="freightforwarding" onClick={handleLinkClick}>
+                          <p className="whitespace-nowrap">
+                            Freight Forwarding
+                          </p>
+                        </Link>
                       </li>
+                      <div className="borderDivider">
+                        <div className="serviceBorder"> </div>
+                      </div>
                       <li>
-                        <Link to={"transportation"}>Transportation</Link>
+                        <Link to="transportation" onClick={handleLinkClick}>
+                          <p className="whitespace-nowrap">Transportation</p>{" "}
+                        </Link>
                       </li>
+                      <div className="borderDivider">
+                        <div className="serviceBorder"> </div>
+                      </div>
                       <li>
-                        <Link to={"warehousing"}>Warehousing</Link>
+                        <Link to="warehousing" onClick={handleLinkClick}>
+                          <p className="whitespace-nowrap">Warehousing</p>
+                        </Link>
                       </li>
+                      <div className="borderDivider">
+                        <div className="serviceBorder"> </div>
+                      </div>
                       <li>
-                        <Link to={"logisticsdesign"}>Logistics Design</Link>
+                        <Link to="logisticsdesign" onClick={handleLinkClick}>
+                          <p className="whitespace-nowrap">Logistics Design</p>
+                        </Link>
                       </li>
+                      <div className="borderDivider">
+                        <div className="serviceBorder"> </div>
+                      </div>
                       <li>
-                        <Link to={"eximconsultancy"}>Exim Consultancy</Link>
+                        <Link to="eximconsultancy" onClick={handleLinkClick}>
+                          <p className="whitespace-nowrap">Exim Consultancy</p>
+                        </Link>
                       </li>
-
+                      <div className="borderDivider">
+                        <div className="serviceBorder"> </div>
+                      </div>
                     </ul>
                   )}
                 </li>
                 <li>
-                  <Link to={"contact"}>Contact</Link>
+                  <Link to="contact" onClick={handleLinkClick}>
+                    Contact
+                  </Link>
                 </li>
                 <li>
-                  <Link to={"getafreequote"}>Get A Free Quote</Link>
+                  <Link to="getafreequote" onClick={handleLinkClick}>
+                    Get A Free Quote
+                  </Link>
                 </li>
                 <li>
-                  <Link to={"admin"}>Admin</Link>
+                  <Link to="admin" onClick={handleLinkClick}>
+                    Admin
+                  </Link>
                 </li>
                 <li>
-                  <Link to={"careers"}>Career</Link>
+                  <Link to="careers" onClick={handleLinkClick}>
+                    Career
+                  </Link>
                 </li>
                 <li>
-                  <Link to={"allblogs"}>Blog</Link>
+                  <Link to="allblogs" onClick={handleLinkClick}>
+                    Blog
+                  </Link>
                 </li>
               </ul>
             )}
           </div>
-          <Link to={"/"} className="btn btn-ghost text-xl">
-            Home
+          <Link to="/" className="btn btn-ghost text-xl" onClick={handleLinkClick}>
+            <img src={navLogo} alt="" className="h-8 hidden md:block" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="whitespace-nowrap menu menu-horizontal px-1">
             <li>
-              <Link to={"about"}>About</Link>
+              <Link to="about" onClick={handleLinkClick}>About</Link>
             </li>
             <li>
               <details>
                 <summary>Services</summary>
                 <ul className="p-2 bg-white text-black border-[1px] focus:shadow-[2px]">
                   <li>
-                    <Link to={"customclearance"}>Custom Clearance</Link>
+                    <Link to="customclearance" onClick={handleLinkClick}>Custom Clearance</Link>
                   </li>
                   <li>
-                    <Link to={"freightforwarding"}>Freight Forwarding</Link>
+                    <Link to="freightforwarding" onClick={handleLinkClick}>Freight Forwarding</Link>
                   </li>
                   <li>
-                    <Link to={"transportation"}>Transportation</Link>
+                    <Link to="transportation" onClick={handleLinkClick}>Transportation</Link>
                   </li>
                   <li>
-                    <Link to={"warehousing"}>Warehousing</Link>
+                    <Link to="warehousing" onClick={handleLinkClick}>Warehousing</Link>
                   </li>
                   <li>
-                    <Link to={"logisticsdesign"}>Logistics Design</Link>
+                    <Link to="logisticsdesign" onClick={handleLinkClick}>Logistics Design</Link>
                   </li>
                   <li>
-                    <Link to={"eximconsultancy"}>Exim Consultancy</Link>
+                    <Link to="eximconsultancy" onClick={handleLinkClick}>Exim Consultancy</Link>
                   </li>
                 </ul>
               </details>
             </li>
             <li>
-              <Link to={"contact"}>Contact</Link>
+              <Link to="contact" onClick={handleLinkClick}>Contact</Link>
             </li>
             <li>
-              <Link to={"getafreequote"}>Get A Free Quote</Link>
+              <Link to="getafreequote" onClick={handleLinkClick}>Get A Free Quote</Link>
             </li>
             <li>
-              <Link to={"admin"}>Admin</Link>
+              <Link to="admin" onClick={handleLinkClick}>Admin</Link>
             </li>
             <li>
-              <Link to={"careers"}>Career</Link>
+              <Link to="careers" onClick={handleLinkClick}>Career</Link>
             </li>
             <li>
-              <Link to={"allblogs"}>Blog</Link>
+              <Link to="allblogs" onClick={handleLinkClick}>Blog</Link>
             </li>
           </ul>
         </div>

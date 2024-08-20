@@ -41,21 +41,21 @@ function SingleBlog() {
     }
 
     return (
-        <div className="bg-white h-auto py-8 px-12 ">
+        <div className="bg-white h-auto pt-8 py-8 px-12 ">
             <div className='SingleBlog rounded-xl'>
-                <div className='BlogTopic text-5xl font-semibold mb-4 text-center'>
+                <div className='BlogTopic md:text-5xl text-2xl font-semibold mb-4 text-center'>
                     <h1>{post.topic}</h1>
                 </div>
                 <div className='BlogAuthor text-center mb-8 border-y-2 border-spacing-6 py-2 my-1'>
                     <h1 className='inline text-blue-700 font-semibold mr-6'>{post.name}</h1>
-                    <span className='text-slate-700 font-normal'>
+                    <span className='text-slate-700 font-normal text-lg'>
                         {post.createdAt
                             ? format(post.createdAt, 'MMMM d, yyyy') // Format date
                             : 'No date available'}
                     </span>
                 </div>
-                <div className='BlogDescription mb-4  text-slate-800 font-serif' >{post.description}</div>
-                <div className='BlogMessage text-slate-800 font-serif'>{post.message}</div>
+                <div className='BlogDescription mb-4 md:text-lg text-sm text-slate-800 font-serif' >{post.description}</div>
+                <div className='BlogMessage md:text-lg text-sm text-slate-800 font-serif'>{post.message}</div>
             </div>
         </div>
     );

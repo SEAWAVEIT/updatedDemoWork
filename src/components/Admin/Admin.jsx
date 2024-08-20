@@ -50,7 +50,7 @@ function Admin() {
     };
 
     return (
-        <div className='bg-white p-8 z-1'>
+        <div className='bg-white p-8 z-1 py-20'>
             <div>
                 <h1 className='text-5xl font-medium text-center mb-8'>Admin Dashboard</h1>
             </div>

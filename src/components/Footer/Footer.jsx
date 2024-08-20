@@ -1,105 +1,107 @@
 import React from "react";
+import footerLogo from "../../assets/seawave/seawavewhitetextlogo.png";
 
 function Footer() {
 	return (
-		<div className="bg-white text-black">
-			<footer className="p-4 md:p-10">
-				<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+		<div className="bg-black h-screen text-white p-8">
+			<div className="flex flex-col h-[70vh] gap-4 justify-center items-center">
+				<div>
+					<img className="md:h-20 h-14" src={footerLogo} alt="Seawave Logo" />
+				</div>
+				<div className="flex justify-center gap-2 md:gap-1 flex-col items-center text-white my-8">
 					<div>
-						<h6 className="footer-title">Services</h6>
-						<a className="link link-hover block my-2">Branding</a>
-						<a className="link link-hover block my-2">Design</a>
-						<a className="link link-hover block my-2">Marketing</a>
-						<a className="link link-hover block my-2">
-							Advertisement
-						</a>
+						<h5 className="font-light text-sm md:text-base text-center italic">
+							SEAWAVE COVERS SEA, EARTH & AIR THROUGH LOGISTICS SOLUTION TO
+							ACHIEVE OUR VISION FLAWLESSLY.
+						</h5>
 					</div>
 					<div>
-						<h6 className="footer-title">Company</h6>
-						<a className="link link-hover block my-2">About us</a>
-						<a className="link link-hover block my-2">Contact</a>
-						<a className="link link-hover block my-2">Jobs</a>
-						<a className="link link-hover block my-2">Press kit</a>
-					</div>
-					<div>
-						<h6 className="footer-title">Legal</h6>
-						<a className="link link-hover block my-2">
-							Terms of use
-						</a>
-						<a className="link link-hover block my-2">
-							Privacy policy
-						</a>
-						<a className="link link-hover block my-2">
-							Cookie policy
-						</a>
-					</div>
-					<div>
-						<h6 className="footer-title">Contact</h6>
-						<a className="link link-hover block my-2">
-							+91 0222383483
-						</a>
-						<a className="link link-hover block my-2">
-							Hello@hmail.com
-						</a>
-						<a className="link link-hover block my-2">
-							fb@sdjsdiw.in
-						</a>
+						<h5 className="font-light text-sm md:text-base text-center italic">
+							Our Branches: West Bengal (Kolkata), Nepal Borders (Jogbani,
+							Raxaul & Sonauli)
+						</h5>
 					</div>
 				</div>
-			</footer>
-			<footer className="border-t border-gray-300 px-4 py-2 flex flex-col md:flex-row items-center justify-between">
-				<nav className="flex gap-4 md:order-2">
-					<a>
+				<div className="flex justify-center items-center gap-6">
+					<a href="https://www.facebook.com/seawavelogistics" target="_blank" rel="noopener noreferrer">
 						<svg
+							width="30px"
+							height="30px"
+							viewBox="38.657999999999994 12.828 207.085 207.085"
 							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							className="fill-current hover:text-slate-700"
+							fill="#000000"
 						>
-							<path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+							<path
+								d="M158.232 219.912v-94.461h31.707l4.747-36.813h-36.454V65.134c0-10.658 2.96-17.922 18.245-17.922l19.494-.009V14.278c-3.373-.447-14.944-1.449-28.406-1.449-28.106 0-47.348 17.155-47.348 48.661v27.149H88.428v36.813h31.788v94.461l38.016-.001z"
+								fill="#5274bc"
+							></path>
 						</svg>
 					</a>
-					<a>
+
+					<a href="https://www.instagram.com/seawave2102/" target="_blank" rel="noopener noreferrer">
 						<svg
+							width="30px"
+							height="30px"
+							viewBox="0 0 2500 2500"
 							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							className="fill-current hover:text-slate-700"
+							fill="#000000"
 						>
-							<path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+							<defs>
+								<radialGradient
+									id="0"
+									cx="332.14"
+									cy="2511.81"
+									r="3263.54"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop offset=".09" stopColor="#fa8f21"></stop>
+									<stop offset=".78" stopColor="#d82d7e"></stop>
+								</radialGradient>
+								<radialGradient
+									id="1"
+									cx="1516.14"
+									cy="2623.81"
+									r="2572.12"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop offset=".64" stopColor="#8c3aaa" stopOpacity="0"></stop>
+									<stop offset="1" stopColor="#8c3aaa"></stop>
+								</radialGradient>
+							</defs>
+							<path
+								d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57"
+								fill="url(#0)"
+							></path>
+							<path
+								d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57"
+								fill="url(#1)"
+							></path>
 						</svg>
 					</a>
-					<a>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							className="fill-current hover:text-slate-700"
-						>
-							<path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+
+					<a href="https://www.linkedin.com/company/seawave-forwarding-logistics-pvt-ltd/" target="_blank" rel="noopener noreferrer">
+						<svg width="37px" height="37px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="2" y="2" width="28" height="28" rx="14" fill="#1275B1"></rect>
+							<path d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z" fill="white"></path>
+							<path d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z" fill="white"></path>
+							<path d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z" fill="white"></path>
 						</svg>
 					</a>
-				</nav>
-				<div className="flex items-center md:p-none py-4 md:order-1">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						className="fill-current text-gray-600 mr-2"
-					>
-						<path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-					</svg>
-					<p className="text-sm">
-						ACME Industries Ltd.
-						<br />
-						Providing reliable tech since 1992
+				</div>
+			</div>
+			<div className="">
+				<div className="flex justify-center">
+					<div className="footerDividerLine my-2"> </div>
+				</div>
+				<div className="flex flex-col text-center md:flex-row justify-between md:px-40 text-sm">
+					<p className="md:text-base text-xs font-light">
+						© Copyright SEAWAVE. All Rights Reserved
+					</p>
+					<p className="md:text-base text-xs font-extralight">
+						Developed by Hemang Ranjan, Anirudh Eyyani, and Rishi Mishra
 					</p>
 				</div>
-			</footer>
+			</div>
 		</div>
 	);
 }

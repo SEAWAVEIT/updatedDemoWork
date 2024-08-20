@@ -39,15 +39,15 @@ function Hero01() {
 
             {/* Main content */}
             <div ref={MainHeadingEffect} className="relative z-10 text-center mt-8 mb-4">
-                <div className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-medium">
+                {/* <div className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-medium">
                     <h1 className="whitespace-nowrap py-2" data-text="Full Sustainable">Full Sustainable</h1>
                     <h1 className="whitespace-nowrap py-4">Cargo Solution</h1>
                 </div>
                 <div className="text-base sm:text-lg md:text-xl lg:text-2xl mt-8 mb-4">
                     <p>We continue to pursue that same vision in today's complex,</p>
                     <p>uncertain world, working every day to earn our customers’</p>
-                </div>
-                <div className="flex flex-col md:flex-row justify-center mt-6 space-y-4 md:space-y-0 md:space-x-8">
+                </div> */}
+                {/* <div className="flex flex-col md:flex-row justify-center mt-6 space-y-4 md:space-y-0 md:space-x-8">
                     <div className="flex justify-center md:mr-8">
                         <Link to="#" className="relative inline-block px-4 py-2 font-medium group">
                             <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
@@ -62,7 +62,7 @@ function Hero01() {
                         </svg>
                         <p className="mt-2 md:mt-0 md:ml-2">Watch More</p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

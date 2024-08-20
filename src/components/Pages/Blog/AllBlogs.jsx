@@ -36,7 +36,7 @@ function AllBlogs() {
     if (error) return <div className='text-center text-red-500'>{error}</div>
 
     return (
-        <div className="flex flex-col bg-white h-auto px-6 md:px-12 mx-auto">
+        <div className="flex flex-col bg-white h-auto py-16 px-6 md:px-12 mx-auto">
             <div className="text-center mb-6">
                 <h1 className="text-3xl font-bold text-gray-900">Published Blogs</h1>
             </div>
