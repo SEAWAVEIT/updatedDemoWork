@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import career from "../../../assets/career/career.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from "../../../firebase/firebase";
 import Loader from '../../Items/Loader';
 
 function Career() {
     const [jobs, setJobs] = useState([]);
+    const navigate = useNavigate()
 
+    const navigateTo = (path) => {
+        window.scrollTo(0, 0)
+        navigate(path)
+    }
     useEffect(() => {
         const fetchJobs = async () => {
             try {
@@ -41,11 +46,20 @@ function Career() {
                             <div key={job.id} className="bg-gray-30 flex flex-col p-6 border border-gray-300 rounded-lg shadow-lg  hover:bg-gray-100 transition-transform transform hover:scale-105">
                                 <h3 className="text-xl font-semibold text-gray-900">{job.position}</h3>
                                 <p className="text-md text-gray-600 mt-2">{job.department}</p>
-                                <Link to={`/jobdetails/${job.id}`} className="">
+                                {/* <Link
+                                    to={`/jobdetails/${job.id}`} className="">
                                     <button className="w-16 mt-4 bg-blue-600 hover:bg-blue-700 text-white text-sm py-1 px-2 px-none rounded-lg transition-colors duration-300">
                                         View
                                     </button>
-                                </Link>
+                                </Link> */}
+
+                                <button
+                                    // aria-label={`View ${post.name}`}
+                                    onClick={() => navigateTo(`/jobdetails/${job.id}`)}
+                                    className="w-16 mt-4 bg-blue-600 hover:bg-blue-700 text-white text-sm py-1 px-2 px-none rounded-lg transition-colors duration-300">
+
+                                    View
+                                </button>
                             </div>
                         ))}
                     </div>

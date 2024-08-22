@@ -8,9 +8,89 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
 }
 
+
+
 /* =========================================================================================================== */
+/* scrollbar */
+/* Scrollbar */
+
+
+
+
+/* =========================================================================================== */
+
+
+/* scrolltotop */
+
+.scroll-to-top-button {
+	position: fixed;
+	bottom: 40px;
+	right: 20px;
+	background-color: #ffffff;
+	color: rgb(2, 2, 2);
+	border: none;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 34px;
+	cursor: pointer;
+	z-index: 1000;
+	transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	/* Ensure the button is on top of other elements */
+}
+
+.scroll-to-top-button:hover {
+	background-color: hsla(286, 42%, 21%, 0.761);
+	color: white;
+}
+
+.scroll-to-top-button.hidden {
+	opacity: 0;
+	pointer-events: none;
+	/* Prevent clicks when hidden */
+}
+
+
+/* =========================================================================================== */
+
+
+/* Chat Button */
+.chat-button {
+	position: fixed;
+	bottom: 40px;
+	left: 20px;
+	background-color: #007bff;
+	/* Change to your preferred color */
+	color: #ffffff;
+	border: none;
+	border-radius: 50%;
+	/* width: 50px;
+	height: 50px; */
+	display: flex;
+	padding: 12px 22px;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+	gap: 12px;
+	border-radius: 50px;
+	z-index: 1000;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.chat-button:hover {
+	background-color: #0056b3;
+}
+
+/* =========================================================================================== */
+
+
 
 html,
 body {
@@ -19,7 +99,23 @@ body {
 	background: white;
 	color: black;
 	font-family: "Montserrat", sans-serif;
+
 	/* font-family: sans-serif; */
+	::-webkit-scrollbar {
+		width: 20px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px grey;
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: red;
+		border-radius: 10px;
+	}
 }
 
 body {
@@ -54,6 +150,13 @@ body {
 	/* Smooth transition for background and text color */
 }
 
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
 .borderDivider {
 	display: flex;
 	justify-content: center;
@@ -83,6 +186,24 @@ body {
 	/* Make sure text color inherits from the header */
 }
 
+
+.socialMedia {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 1rem 1rem 4rem 1rem;
+	gap: 0.5rem;
+}
+
+.socialIcon img {
+	transition: transform 0.3s;
+}
+
+.socialIcon img:hover {
+	transform: scale(1.1);
+	/* Slightly increase size on hover */
+}
+
 .footerDividerLine {
 	height: 1px;
 	width: 75vw;
@@ -96,7 +217,7 @@ body {
 .centerHeroWhole {
 	position: relative;
 	overflow: hidden;
-	height: 100vh;
+	height: 91vh;
 	width: 100%;
 	background-image: url("./assets/backgroundImages/1.webp");
 	background-size: cover;

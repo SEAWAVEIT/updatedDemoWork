@@ -3,8 +3,8 @@ import footerLogo from "../../assets/seawave/seawavewhitetextlogo.png";
 
 function Footer() {
 	return (
-		<div className="bg-black h-screen text-white p-8">
-			<div className="flex flex-col h-[70vh] gap-4 justify-center items-center">
+		<div className="bg-black h-auto text-white md:p-8 py-6">
+			<div className="flex flex-col py-16 gap-4 justify-center items-center">
 				<div>
 					<img className="md:h-20 h-14" src={footerLogo} alt="Seawave Logo" />
 				</div>
@@ -38,7 +38,7 @@ function Footer() {
 						</svg>
 					</a>
 
-					<a href="https://www.instagram.com/seawave2102/" target="_blank" rel="noopener noreferrer">
+					<a href="https://www.instagram.com/seawavelogistics/" target="_blank" rel="noopener noreferrer">
 						<svg
 							width="30px"
 							height="30px"
@@ -98,7 +98,7 @@ function Footer() {
 						© Copyright SEAWAVE. All Rights Reserved
 					</p>
 					<p className="md:text-base text-xs font-extralight">
-						Developed by Hemang Ranjan, Anirudh Eyyani, and Rishi Mishra
+						~ Developed by C Connect Technology.
 					</p>
 				</div>
 			</div>

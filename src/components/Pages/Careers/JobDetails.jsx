@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { db, getDoc, doc } from "../../../firebase/firebase";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { format } from 'date-fns';
 import Loader from '../../Items/Loader';
 
 function JobDetails() {
     const [job, setJob] = useState(null);
     const { jobId } = useParams();
+    const navigate = useNavigate()
 
+    const navigateTo = (path) => {
+        window.scrollTo(0, 0)
+        navigate(path)
+    }
     useEffect(() => {
         const fetchJob = async () => {
             try {
@@ -73,11 +78,12 @@ function JobDetails() {
                 </div>
             </div>
             <div className="mt-6 flex justify-center">
-                <Link to="/careerinputfield">
-                    <button className="text-sm bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md shadow-md transition duration-200">
-                        Apply
-                    </button>
-                </Link>
+
+                <button onClick={() => navigateTo(`/careerinputfield`)} className="text-sm bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md shadow-md transition duration-200">
+                    Apply
+                </button>
+
+
             </div>
         </div>
     );

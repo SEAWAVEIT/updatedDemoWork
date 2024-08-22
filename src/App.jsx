@@ -39,6 +39,11 @@ import FreeQuote from "./components/Pages/FreeQuote/FreeQuote";
 import QuoteDetails from "./components/Pages/FreeQuote/QuoteDetails";
 import ViewQuoteResquests from "./components/Pages/FreeQuote/ViewQuoteResquests";
 
+
+
+import ScrollToTopButton from "./components/Items/ScrollToTopButton"
+import ChatButton from "./components/Items/ChatButton"
+
 function Home() {
   return (
     <div>
@@ -84,6 +89,7 @@ function App() {
           path="/admincareerpostallowance"
           element={<AdminCareerPostAllowance />}
         />
+
         <Route path="/signin" element={<SignIn />} />
         <Route path="/allblogs" element={<AllBlog />} />
         <Route path="/blog/:postId" element={<SingleBlog />} />
@@ -97,6 +103,8 @@ function App() {
           element={<ApplicantDetails />}
         />
       </Routes>
+      <ScrollToTopButton />
+      <ChatButton />
       <Footer />
     </AuthProvider>
   );

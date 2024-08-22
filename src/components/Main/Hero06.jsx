@@ -1,24 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import customerservice from "../../assets/whychoseus/customerservice.png"
+import onlinesupport from "../../assets/whychoseus/onlinesupport.png"
+import punctualdelivery from "../../assets/whychoseus/punctualdelivery.png"
+import securetransaction from "../../assets/whychoseus/securetransaction.png"
 
 
 function Hero06() {
-
-	// const InnerDivStyle = {
-	// 	paddingBottom: '10px',
-
-	// };
-
 	return (
-		<div className="Hero06  h-auto py-2 px-4 md:py-none flex md:flex-row flex-col flex-start items-center bg-white  ">
-			<div className="md:w-[40%] ">
-				<div className="md:p-8 md:my-20 md:text-start text-center ">
+		<div className="Hero06 h-auto py-2 px-4 md:py-none flex md:flex-row flex-col flex-start items-center bg-white">
+			<div className="md:w-[40%]">
+				<div className="md:p-8 md:my-20 md:text-start text-center">
 					<h1 className="text-4xl md:text-6xl">Why choose us</h1>
 					<h1 className="text-4xl md:text-6xl">for your service</h1>
 					<div className="my-4 md:text-lg text-sm">
-						<p>Cursus congue tortor turpis faucibus </p>
-						<p>massa accumsan egestas habitant in diam</p>
-						<p>ollicitud ut placerat nascet</p>
+						<p>Choosing the right partner is vital</p>
+						<p>for enhancing your logistics and</p>
+						<p>ensuring smooth operations.</p>
 					</div>
 					<div>
 						<Link
@@ -37,47 +35,51 @@ function Hero06() {
 				</div>
 			</div>
 			<div className="md:w-[60%] flex md:flex-row flex-col md:p-4 p-2 px-8">
-				<div className="topSec md:pt-24 mt-12   ">
-					<div className="flex gap-1  my-4">
-						<div className="w-1/3 ">
-							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009b0314aa349233739d_why%20choose.svg" alt="" /></div>
+				<div className="topSec md:pt-24 mt-12">
+					<div className="flex gap-1 my-4">
+						<div className="w-1/3">
+							<img src={onlinesupport} className="h-20" alt="" />
+						</div>
 						<div className="w-2/3 pt-8">
-							<h1 className="text-xl font-semibold ">Online Support1</h1>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
+							<h1 className="text-xl font-semibold">Online Support</h1>
+							<p>Our team is always available to assist you with any inquiries or issues.</p>
 						</div>
 					</div>
 
-
 					<div className="CustomBorder-Sub mx-auto my-8"></div>
-					<div className="flex gap-1  my-4">
-						<div className="w-1/3 ">
-							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009b7d75415a8cb4c30a_why%20choose-3.svg" alt="" /></div>
+					<div className="flex gap-1 my-4">
+						<div className="w-1/3">
+
+							<img src={punctualdelivery} alt="" className="h-16" />
+						</div>
 						<div className="w-2/3 pt-8">
-							<h1 className="text-xl font-semibold ">Online Support2</h1>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
+							<h1 className="text-xl font-semibold">Punctual Deliveries</h1>
+							<p>We pride ourselves on delivering your goods on time, every time.</p>
 						</div>
 					</div>
 				</div>
 
-				<div className="CustomBorder-main hidden md:block text-center mx-8   my-auto"></div>
-				<div className="CustomBorder-Sub  md:hidden mx-auto my-8"></div>
+				<div className="CustomBorder-main hidden md:block text-center mx-8 my-auto"></div>
+				<div className="CustomBorder-Sub md:hidden mx-auto my-8"></div>
 
 				<div className="bottomSec md:pb-14 md:pt-12">
-					<div className="flex gap-1  mb-8">
-						<div className="w-1/3 ">
-							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009b7d7541f38bb4c309_why%20choose-2.svg" alt="" /></div>
+					<div className="flex gap-1 mb-8">
+						<div className="w-1/3">
+							<img src={customerservice} className="h-20" alt="" />
+						</div>
 						<div className="w-2/3 pt-8">
-							<h1 className="text-xl font-semibold pb-2">Online Support3</h1>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
+							<h1 className="text-xl font-semibold pb-2">Exceptional Customer Service</h1>
+							<p>Experience top-notch customer care and personalized support.</p>
 						</div>
 					</div>
 					<div className="CustomBorder-Sub mx-auto my-8"></div>
 					<div className="flex gap-1 my-4">
-						<div className="w-1/3 ">
-							<img src="https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009bdff26411a67191d3_why%20choose-1.svg" alt="" /></div>
+						<div className="w-1/3">
+							<img src={securetransaction} className="h-16" alt="" />
+						</div>
 						<div className="w-2/3 pt-8">
-							<h1 className="text-xl font-semibold ">Online Support4</h1>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui error odit.</p>
+							<h1 className="text-xl font-semibold">Secure Transactions</h1>
+							<p>We ensure your transactions are safe and your data is protected.</p>
 						</div>
 					</div>
 				</div>

@@ -151,13 +151,17 @@ function About() {
         <div className='my-6 font-light'>
           <span className='GradientText font-medium'>SEAWAVE FORWARDING AND LOGISTICS PVT LTD</span> is affiliated, endorsed, and certified with the following organizations and professional bodies:
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <img src='https://www.seawave.in/images/affiliation/1.webp' alt='Affiliation 1' className='p-2 md:w-32 w-16' />
-          <img src='https://www.seawave.in/images/affiliation/2.webp' alt='Affiliation 2' className='p-2 md:w-32 w-16' />
-          <img src='https://www.seawave.in/images/affiliation/3.webp' alt='Affiliation 3' className='p-2 md:w-32 w-16' />
-          <img src='https://www.seawave.in/images/affiliation/4.webp' alt='Affiliation 4' className='p-2 md:w-32 w-16' />
-          <img src='https://www.seawave.in/images/affiliation/5.webp' alt='Affiliation 5' className='p-2 md:w-32 w-16' />
-          <img src='https://www.seawave.in/images/affiliation/6.webp' alt='Affiliation 6' className='p-2 md:w-32 w-16' />
+        <div className='flex md:flex-row flex-col items-center justify-center'>
+          <div className='flex gap-6'>
+            <img src='https://www.seawave.in/images/affiliation/1.webp' alt='Affiliation 1' className='p-2 md:w-32 w-16' />
+            <img src='https://www.seawave.in/images/affiliation/2.webp' alt='Affiliation 2' className='p-2 md:w-32 w-16' />
+            <img src='https://www.seawave.in/images/affiliation/3.webp' alt='Affiliation 3' className='p-2 md:w-32 w-16' />
+          </div>
+          <div className='flex gap-6'>
+            <img src='https://www.seawave.in/images/affiliation/4.webp' alt='Affiliation 4' className='p-2 md:w-32 w-16' />
+            <img src='https://www.seawave.in/images/affiliation/5.webp' alt='Affiliation 5' className='p-2 md:w-32 w-16' />
+            <img src='https://www.seawave.in/images/affiliation/6.webp' alt='Affiliation 6' className='p-2 md:w-32 w-16' />
+          </div>
         </div>
       </div>
     </div>

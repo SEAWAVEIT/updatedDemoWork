@@ -21,7 +21,7 @@ function ViewQuoteResquests() {
 
     return (
         <div>
-            <div className="flex flex-col bg-white h-auto px-6 md:px-12 mx-auto">
+            <div className="flex flex-col bg-white h-auto px-6 py-12 md:px-12 mx-auto">
                 <div className="text-center mb-6">
                     <h1 className="text-3xl font-bold text-gray-900">Requested Quote</h1>
                 </div>

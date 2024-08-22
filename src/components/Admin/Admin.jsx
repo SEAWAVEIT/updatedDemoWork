@@ -9,12 +9,16 @@ function Admin() {
     const navigate = useNavigate();
     const { user, setUser } = useAuth();
 
+    const navigateTo = (path) => {
+        window.scrollTo(0, 0)
+        navigate(path)
+    }
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
             if (user) {
                 setUser(user);
             } else {
-                navigate("/signin");
+                navigateTo("/signin");
             }
         });
         return () => unsubscribe();
@@ -34,19 +38,19 @@ function Admin() {
     }
 
     const postCareer = () => {
-        navigate('/admincareerpostallowance');
+        navigateTo('/admincareerpostallowance');
     };
 
     const postBlog = () => {
-        navigate('/adminblogpostallowance');
+        navigateTo('/adminblogpostallowance');
     };
 
     const allapplicants = () => {
-        navigate('/allapplicants');
+        navigateTo('/allapplicants');
     };
 
     const viewQuotes = () => {
-        navigate('/viewquoterequests');
+        navigateTo('/viewquoterequests');
     };
 
     return (
